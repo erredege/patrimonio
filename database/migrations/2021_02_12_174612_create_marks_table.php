@@ -20,7 +20,7 @@ class CreateMarksTable extends Migration
             $table->double("length");
             $table->string("name");
             $table->text("information");
-            $table->enum("type",["marker","circle","polygon"]);
+            $table->integer("type",["marker","circle","polygon"]);
             $table->double("start_point");
             $table->double("radio");
             $table->string("border_color");
