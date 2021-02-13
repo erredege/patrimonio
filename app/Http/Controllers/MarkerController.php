@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Marker;
 
-class markerController extends Controller
+class MarkerController extends Controller
 {
     public function index() {
         $markersList = Marker::all();
