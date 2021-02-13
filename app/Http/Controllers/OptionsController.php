@@ -9,56 +9,42 @@ class OptionsController extends Controller
 {
     public function index() {
         $optionList = Option::all();
-        return view('backend/marker.index', ['markersList'=>$markersList]);
+        return view('backend/option/option.index', ['optionList'=>$optionList]);
     }
 
     public function show($id) {
-        $marker = Option::find($id);
-        return view('backend/marker.show', ['marker'=>$marker]);
+        $option = Option::find($id);
+        return view('backend/option/option.show', ['option'=>$option]);
     }
 
     public function create() {
-        return view('backend/masker.form');
+        return view('backend/option/option.form');
     }
 
     public function store(Request $r) {
-        $marker = new Option();
-        $marker->latitude = $r->latitude;
-        $marker->length = $r->length;
-        $marker->name = $r->name;
-        $marker->information = $r->information;
-        $marker->type = $r->type;
-        $marker->start_point = $r->start_point;
-        $marker->radio = $r->radio;
-        $marker->border_color = $r->border_color;
-        $marker->background_color = $r->background_color;
-        $marker->save();
-        return redirect()->route('marker.index');
+        $option = new Option();
+        $option->value = $r->value;
+        $option->key = $r->key;
+        $option->save();
+        return redirect()->route('option/option.index');
     }
 
     public function edit($id) {
-        $marker = Option::find($id);
-        return view('backend/marker.form', array('marker' => $marker));
+        $option = Option::find($id);
+        return view('backend/option/option.form', array('option' => $option));
     }
 
     public function update(Request $r) {
-        $marker = Option::find($r->id);
-        $marker->latitude = $r->latitude;
-        $marker->length = $r->length;
-        $marker->name = $r->name;
-        $marker->information = $r->information;
-        $marker->type = $r->type;
-        $marker->start_point = $r->start_point;
-        $marker->radio = $r->radio;
-        $marker->border_color = $r->border_color;
-        $marker->background_color = $r->background_color;
-        $marker->save();
-        return redirect()->route('marker.index');
+        $option = Option::find($r->id);
+        $option->value = $r->value;
+        $option->key = $r->key;
+        $option->save();
+        return redirect()->route('option/option.index');
     }
 
     public function destroy($id) {
-        $marker = Option::find($id);
-        $marker->delete();
-        return redirect()->route('markers.index');
+        $option = Option::find($id);
+        $option->delete();
+        return redirect()->route('option/option.index');
     }
 }

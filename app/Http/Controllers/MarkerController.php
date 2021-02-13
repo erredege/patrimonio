@@ -9,16 +9,16 @@ class markerController extends Controller
 {
     public function index() {
         $markersList = Marker::all();
-        return view('backend/marker.index', ['markersList'=>$markersList]);
+        return view('backend/marker/marker.index', ['markersList'=>$markersList]);
     }
 
     public function show($id) {
         $marker = Marker::find($id);
-        return view('backend/marker.show', ['marker'=>$marker]);
+        return view('backend/marker/marker.show', ['marker'=>$marker]);
     }
 
     public function create() {
-        return view('backend/marker.form');
+        return view('backend/marker/marker.form');
     }
 
     public function store(Request $r) {
@@ -33,12 +33,12 @@ class markerController extends Controller
         $marker->border_color = $r->border_color;
         $marker->background_color = $r->background_color;
         $marker->save();
-        return redirect()->route('marker.index');
+        return redirect()->route('marker/marker.index');
     }
 
     public function edit($id) {
         $marker = Marker::find($id);
-        return view('backend/marker.form', array('marker' => $marker));
+        return view('backend/marker/marker.form', array('marker' => $marker));
     }
 
     public function update(Request $r) {
@@ -53,12 +53,12 @@ class markerController extends Controller
         $marker->border_color = $r->border_color;
         $marker->background_color = $r->background_color;
         $marker->save();
-        return redirect()->route('marker.index');
+        return redirect()->route('marker/marker.index');
     }
 
     public function destroy($id) {
         $marker = Marker::find($id);
         $marker->delete();
-        return redirect()->route('marker.index');
+        return redirect()->route('marker/marker.index');
     }
 }
