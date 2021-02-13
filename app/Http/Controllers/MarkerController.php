@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Marker;
 
 class markerController extends Controller
 {
@@ -17,7 +18,7 @@ class markerController extends Controller
     }
 
     public function create() {
-        return view('backend/masker.form');
+        return view('backend/marker.form');
     }
 
     public function store(Request $r) {
@@ -58,6 +59,6 @@ class markerController extends Controller
     public function destroy($id) {
         $marker = Marker::find($id);
         $marker->delete();
-        return redirect()->route('markers.index');
+        return redirect()->route('marker.index');
     }
 }
