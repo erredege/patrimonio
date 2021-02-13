@@ -25,8 +25,7 @@
                     @method("DELETE")
                     <input type="submit" value="Borrar">
                 </form>
-
-                {{--<button type="button" onclick="destroy('{{route('option.destroy',$option->id)}}')">Eliminar</button>--}}
+                   {{--<button type="button" onclick="destroy('{{route('option.destroy',$option->id)}}')">Eliminar</button>--}}
             </td>
         <br>
     @endforeach
