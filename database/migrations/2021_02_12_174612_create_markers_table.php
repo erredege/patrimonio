@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMarksTable extends Migration
+class CreateMarkersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMarksTable extends Migration
      */
     public function up()
     {
-        Schema::create('marks', function (Blueprint $table) {
+        Schema::create('markers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->double("latitude");
@@ -21,10 +21,10 @@ class CreateMarksTable extends Migration
             $table->string("name");
             $table->text("information");
             $table->integer("type");
-            $table->double("start_point");
-            $table->double("radio");
-            $table->string("border_color");
-            $table->string("background_color");
+            $table->double("start_point")->nullable();
+            $table->double("radio")->nullable();
+            $table->string("border_color")->nullable();
+            $table->string("background_color")->nullable();
         });
     }
 
@@ -35,6 +35,6 @@ class CreateMarksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('marks');
+        Schema::dropIfExists('markers');
     }
 }

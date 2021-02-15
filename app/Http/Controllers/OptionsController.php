@@ -9,16 +9,16 @@ class OptionsController extends Controller
 {
     public function index() {
         $optionList = Option::all();
-        return view('backend/option/option.index', ['optionList'=>$optionList]);
+        return view('backend.option.index', ['optionList'=>$optionList]);
     }
 
     public function show($id) {
         $option = Option::find($id);
-        return view('backend/option/option.show', ['option'=>$option]);
+        return view('backend.option.show', ['option'=>$option]);
     }
 
     public function create() {
-        return view('backend/option/option.form');
+        return view('backend.option.form');
     }
 
     public function store(Request $r) {
@@ -29,12 +29,12 @@ class OptionsController extends Controller
            $option->valor = $valor;
            $option->save();
         }
-        return redirect()->route('option/option.index');
+        return redirect()->route('option.index');
     }
 
     public function edit($id) {
         $option = Option::find($id);
-        return view('backend/option/option.form', array('option' => $option));
+        return view('backend.option.form', array('option' => $option));
     }
 
     public function update(Request $r) {
@@ -42,12 +42,12 @@ class OptionsController extends Controller
         $option->value = $r->value;
         $option->key = $r->key;
         $option->save();
-        return redirect()->route('option/option.index');
+        return redirect()->route('option.index');
     }
 
     public function destroy($id) {
         $option = Option::find($id);
         $option->delete();
-        return redirect()->route('option/option.index');
+        return redirect()->route('option.index');
     }
 }
