@@ -23,7 +23,7 @@
         <select name="type">
             <option value="0" selected>Marcador</option>
             <option value="1">Circulo</option>
-            <option value="1">Poligono</option>
+            <option value="2">Poligono</option>
         </select>
         <input type="submit">
         </form>
