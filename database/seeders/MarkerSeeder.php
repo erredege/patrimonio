@@ -15,7 +15,6 @@ class MarkerSeeder extends Seeder
     public function run()
     {
         DB::table('markers')->insert([
-            'id' => '1',
             'latitude' => '36.84170',
             'length' => '-2.46378',
             'name' => 'casaMariposas',
@@ -29,7 +28,6 @@ class MarkerSeeder extends Seeder
         ]);
 
         DB::table('markers')->insert([
-            'id' => '2',
             'latitude' => '36.83202562331118',
             'length' => '-2.4536694109363073',
             'name' => 'ciudadJardin',

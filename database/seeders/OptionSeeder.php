@@ -15,13 +15,11 @@ class OptionSeeder extends Seeder
     public function run()
     {
         DB::table('options')->insert([
-            'id' => '1',
             'key' => 'dsdasfsf',
             'value' => 'fefcewfcewfcwe',
         ]);
 
         DB::table('options')->insert([
-            'id' => '2',
             'key' => 'jkhjkhkhjkfh',
             'value' => 'ytyuytutjyj',
         ]);

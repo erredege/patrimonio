@@ -14,7 +14,7 @@ class CreateMarkersTable extends Migration
     public function up()
     {
         Schema::create('markers', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->timestamps();
             $table->double("latitude");
             $table->double("length");
