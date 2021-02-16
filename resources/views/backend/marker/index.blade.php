@@ -41,7 +41,7 @@
             <td>{{$marker->latitude}}</td>
             <td>{{$marker->length}}</td>
             <td>{{$marker->information}}</td>
-            <td>{{$marker->type}}</td>
+            <td>{{$valor}}</td>
             <td>{{$marker->start_point}}</td>
             <td>{{$marker->radio}}</td>
             <td>{{$marker->border_color}}</td>
