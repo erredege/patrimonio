@@ -8,8 +8,8 @@ use App\Models\Option;
 class OptionController extends Controller
 {
     public function index() {
-        $optionList = Option::all();
-        return view('backend.option.index', ['optionList'=>$optionList]);
+        $optionsList = Option::all();
+        return view('backend.option.index', ['optionsList'=>$optionsList]);
     }
 
     public function show($id) {

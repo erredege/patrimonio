@@ -8,7 +8,7 @@
 <br>
 <a href="{{ route('option.create') }}">Nuevo</a>
 <table border='1'>
-    @foreach ($markersList as $marker)
+    @foreach ($optionsList as $option)
     
         <tr>
             <td>Clave</td>
