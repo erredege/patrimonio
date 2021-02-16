@@ -9,7 +9,9 @@
             <br>
             <div class='navigation-menu'>
                 <center>
-                    <a href='index.php'>INICIO<a> 
+                    <a href='index.php'>INICIO<a> |
+                    <a href='{{route("marker.index")}}'>MARCADORES<a> |
+                    <a href='{{route("option.index")}}'>OPCIONES<a> 
                 </center>
             </div>
             <h2>Juego del patrimonoio</h2>
