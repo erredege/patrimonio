@@ -25,15 +25,21 @@
     @endif
 
         <tr>
-            <td>E-mail</td>
-            <td>Puntuacion</td>
+            <td>Nombre</td>
+            <td>Latitud</td>
+            <td>Longitud</td>
+            <td>Informacion</td>
             <td>Tipo</td>
+            <td>Punto Inicio</td>
+            <td>Radio</td>
+            <td>Color Borde</td>
+            <td>Color Fondo</td>
             <td colspan="2">Opciones</td>
         </tr>
         <tr>
+            <td>{{$marker->name}}</td>
             <td>{{$marker->latitude}}</td>
             <td>{{$marker->length}}</td>
-            <td>{{$marker->name}}</td>
             <td>{{$marker->information}}</td>
             <td>{{$marker->type}}</td>
             <td>{{$marker->start_point}}</td>
