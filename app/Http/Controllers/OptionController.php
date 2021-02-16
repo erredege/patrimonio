@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Option;
 
-class OptionsController extends Controller
+class OptionController extends Controller
 {
     public function index() {
         $optionList = Option::all();
