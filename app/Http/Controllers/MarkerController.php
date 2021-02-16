@@ -32,6 +32,7 @@ class MarkerController extends Controller
         $marker->radio = $r->radio;
         $marker->border_color = $r->border_color;
         $marker->background_color = $r->background_color;
+        $marker->opacity = $r->opacity;
         $marker->save();
         return redirect()->route('marker.index');
     }
@@ -52,6 +53,7 @@ class MarkerController extends Controller
         $marker->radio = $r->radio;
         $marker->border_color = $r->border_color;
         $marker->background_color = $r->background_color;
+        $marker->opacity = $r->opacity;
         $marker->save();
         return redirect()->route('marker.index');
     }

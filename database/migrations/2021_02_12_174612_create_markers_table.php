@@ -25,6 +25,7 @@ class CreateMarkersTable extends Migration
             $table->double("radio")->nullable();
             $table->string("border_color")->nullable();
             $table->string("background_color")->nullable();
+            $table->double("opacity")->nullable();
         });
     }
 

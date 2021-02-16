@@ -34,6 +34,7 @@
             <td>Radio</td>
             <td>Color Borde</td>
             <td>Color Fondo</td>
+            <td>Opacidad</td>
             <td colspan="2">Opciones</td>
         </tr>
         <tr>
@@ -46,6 +47,7 @@
             <td>{{$marker->radio}}</td>
             <td>{{$marker->border_color}}</td>
             <td>{{$marker->background_color}}</td>
+            <td>{{$marker->opacity}}</td>
             <td><a href="{{route('marker.edit', $marker->id)}}">Modificar</a></td>
             <td>
                 <form action = "{{route('marker.destroy', $marker->id)}}" method="POST">

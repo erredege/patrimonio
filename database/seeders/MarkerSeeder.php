@@ -25,6 +25,7 @@ class MarkerSeeder extends Seeder
             'radio' => null,
             'border_color' => null,
             'background_color' => null,
+            'opacity' => null,
         ]);
 
         DB::table('markers')->insert([
@@ -38,6 +39,7 @@ class MarkerSeeder extends Seeder
             'radio' => '250',
             'border_color' => '#5CC1FF',
             'background_color' => '#FAF77F',
+            'opacity' => '0.25',
         ]);
 
     }
