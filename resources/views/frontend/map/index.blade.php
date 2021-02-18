@@ -15,8 +15,8 @@
     <style>
         #map {
             position: absolute;
-            width: 88%;
-            height: 90%;
+            width: 100%;
+            height: 100%;
             margin-top: 1%;
             margin-left: 7%;
             margin-right: 3%;
