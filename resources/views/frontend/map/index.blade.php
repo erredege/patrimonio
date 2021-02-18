@@ -87,9 +87,9 @@
             }
             return $result;
         }
-        $valueMinZoom = my_search($optioList, 'minZoom');
-        $valueLat = my_search($optioList, 'latitude');
-        $valueLen = my_search($optioList, 'length');
+        $valueMinZoom = my_search($optionList, 'minZoom');
+        $valueLat = my_search($optionList, 'latitude');
+        $valueLen = my_search($optionList, 'length');
     @endphp
     var map = L.map('map', {
         minZoom: {{$valueMinZoom}} //zoom minimo aceptado
@@ -156,7 +156,7 @@
     ////////////POPUPS IMGS//////////////////////////////////
 
     @foreach($markerList as $marker)
-        {{$marker->name}}.bindPopup("{{$marker->title}} <img src='{{$marker->images->getPrincipal->url}}"); 
+        {{$marker->name}}.bindPopup("{{$marker->title}}"); 
     @endforeach
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -165,17 +165,17 @@
     @foreach($markerList as $marker) 
         function click_{{$marker->name}}() { 
             map.setView([{{$marker->latitude}}, {{$marker->length}}]);
-            @if ({{$marker->type}} == 0) 
+            @if ($marker->type == 0) 
                 map.setZoom(18);
             @endif
-            @if ({{$marker->type}} == 1) 
-                @if ({{$marker->radio}} > 20)
+            @if ($marker->type == 1) 
+                @if ($marker->radio > 20)
                     map.setZoom(17);
                 @else
                     map.setZoom(18);
-                @if
+                @endif
             @endif
-            @if ({{$marker->type}} == 2) 
+            @if ($marker->type == 2) 
                 map.setZoom(17);
             @endif
         
