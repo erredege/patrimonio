@@ -164,19 +164,19 @@
     // FUNCIONES FOCUS HACIA POPUP AL HACER CLICK EN CUALQUIER PUTNO DEL MARKET/////
     @foreach($markerList as $marker) 
         function click_{{$marker->name}}() { 
-            map.setView([{{$marker->latitude}}, {{$marker->length}}])
+            map.setView([{{$marker->latitude}}, {{$marker->length}}]);
             @if ({{$marker->type}} == 0) 
-                map.setZoom(18)
+                map.setZoom(18);
             @endif
             @if ({{$marker->type}} == 1) 
                 @if ({{$marker->radio}} > 20)
-                    map.setZoom(17)
+                    map.setZoom(17);
                 @else
-                    map.setZoom(18)
+                    map.setZoom(18);
                 @if
             @endif
             @if ({{$marker->type}} == 2) 
-                map.setZoom(17)
+                map.setZoom(17);
             @endif
         
         }
