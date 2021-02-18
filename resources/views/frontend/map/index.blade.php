@@ -96,7 +96,7 @@
     @endphp
     var map = L.map('map', {
         minZoom: {{$valueMinZoom}} //zoom minimo aceptado
-    }).setView([{{$valueLat}}, {{$valueLen}}], 15);// LOCALICACION DEL FOCUS PRIMARIO DEL MAPA
+    }).setView([{{$valueLatitude}}, {{$valueLength}}], 15);// LOCALICACION DEL FOCUS PRIMARIO DEL MAPA
     ///////////////////////////////////////////////////////
     
     L.tileLayer({{$valueUrlMap}}/*, {
