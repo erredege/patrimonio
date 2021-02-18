@@ -17,9 +17,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            margin-top: 1%;
-            margin-left: 7%;
-            margin-right: 3%;
+            
         }
         .leaflet-popup{
             max-width: 1000px;
