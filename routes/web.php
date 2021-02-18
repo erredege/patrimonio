@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MapController@index')->name('map.index');
 
 //-------------Markers----------------------------------------------------
 Route::get('/marker', 'MarkerController@index')->name('marker.index');

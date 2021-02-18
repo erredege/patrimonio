@@ -15,13 +15,19 @@ class OptionSeeder extends Seeder
     public function run()
     {
         DB::table('options')->insert([
-            'key' => 'dsdasfsf',
-            'value' => 'fefcewfcewfcwe',
+            'key' => 'minZoom',
+            'value' => '15',
         ]);
 
         DB::table('options')->insert([
-            'key' => 'jkhjkhkhjkfh',
-            'value' => 'ytyuytutjyj',
+            'key' => 'latitude',
+            'value' => '36.83999601823103',
         ]);
+        DB::table('options')->insert([
+            'key' => 'length',
+            'value' => '-2.4650189820304593',
+        ]);
+
+
     }
 }

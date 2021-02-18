@@ -12,7 +12,7 @@
     @endisset
         @csrf
         Clave:<input type="text" name="key" value="{{$option->key ?? '' }}"><br>
-        Valor:<input type="text" name="value" value="{{$marker->value ?? '' }}"><br>
+        Valor:<input type="text" name="value" value="{{$option->value ?? '' }}"><br>
         <input type="submit">
         </form>
 
