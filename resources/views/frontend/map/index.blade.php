@@ -96,7 +96,9 @@
     }).setView([{{$valueLatitude}}, {{$valueLength}}], 15);// LOCALICACION DEL FOCUS PRIMARIO DEL MAPA
     ///////////////////////////////////////////////////////
     
-    L.tileLayer('{{$valueUrlMap}}').addTo(map);//MODEL DEL MAPA
+    L.tileLayer('{{$valueUrlMap}}', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);//MODEL DEL MAPA
     
     ///////////Variables de los limites //////////////////
     var sureste = L.latLng({{$valueLatitudeSoutheast}}, {{$valueLengthSoutheast}});
