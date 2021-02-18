@@ -11,6 +11,7 @@
         <form action="{{ route('marker.store') }}" method="POST">
     @endisset
         @csrf
+        Titulo:<input type="text" name="title" value="{{$marker->title ?? '' }}"><br>
         Latitud:<input type="number" name="latitude" value="{{$marker->latitude ?? '' }}"><br>
         Longitud:<input type="number" name="length" value="{{$marker->length ?? '' }}"><br>
         Nombre:<input type="text" name="name" value="{{$marker->name ?? '' }}"><br>

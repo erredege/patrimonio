@@ -25,6 +25,7 @@
     @endif
 
         <tr>
+            <td>Titulo</td>
             <td>Nombre</td>
             <td>Latitud</td>
             <td>Longitud</td>
@@ -38,6 +39,7 @@
             <td colspan="2">Opciones</td>
         </tr>
         <tr>
+            <td>{{$marker->title}}</td>
             <td>{{$marker->name}}</td>
             <td>{{$marker->latitude}}</td>
             <td>{{$marker->length}}</td>
