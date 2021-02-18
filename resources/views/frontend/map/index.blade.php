@@ -21,17 +21,14 @@
             margin-left: 7%;
             margin-right: 3%;
         }
-
         .leaflet-popup{
             max-width: 1000px;
             max-height: 1000px;
         }
-
         .leaflet-popup-content > img{
            max-width:  68%;
            max-height: 68%; 
         }
-
         #bannerImg{
             width: 104.5em;
             height: 10em;
@@ -76,7 +73,6 @@
 
 
     <script>
-
     ////////Variable para que aprezca mapa/////////////////
     @php
         function my_search($my_array, $key) {
@@ -88,35 +84,38 @@
             return $result;
         }
         $valueMinZoom = my_search($optionList, 'minZoom');
-        $valueLat = my_search($optionList, 'latitude');
-        $valueLen = my_search($optionList, 'length');
+        $valueMaxZoom = my_search($optionList, 'maxZoom');
+        $valueMarkerZoom = my_search($optionList, 'markerZoom');
+        $valueLatitude = my_search($optionList, 'latitude');
+        $valueLength = my_search($optionList, 'length');
+        $valueUrlMap = my_search($optionList, 'urlMap');
+        $valueLatitudeSoutheast = my_search($optionList, 'latitudeSoutheast');
+        $valueLengthSoutheast = my_search($optionList, 'lengthSoutheast');
+        $valueLatitudeNortheast = my_search($optionList, 'latitudeNortheast');
+        $valueLengthNortheast = my_search($optionList, 'lengthNortheast');
     @endphp
     var map = L.map('map', {
         minZoom: {{$valueMinZoom}} //zoom minimo aceptado
     }).setView([{{$valueLat}}, {{$valueLen}}], 15);// LOCALICACION DEL FOCUS PRIMARIO DEL MAPA
     ///////////////////////////////////////////////////////
     
-    L.tileLayer('https://api.maptiler.com/maps/pastel/{z}/{x}/{y}.png?key=gBYlEvCO94RWBZ7O3Osq', {
+    L.tileLayer({{$valueUrlMap}}/*, {
         attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-    }).addTo(map);//MODEL DEL MAPA
-
+    }*/).addTo(map);//MODEL DEL MAPA
     ///////////Variables de los limites //////////////////
-    var sureste = L.latLng(36.809803, -2.421262);
-    var noroeste = L.latLng(36.867133, -2.491599);
+    var sureste = L.latLng({{$valueLatitudeSoutheast}}, {{$valueLengthSoutheast}});
+    var noroeste = L.latLng({{$valueLatitudeNortheast}}, {{$valueLengthNortheast}});
     var bounds = L.latLngBounds(sureste, noroeste);
     //////////////////////////////////////////////////////
-
     //////Funcion que nos premite establecer los limites //
         map.setMaxBounds(bounds);
         map.on('drag', function () {
             map.panInsideBounds(bounds, { animate: false });
         });
     ////////////////////////////////////////////////////////
-
     //////////Variables para el sidebar ////////////////////
     var sidebar = L.control.sidebar('sidebar').addTo(map);
     ////////////////////////////////////////////////////////
-
     //////////Marca de agua del Celia Viñas/////////////////
     L.Control.Watermark = L.Control.extend({
         onAdd:function(map) {
@@ -131,13 +130,10 @@
     }
     L.control.watermark({position:'bottomleft'}).addTo(map);
     ////////////////////////////////////////////////////////
-
     /////////////// VARIABLES DE LOS PUNTOS ///////////////////
-
     @foreach($markerList as $marker)
-        var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}])addTo(map);
+        var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}]).addTo(map);
     @endforeach
-
     var alcazaba = L.polygon([
         [36.84004520769246, -2.4693843764004306],
         [36.84002803484754, -2.4709185999934937],
@@ -152,15 +148,11 @@
         radius: 120
     }).addTo(map);
     //////////////////////////////////////////////////////////////////////////////////
-
     ////////////POPUPS IMGS//////////////////////////////////
-
     @foreach($markerList as $marker)
         {{$marker->name}}.bindPopup("{{$marker->title}}"); 
     @endforeach
-
     ////////////////////////////////////////////////////////////////////////////////
-
     // FUNCIONES FOCUS HACIA POPUP AL HACER CLICK EN CUALQUIER PUTNO DEL MARKET/////
     @foreach($markerList as $marker) 
         function click_{{$marker->name}}() { 
@@ -181,9 +173,7 @@
         
         }
     @endforeach
-
     ////////////////////////////////////////////////////////////////////////////////
-
     </script>
 
     <div id="invisible">
