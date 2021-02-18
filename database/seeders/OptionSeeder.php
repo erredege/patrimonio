@@ -27,7 +27,7 @@ class OptionSeeder extends Seeder
 
         DB::table('options')->insert([
             'key' => 'urlMap',
-            'value' => 'https://www.openstreetmap.org/#map=15/36.8391/-2.4602',
+            'value' => "https://www.openstreetmap.org/#map=15/36.8391/-2.4602",
         ]);
             // Latitudes y longitudes para establecer limite de movimiento
         DB::table('options')->insert([
