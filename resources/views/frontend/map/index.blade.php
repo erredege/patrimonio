@@ -99,6 +99,7 @@
     L.tileLayer('{{$valueUrlMap}}'/*, {
         attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     }*/).addTo(map);//MODEL DEL MAPA
+    
     ///////////Variables de los limites //////////////////
     var sureste = L.latLng({{$valueLatitudeSoutheast}}, {{$valueLengthSoutheast}});
     var noroeste = L.latLng({{$valueLatitudeNortheast}}, {{$valueLengthNortheast}});
