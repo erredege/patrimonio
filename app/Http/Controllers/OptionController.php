@@ -23,7 +23,7 @@ class OptionController extends Controller
 
     public function store(Request $r) {
         $campos = Option::get();  // Esto nos devuelve un array con todos los campos del formulario, con sus nombres y sus valores
-        foreach ($campos as $campo => $vlaue) {
+        foreach ($campos as $campo => $value) {
            $option = new Option();
            $option->key = $r->key;
            $option->value = $r->value;

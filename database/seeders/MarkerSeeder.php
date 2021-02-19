@@ -540,10 +540,10 @@ class MarkerSeeder extends Seeder
             'information' => 'null',
             'type' => '2',
             'start_point' => null,
-            'radio' => null,
-            'border_color' => null,
-            'background_color' => null,
-            'opacity' => null,
+            'radio' => '120',
+            'border_color' => '#5CC1FF',
+            'background_color' => '#FAF77F',
+            'opacity' => '0.10',
         ]);
     }
 }
