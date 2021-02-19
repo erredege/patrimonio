@@ -140,22 +140,18 @@
                 color:"{{$marker->background_color}}",
             }).addTo(map);
         @else
-            var {{$marker->name}} = L.polygon([]).addTo(map);
+            @foreach($pointsList as point)
+                @if($marker->name == $point->name)
+                    var {{$marker->name}} = L.polygon([[{{$point->latitude}}, {{$point->length}}],], { 
+                        radius:{{$marker->radio}}, 
+                        fillOpacity:{{$marker->opacity}}, 
+                        fillColor:"{{$marker->border_color}}", 
+                        color:"{{$marker->background_color}}",
+                    }).addTo(map);
+                @endif
+            @endforeach
         @endif
     @endforeach
-    var alcazaba = L.polygon([
-        [36.84004520769246, -2.4693843764004306],
-        [36.84002803484754, -2.4709185999934937],
-        [36.841423315926306, -2.474174801815135],
-        [36.84182686939978, -2.4728712482028468],
-        [36.841444781590226, -2.4713525126486005],
-        [36.8404369215936, -2.4691562403203835],
-    ],{
-        color: '#FAF77F',
-        fillColor: '#5CC1FF',
-        fillOpacity: 0.10,
-        radius: 120
-    }).addTo(map);
     //////////////////////////////////////////////////////////////////////////////////
     ////////////POPUPS IMGS//////////////////////////////////
     @foreach($markerList as $marker)

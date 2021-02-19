@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(MarkerSeeder::class);
         $this->call(OptionSeeder::class);
+        $this->call(PointSeeder::class);
     }
 }
