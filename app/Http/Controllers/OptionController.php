@@ -27,8 +27,8 @@ class OptionController extends Controller
            $option = new Option();
            $option->key = $r->key;
            $option->value = $r->value;
-           $option->save();
         }
+        $option->save();
         return redirect()->route('option.index');
     }
 
@@ -51,3 +51,4 @@ class OptionController extends Controller
         return redirect()->route('option.index');
     }
 }
+
