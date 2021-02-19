@@ -130,7 +130,13 @@
     ////////////////////////////////////////////////////////
     /////////////// VARIABLES DE LOS PUNTOS ///////////////////
     @foreach($markerList as $marker)
-        var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}]).addTo(map);
+        @if ($marker->type == 0) 
+            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}]).addTo(map);
+        @elseif($marker->type == 1)
+            var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], { radius:{{$marker->radio}}, fillOpacity:{{$marker->opacity}}, fillColor: ,{{$marker->border_color}}, color:{{$marker->background_color}}}).addTo(map);
+        @else
+            var {{$marker->name}} = L.polygon([]).addTo(map);
+        @endif
     @endforeach
     var alcazaba = L.polygon([
         [36.84004520769246, -2.4693843764004306],
