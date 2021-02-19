@@ -136,8 +136,8 @@
             var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], { 
                 radius:{{$marker->radio}}, 
                 fillOpacity:{{$marker->opacity}}, 
-                fillColor: ,{{$marker->border_color}}, 
-                color:{{$marker->background_color}}
+                fillColor:"{{$marker->border_color}}", 
+                color:"{{$marker->background_color}}",
             }).addTo(map);
         @else
             var {{$marker->name}} = L.polygon([]).addTo(map);

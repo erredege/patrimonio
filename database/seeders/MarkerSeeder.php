@@ -358,7 +358,7 @@ class MarkerSeeder extends Seeder
             'information' => 'dfhbdn',
             'type' => '1',
             'start_point' => null,
-            'radio' => '150',
+            'radio' => '50',
             'border_color' => '#5CC1FF',
             'background_color' => '#FAF77F',
             'opacity' => '0.25',
