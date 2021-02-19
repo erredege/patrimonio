@@ -15,8 +15,8 @@
     <style>
         #map {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 99%;
+            height: 99%;
         }
         .leaflet-popup{
             max-width: 1000px;
