@@ -66,7 +66,19 @@ class OptionSeeder extends Seeder
             'key' => 'maxZoom',
             'value' => '18',
         ]);
-
         
+        DB::table('options')->insert([
+            'key' => 'cityName',
+            'value' => 'Almeria',
+        ]);
+        
+        DB::table('options')->insert([
+            'key' => 'cityDescription',
+            'value' => 'Esta aplicación se centra en 
+                        una visita por la ciudad,
+                        en donde podremos visitar ciertos 
+                        puntos de interes, de los cuales se hara
+                        una explicación',
+        ]);
     }
 }
