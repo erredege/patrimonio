@@ -140,7 +140,7 @@
                 color:"{{$marker->background_color}}",
             }).addTo(map);
         @else
-            @foreach($pointsList as point)
+            @foreach($pointsList as $point)
                 @if($marker->name == $point->name)
                     var {{$marker->name}} = L.polygon([[{{$point->latitude}}, {{$point->length}}],], { 
                         radius:{{$marker->radio}}, 

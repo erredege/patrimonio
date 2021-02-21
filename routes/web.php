@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'MapController@index')->name('map.index');
+Route::get('/map', 'MapController@index')->name('map.index');
 Route::get('/', 'CaratulaController@index')->name('caratula.index');
 
 //-------------Markers----------------------------------------------------
