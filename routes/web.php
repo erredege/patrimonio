@@ -34,3 +34,6 @@ Route::get('/option/{id}/editar', 'OptionController@edit')->name('option.edit');
 Route::put('/option/{id}', 'OptionController@update')->name('option.update');
 Route::delete('/option/{id}/borrar', 'OptionController@destroy')->name('option.destroy');
 //-----------------------------------------------------------------------
+
+//------------Image------------------------------------------------------
+Route::resource('/image','ImageController');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Image;
 
 class ImageController extends Controller
 {
@@ -13,7 +14,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        //
+        $imagesList = Image::all();
+        return view('backend.image.index', ['imagesList'=>$imagesList]);
     }
 
     /**
@@ -23,7 +25,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.image.form');
     }
 
     /**
@@ -34,7 +36,20 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $image = new Image();
+        
+        if ($request->file('file')) {
+            $image->title = $request->title;
+            $image->description = $request->description;
+            $image->order = $request->order;
+            $extension = $request->file->extension();
+            
+            $path = $request->file('file')->storeAs('images',$image.$extension,'public');
+          }
+        $image->path ='public/assets/'.$path;
+        $image->save();  
+
+        return back()->with('success', 'Imagen subida correctamente');
     }
 
     /**
@@ -45,7 +60,8 @@ class ImageController extends Controller
      */
     public function show($id)
     {
-        //
+        $image = Image::find($id);
+        return view('backend.image.show', ['image'=>$image]);
     }
 
     /**
@@ -56,7 +72,8 @@ class ImageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $image = Image::find($id);
+        return view('backend.image.form', array('image' => $image));
     }
 
     /**
@@ -68,7 +85,14 @@ class ImageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $image = Image::find($request->id);
+        $image->title = $request->title;
+        $image->description = $request->description;
+        $image->order = $request->order;
+
+        $image->save();
+
+        return redirect()->route('image.index');        
     }
 
     /**
@@ -79,6 +103,8 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $image = Image::find($id);
+        $image->delete();
+        return redirect()->route('image.index');
     }
 }
