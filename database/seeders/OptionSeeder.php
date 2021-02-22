@@ -27,7 +27,10 @@ class OptionSeeder extends Seeder
 
         DB::table('options')->insert([
             'key' => 'urlMap',
-            'value' => 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            //mapa normal
+            //'value' => 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            //mapa blanco y negro
+            'value' => 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.png',
         ]);
             // Latitudes y longitudes para establecer limite de movimiento
         DB::table('options')->insert([
