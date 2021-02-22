@@ -161,8 +161,8 @@
     @media (min-width: 768px) {
       .sidebar {
         border-radius: 4px; }
-        /*.sidebar.leaflet-touch {
-          border: 2px solid rgba(0, 0, 0, 0.2); }*/ }
+        .sidebar.leaflet-touch {
+          border: 2px solid rgba(0, 0, 0, 0.2); } }
   
   @media (min-width: 768px) {
     .sidebar-left ~ .sidebar-map .leaflet-left {
@@ -202,4 +202,4 @@
   
   @media (min-width: 768px) {
     .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
-      right: 50px; } } }
+      right: 50px; } } 
