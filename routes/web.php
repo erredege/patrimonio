@@ -37,3 +37,10 @@ Route::delete('/option/{id}/borrar', 'OptionController@destroy')->name('option.d
 
 //------------Image------------------------------------------------------
 Route::resource('/image','ImageController');
+Route::post('/image/store', 'ImageController@store')->name('image.store');
+Route::get('/image/crear', 'ImageController@create')->name('image.create');
+Route::get('/image/{id}', 'ImageController@show')->name('image.show');
+Route::get('/image/{id}/editar', 'ImageController@edit')->name('image.edit');
+Route::put('/image/{id}', 'ImageController@update')->name('image.update');
+Route::delete('/image/{id}/borrar', 'ImageController@destroy')->name('image.destroy');
+//-----------------------------------------------------------------------
