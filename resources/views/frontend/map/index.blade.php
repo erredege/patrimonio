@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
     <link rel="stylesheet" href="{{ url('js/pluginSidebar/leaflet-sidebar.css') }}"/>
     <script src="{{ url('js/pluginSidebar/leaflet-sidebar.js') }}"></script>
-       
+
     <style>
         #map {
             position: absolute;
@@ -24,7 +24,7 @@
         }
         .leaflet-popup-content > img{
            max-width:  68%;
-           max-height: 68%; 
+           max-height: 68%;
         }
         #bannerImg{
             width: 104.5em;
@@ -38,8 +38,8 @@
     </style>
 </head>
 
-<body>  
-    <div class="sidebar-map" id="map"> 
+<body>
+    <div class="sidebar-map" id="map">
         <div id="sidebar" class="sidebar collapsed">
             <!-- Nav tabs -->
             <div class="sidebar-tabs" style="background-image: url('');">
@@ -53,13 +53,13 @@
                     <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
                 </ul>-->
             </div>
-    
+
             <!-- Tab panes -->
             <div class="sidebar-content" style="background-image: url('');">
                 <div class="sidebar-pane" id="home">
                     <h1 class="sidebar-header">Listado<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
-                   
-                    @foreach ($markerList as $marker) 
+
+                    @foreach ($markerList as $marker)
                         <p name='{{$marker->name}}' onClick='click_{{$marker->name}}()'>{{$marker->title}}</p>
                     @endforeach
                 </div>
@@ -95,11 +95,11 @@
         minZoom: {{$valueMinZoom}} //zoom minimo aceptado
     }).setView([{{$valueLatitude}}, {{$valueLength}}], 15);// LOCALICACION DEL FOCUS PRIMARIO DEL MAPA
     ///////////////////////////////////////////////////////
-    
+
     L.tileLayer('{{$valueUrlMap}}', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);//MODEL DEL MAPA
-    
+
     ///////////Variables de los limites //////////////////
     var sureste = L.latLng({{$valueLatitudeSoutheast}}, {{$valueLengthSoutheast}});
     var noroeste = L.latLng({{$valueLatitudeNortheast}}, {{$valueLengthNortheast}});
@@ -130,13 +130,13 @@
     ////////////////////////////////////////////////////////
     /////////////// VARIABLES DE LOS PUNTOS ///////////////////
     @foreach($markerList as $marker)
-        @if ($marker->type == 0) 
+        @if ($marker->type == 0)
             var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}]).addTo(map);
         @elseif($marker->type == 1)
-            var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], { 
-                radius:{{$marker->radio}}, 
-                fillOpacity:{{$marker->opacity}}, 
-                fillColor:"{{$marker->border_color}}", 
+            var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], {
+                radius:{{$marker->radio}},
+                fillOpacity:{{$marker->opacity}},
+                fillColor:"{{$marker->border_color}}",
                 color:"{{$marker->background_color}}",
             }).addTo(map);
         @else
@@ -146,39 +146,38 @@
                         [{{$point->latitude}}, {{$point->length}}],
                     @endif
                 @endforeach
-            ], { 
-                radius:{{$marker->radio}}, 
-                fillOpacity:{{$marker->opacity}}, 
-                fillColor:"{{$marker->border_color}}", 
+            ], {
+                fillOpacity:{{$marker->opacity}},
+                fillColor:"{{$marker->border_color}}",
                 color:"{{$marker->background_color}}",
             }).addTo(map);
-               
+
         @endif
     @endforeach
     //////////////////////////////////////////////////////////////////////////////////
     ////////////POPUPS IMGS//////////////////////////////////
     @foreach($markerList as $marker)
-        {{$marker->name}}.bindPopup("{{$marker->title}}"); 
+        {{$marker->name}}.bindPopup("{{$marker->title}}");
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
     // FUNCIONES FOCUS HACIA POPUP AL HACER CLICK EN CUALQUIER PUTNO DEL MARKET/////
-    @foreach($markerList as $marker) 
-        function click_{{$marker->name}}() { 
+    @foreach($markerList as $marker)
+        function click_{{$marker->name}}() {
             map.setView([{{$marker->latitude}}, {{$marker->length}}]);
-            @if ($marker->type == 0) 
+            @if ($marker->type == 0)
                 map.setZoom(18);
             @endif
-            @if ($marker->type == 1) 
+            @if ($marker->type == 1)
                 @if ($marker->radio > 20)
                     map.setZoom(17);
                 @else
                     map.setZoom(18);
                 @endif
             @endif
-            @if ($marker->type == 2) 
+            @if ($marker->type == 2)
                 map.setZoom(17);
             @endif
-        
+
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////

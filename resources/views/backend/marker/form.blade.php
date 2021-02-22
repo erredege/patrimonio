@@ -18,7 +18,7 @@
         Informacion:<input type="text" name="information" value="{{$marker->information ?? '' }}"><br>
         Pnto de inicio:<input type="number" name="start_point" value="{{$marker->start_point ?? '' }}"><br>
         Radio:<input type="number" name="radio" value="{{$marker->radio ?? '' }}"><br>
-        Color del borde:<input type="text" name="scoborder_colorre" value="{{$marker->border_color ?? '' }}"><br>
+        Color del borde:<input type="text" name="border_color" value="{{$marker->border_color ?? '' }}"><br>
         Color del fondo:<input type="text" name="background_color" value="{{$marker->background_color ?? '' }}"><br>
         Opacidad:<input type="number" name="opacity" value="{{$marker->opacity ?? '' }}"><br>
         Tipo:

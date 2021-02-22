@@ -37,19 +37,19 @@ class ImageController extends Controller
     public function store(Request $request)
     {
         $image = new Image();
-        
+
         if ($request->file('file')) {
             $image->title = $request->title;
             $image->description = $request->description;
             $image->order = $request->order;
             $extension = $request->file->extension();
-            
-            $path = $request->file('file')->storeAs('images',$image.$extension,'public');
+
+            $path = $request->file('file')->storeAs('image',$image.$extension,'public');
           }
         $image->path ='public/assets/'.$path;
-        $image->save();  
+        $image->save();
 
-        return back()->with('success', 'Imagen subida correctamente');
+        redirect()->route('image.index');
     }
 
     /**
@@ -61,7 +61,7 @@ class ImageController extends Controller
     public function show($id)
     {
         $image = Image::find($id);
-        return view('backend.image.form', ['image'=>$image]);
+        return view('backend.image.show', ['image'=>$image]);
     }
 
     /**
@@ -92,7 +92,7 @@ class ImageController extends Controller
 
         $image->save();
 
-        return redirect()->route('image.index');        
+        return redirect()->route('image.index');
     }
 
     /**
