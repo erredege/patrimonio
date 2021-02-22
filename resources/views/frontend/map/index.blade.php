@@ -140,16 +140,19 @@
                 color:"{{$marker->background_color}}",
             }).addTo(map);
         @else
-            @foreach($pointsList as $point)
-                @if($marker->name == $point->name)
-                    var {{$marker->name}} = L.polygon([[{{$point->latitude}}, {{$point->length}}],], { 
-                        radius:{{$marker->radio}}, 
-                        fillOpacity:{{$marker->opacity}}, 
-                        fillColor:"{{$marker->border_color}}", 
-                        color:"{{$marker->background_color}}",
-                    }).addTo(map);
-                @endif
-            @endforeach
+            var {{$marker->name}} = L.polygon([
+                @foreach($pointsList as $point)
+                    @if($marker->name == $point->name)
+                        [{{$point->latitude}}, {{$point->length}}],
+                    @endif
+                @endforeach
+            ], { 
+                radius:{{$marker->radio}}, 
+                fillOpacity:{{$marker->opacity}}, 
+                fillColor:"{{$marker->border_color}}", 
+                color:"{{$marker->background_color}}",
+            }).addTo(map);
+               
         @endif
     @endforeach
     //////////////////////////////////////////////////////////////////////////////////
