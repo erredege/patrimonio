@@ -27,7 +27,6 @@
                 </form>
                    {{--<button type="button" onclick="destroy('{{route('option.destroy',$option->id)}}')">Eliminar</button>--}}
             </td>
-        <br>
     @endforeach
 </table>
 @endsection

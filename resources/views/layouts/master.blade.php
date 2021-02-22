@@ -18,8 +18,6 @@
             @yield('header')
         </div>
 
-        
-
         <div class='main-content'>
             @yield('content')
         </div>

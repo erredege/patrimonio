@@ -60,7 +60,6 @@
 
                 {{--<button type="button" onclick="destroy('{{route('marker.destroy',$marker->id)}}')">Eliminar</button>--}}
             </td>
-        <br>
     @endforeach
 </table>
 @endsection
