@@ -164,7 +164,7 @@
     @foreach($markerList as $marker)
         function click_{{$marker->name}}() {
             map.setView([{{$marker->latitude}}, {{$marker->length}}]);
-            @if ($marker->type == 0)
+           @if ($marker->type == 0)
                 map.setZoom(18);
             @endif
             @if ($marker->type == 1)
@@ -178,6 +178,7 @@
                 map.setZoom(17);
             @endif
 
+            {{$marker->name}}.openPopup();
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
