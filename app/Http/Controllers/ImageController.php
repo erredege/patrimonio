@@ -38,18 +38,22 @@ class ImageController extends Controller
     {
         $image = new Image();
 
-        if ($request->file('file')) {
+       if ($request->hasFile('imageFile')) {
             $image->title = $request->title;
             $image->description = $request->description;
             $image->order = $request->order;
-            $extension = $request->file->extension();
+            $extension = $request->file('imageFile')->extension();
+            $imgFileName = "assets/images/" . time() * rand(1, 10000) . "." . $extension;
 
-            $path = $request->file('file')->storeAs('image',$image.$extension,'public');
-          }
-        $image->path ='public/assets/'.$path;
+             $request->file('imageFile')->move(public_path('assets/images'),$image->title.'.'.$extension);
+        $image->route ='assets/images'.$imgFileName;
         $image->save();
+        }
 
-        redirect()->route('image.index');
+
+         return redirect()->route('image.index');
+
+
     }
 
     /**
