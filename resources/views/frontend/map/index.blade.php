@@ -118,7 +118,7 @@
     L.Control.Watermark = L.Control.extend({
         onAdd:function(map) {
             var img = L.DomUtil.create('img');
-            img.src = 'img/celiaEscudo.png';
+            img.src =" {{url('img/celiaEscudo.png')}}";
             img.style.width = '80px';
             return img;
         }
@@ -164,7 +164,7 @@
     @foreach($markerList as $marker)
         function click_{{$marker->name}}() {
             map.setView([{{$marker->latitude}}, {{$marker->length}}]);
-           @if ($marker->type == 0)
+            @if ($marker->type == 0)
                 map.setZoom(18);
             @endif
             @if ($marker->type == 1)

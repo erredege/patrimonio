@@ -20,7 +20,7 @@
         Color del borde:<input type="text" name="border_color" value="{{$marker->border_color ?? '' }}"><br>
         Color del fondo:<input type="text" name="background_color" value="{{$marker->background_color ?? '' }}"><br>
         Opacidad:<input type="number" name="opacity" value="{{$marker->opacity ?? '' }}"><br>
-        Informacion:<br><textarea name="information" rows="10" cols="40" value="{{$marker->information ?? '' }}"></textarea><br>
+        Informacion:<br><input type="text" name="information" value="{{$marker->information ?? '' }}" size=20 style="height:250px"><br>
         Tipo:
         <select name="type">
             @isset($marker)
