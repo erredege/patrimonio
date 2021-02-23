@@ -157,12 +157,12 @@
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65); }
     .sidebar.leaflet-touch {
       box-shadow: none;
-      border-right: 2px solid rgba(0, 0, 0, 0.2); }
+      /*border-right: 2px solid rgba(0, 0, 0, 0.2)*/; }
     @media (min-width: 768px) {
       .sidebar {
         border-radius: 4px; }
-        .sidebar.leaflet-touch {
-          border: 2px solid rgba(0, 0, 0, 0.2); } }
+        /*.sidebar.leaflet-touch {
+          border: 2px solid rgba(0, 0, 0, 0.2); }*/ }
   
   @media (min-width: 768px) {
     .sidebar-left ~ .sidebar-map .leaflet-left {
