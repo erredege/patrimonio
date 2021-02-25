@@ -14,13 +14,14 @@
             <td>Titulo</td>
             <td>Descripcion</td>
             <td>Orden prioridad</td>
+            <td>Imagen</td>
             <td colspan="2">Opciones</td>
         </tr>
         <tr>
             <td>{{$image->title}}</td>
             <td>{{$image->description}}</td>
             <td>{{$image->order}}</td>
-            
+            <td><a href="{{$image->route}}"></td>
             <td><a href="{{route('image.edit', $image->id)}}">Modificar</a></td>
             <td>
                 <form action = "{{route('image.destroy', $image->id)}}" method="POST">

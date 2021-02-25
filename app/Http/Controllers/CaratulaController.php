@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Option;
+use App\Models\Image;
 
 class CaratulaController extends Controller
 {
@@ -15,7 +16,7 @@ class CaratulaController extends Controller
     public function index()
     {
         $data['optionList'] = Option::all();
-        return view('frontend.caratula.index', $data);
+         return view('frontend.caratula.index', $data);
     }
 
     /**

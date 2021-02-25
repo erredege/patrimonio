@@ -45,7 +45,7 @@ class ImageController extends Controller
             $extension = $request->file('imageFile')->extension();
             $imgFileName = "assets/images/" . time() * rand(1, 10000) . "." . $extension;
 
-             $request->file('imageFile')->move(public_path('assets/images'),$image->title.'.'.$extension);
+            $request->file('imageFile')->move(public_path('assets/images'),str_replace(' ','',$image->title).'.'.$extension);
         $image->route ='assets/images'.$imgFileName;
         $image->save();
         }
