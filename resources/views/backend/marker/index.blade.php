@@ -7,7 +7,7 @@
 @section("content")
 <br>
 <a href="{{ route('marker.create') }}">Nuevo</a>
-<table border='1'>
+<table border='1' class="table">
     @foreach ($markersList as $marker)
 
     @if ($marker->type == 0)

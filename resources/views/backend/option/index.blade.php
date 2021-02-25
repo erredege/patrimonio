@@ -7,7 +7,7 @@
 @section("content")
 <br>
 <a href="{{ route('option.create') }}">Nuevo</a>
-<table border='1'>
+<table border='1' class="table">
     @foreach ($optionsList as $option)
     
         <tr>

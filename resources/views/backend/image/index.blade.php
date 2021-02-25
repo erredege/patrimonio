@@ -7,7 +7,7 @@
 @section("content")
 <br>
 <a href="{{ route('image.create') }}">Nuevo</a>
-<table border='1'>
+<table border='1' class="table">
     @foreach ($imagesList as $image)
    
         <tr>
