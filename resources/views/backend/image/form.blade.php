@@ -11,12 +11,25 @@
         <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
     @endisset
         @csrf
-        Titulo:<input type="text" name="title" value="{{$image->title ?? '' }}"><br>
-        Descripcion:<input type="text" name="description" value="{{$image->description ?? '' }}"><br>
-        Orden Prioridad:<input type="number" name="order" value="{{$image->order ?? '' }}"><br>
-        Imagen:<input type="file" name="imageFile" value=""><br>
-
-        <input type="submit">
+        <div class="form-group">
+            <label class="control-label">Titulo</label>
+            <input type="text" class="form-control" name="title" value="{{$image->title ?? '' }}">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Descripcion</label>
+            <input type="text" class="form-control" name="description" value="{{$image->description ?? '' }}">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Orden Prioridad</label>
+            <input type="number" class="form-control" name="order" value="{{$image->order ?? '' }}">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Orden Prioridad</label>
+            <input type="file" class="form-control" name="imageFile" value="">
+        </div><br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
         </form>
 
 @endsection
