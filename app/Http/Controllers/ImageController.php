@@ -43,10 +43,11 @@ class ImageController extends Controller
             $image->description = $request->description;
             $image->order = $request->order;
             $extension = $request->file('imageFile')->extension();
-            $imgFileName = "assets/images/" . time() * rand(1, 10000) . "." . $extension;
+            $imgFileName = time() * rand(1, 10000) . "." . $extension;
+            $imgPath = "assets/images/" . $imgFileName;
 
-            $request->file('imageFile')->move(public_path('assets/images'),str_replace(' ','',$image->title).'.'.$extension);
-        $image->route ='assets/images'.$imgFileName;
+            $request->file('imageFile')->move(public_path('assets/images'),$imgFileName);
+        $image->route =$imgPath;
         $image->save();
         }
 

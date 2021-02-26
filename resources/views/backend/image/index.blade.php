@@ -9,7 +9,7 @@
 <a href="{{ route('image.create') }}">Nuevo</a>
 <table border='1' class="table">
     @foreach ($imagesList as $image)
-   
+
         <tr>
             <td>Titulo</td>
             <td>Descripcion</td>
@@ -21,7 +21,7 @@
             <td>{{$image->title}}</td>
             <td>{{$image->description}}</td>
             <td>{{$image->order}}</td>
-            <td><a src="{{$image->route}}"></td>
+            <td><img src="{{$image->route}}"></td>
             <td><a href="{{route('image.edit', $image->id)}}">Modificar</a></td>
             <td>
                 <form action = "{{route('image.destroy', $image->id)}}" method="POST">
