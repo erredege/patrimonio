@@ -83,5 +83,10 @@ class OptionSeeder extends Seeder
                         puntos de interes, de los cuales se hara
                         una explicación',
         ]);
+
+        DB::table('options')->insert([
+            'key' => 'backgroundImage',
+            'value' => 'ruta',
+        ]);
     }
 }

@@ -35,7 +35,27 @@
         .leaflet-control-attribution{
             display: none; /* Nos permite quitar la marca de agua de Leaflet*/
         }
+        #info{
+            width: 100%;
+            height: 35%;
+        }
     </style>
+    <script>
+        function myFunction() {
+            var info = document.getElementById("info");
+            var map = document.getElementById("map");
+            if (info.style.display === "block") {
+                info.style.display = "none";
+            } else {
+                info.style.display = "block";
+            }
+            if(info.style.display === "block"){
+                map.style.height = "65%";
+            }else{
+                map.style.height = "100%";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -157,8 +177,10 @@
     //////////////////////////////////////////////////////////////////////////////////
     ////////////POPUPS IMGS//////////////////////////////////
     @foreach($markerList as $marker)
-        {{$marker->name}}.bindPopup("{{$marker->title}}");
+        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button onclick='myFunction()'>Ver mas</button>");
+        
     @endforeach
+    
     ////////////////////////////////////////////////////////////////////////////////
     // FUNCIONES FOCUS HACIA POPUP AL HACER CLICK EN CUALQUIER PUTNO DEL MARKET/////
     @foreach($markerList as $marker)
@@ -184,8 +206,12 @@
     ////////////////////////////////////////////////////////////////////////////////
     </script>
 
-    <div id="invisible">
-
+    <div id="info" style="display: none">
+        @foreach ($markerList as $marker)
+            @if ($marker->name)
+                {{$marker->information}}
+            @endif
+        @endforeach
     </div>
 
 </body>

@@ -19,6 +19,14 @@
             .table{
                 border-width: 1px;
                 border: solid;
+                width: 95% !important;
+                margin: auto;
+                text-align: center;
+                table-layout: fixed;
+                overflow: hidden;
+            }
+            .marker{
+                overflow-x:scroll;
             }
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -38,6 +46,7 @@
                     <a class="nav-item nav-link" href='{{route("marker.index")}}'>MARCADORES<a>
                     <a class="nav-item nav-link" href='{{route("option.index")}}'>OPCIONES<a>
                     <a class="nav-item nav-link" href='{{route("image.index")}}'>IMAGENES<a>
+                    <a class="nav-item nav-link" href='{{route("map.index")}}'>MAPA<a>
                   </div>
                 </div>
             </nav>
