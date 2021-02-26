@@ -41,7 +41,7 @@
         }
     </style>
     <script>
-        function myFunction() {
+        function ocultar() {
             var info = document.getElementById("info");
             var map = document.getElementById("map");
             if (info.style.display === "block") {
@@ -177,7 +177,7 @@
     //////////////////////////////////////////////////////////////////////////////////
     ////////////POPUPS IMGS//////////////////////////////////
     @foreach($markerList as $marker)
-        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button onclick='myFunction()'>Ver mas</button>");
+        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button onclick='ocultar()'>+</button>");
         
     @endforeach
     
