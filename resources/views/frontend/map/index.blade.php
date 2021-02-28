@@ -16,7 +16,7 @@
         #map {
             position: absolute;
             width: 99%;
-            height: 99%;
+            height: 98%;
         }
         .leaflet-popup{
             max-width: 1000px;
@@ -36,8 +36,24 @@
             display: none; /* Nos permite quitar la marca de agua de Leaflet*/
         }
         #info{
-            width: 100%;
-            height: 35%;
+            width: 68%;
+            height: 99%;
+            position:static;
+            float: right;
+        }
+
+        #galeria{
+            width: 28%;
+            height: 99%;
+            position:absolute;
+            float: left;
+        }
+
+        #footer-map{
+            position: absolute;
+            width: 99%;
+            height: 34%;
+            bottom: 0px;
         }
     </style>
     <script>
@@ -52,7 +68,7 @@
             if(info.style.display === "block"){
                 map.style.height = "65%";
             }else{
-                map.style.height = "100%";
+                map.style.height = "99%";
             }
         }
     </script>
@@ -205,15 +221,27 @@
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
     </script>
-
-    <div id="info" style="display: none">
-        @foreach ($markerList as $marker)
-            @if ($marker->name)
+    <div id ="footer-map">
+        <div id=galeria >
+            <!--aqui va la galertia-->
+            <div class="carousel-item">
+                @foreach ($imageList as $image)
+                    @if ($image->$title == $marker->title)
+                        <img src="{{$imgPath}}" alt="{{$image->$title}}">
+                        <!--div class="carousel-caption d-none d-md-block">
+                        <h5>...</h5>
+                        <p>...</p>
+                        </div-->
+                    @endif 
+                @endforeach
+            </div>
+        </div>
+        <div id="info" >
+            @foreach ($markerList as $marker)
                 {{$marker->information}}
-            @endif
-        @endforeach
+            @endforeach
+        </div>
     </div>
-
 </body>
 
 </html>
