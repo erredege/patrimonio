@@ -42,6 +42,7 @@
             height: 99%;
             position:static;
             float: right;
+            overflow-y:scroll;
         }
 
         #galeria{
@@ -62,7 +63,7 @@
         function ocultar() {
             var info = document.getElementById("info");
             var map = document.getElementById("map");
-            var boton = document.getElementById("boton");
+            var boton = document.getElementById("botonVer");
             if (info.style.display === "block") {
                 info.style.display = "none";
             } else {
@@ -198,7 +199,7 @@
     //////////////////////////////////////////////////////////////////////////////////
     ////////////POPUPS IMGS//////////////////////////////////
     @foreach($markerList as $marker)
-        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id=boton onclick='ocultar()'>+</button>");
+        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id=botonVer onclick='ocultar()'>+</button>");
         
     @endforeach
     
