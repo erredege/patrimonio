@@ -11,6 +11,8 @@
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
     <link rel="stylesheet" href="{{ url('js/pluginSidebar/leaflet-sidebar.css') }}"/>
     <script src="{{ url('js/pluginSidebar/leaflet-sidebar.js') }}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <style>
         #map {
@@ -60,6 +62,7 @@
         function ocultar() {
             var info = document.getElementById("info");
             var map = document.getElementById("map");
+            var boton = document.getElementById("boton");
             if (info.style.display === "block") {
                 info.style.display = "none";
             } else {
@@ -67,8 +70,10 @@
             }
             if(info.style.display === "block"){
                 map.style.height = "65%";
+                boton.innerText = "-";
             }else{
                 map.style.height = "99%";
+                boton.innerText = "+";
             }
         }
     </script>
@@ -193,7 +198,7 @@
     //////////////////////////////////////////////////////////////////////////////////
     ////////////POPUPS IMGS//////////////////////////////////
     @foreach($markerList as $marker)
-        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button onclick='ocultar()'>+</button>");
+        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id=boton onclick='ocultar()'>+</button>");
         
     @endforeach
     
@@ -224,17 +229,25 @@
     <div id ="footer-map">
         <div id=galeria >
             <!--aqui va la galertia-->
-            <div class="carousel-item">
-                @foreach ($imageList as $image)
-                    @if ($image->$title == $marker->title)
-                        <img src="{{$imgPath}}" alt="{{$image->$title}}">
-                        <!--div class="carousel-caption d-none d-md-block">
-                        <h5>...</h5>
-                        <p>...</p>
-                        </div-->
-                    @endif 
-                @endforeach
-            </div>
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @foreach ($imageList as $image)
+                        @if ($image->$title == $marker->title)
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="{{$imgPath }}" alt="{{$image->title}}">
+                            </div>
+                        @endif 
+                    @endforeach
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>  
         </div>
         <div id="info" >
             @foreach ($markerList as $marker)
