@@ -18,7 +18,7 @@
         #map {
             position: absolute;
             width: 99%;
-            height: 98%;
+            height: 100%;
         }
         .leaflet-popup{
             max-width: 1000px;
@@ -72,11 +72,30 @@
             if(info.style.display === "block"){
                 map.style.height = "65%";
                 boton.innerText = "-";
+                var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
+                //var informationList = [];
+                @foreach ($markerList as $marker)
+                    if (elemento == $marker->name) {
+                        var informacion = {{$marker->information}};
+                        document.getElementById("info").innerHTML = informacion;
+                    }
+                @endforeach
             }else{
                 map.style.height = "99%";
                 boton.innerText = "+";
             }
         }
+
+        /*function mostrar(){
+            var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
+            //var informationList = [];
+            @foreach ($markerList as $marker)
+                if (elemento == $marker->name) {
+                    var informacion = {{$marker->information}};
+                    document.getElementById("info").innerHTML = informacion;
+                }
+            @endforeach
+        }*/
     </script>
 </head>
 
@@ -102,7 +121,7 @@
                     <h1 class="sidebar-header">Listado<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
 
                     @foreach ($markerList as $marker)
-                        <p name='{{$marker->name}}' onClick='click_{{$marker->name}}()'>{{$marker->title}}</p>
+                        <p name='{{$marker->name}}' onClick='click_{{$marker->name}}()' id='{{$marker->id}}'>{{$marker->title}}</p>
                     @endforeach
                 </div>
             </div>
@@ -251,9 +270,7 @@
               </div>  
         </div>
         <div id="info" >
-            @foreach ($markerList as $marker)
-                {{$marker->information}}
-            @endforeach
+            
         </div>
     </div>
 </body>
