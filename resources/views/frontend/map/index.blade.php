@@ -75,8 +75,8 @@
                 var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
                 //var informationList = [];
                 @foreach ($markerList as $marker)
-                    if (elemento == $marker->name) {
-                        var informacion = {{$marker->information}};
+                    if (elemento == {{$marker->name}}) {
+                        var informacion = "{{$marker->information}}";
                         document.getElementById("info").innerHTML = informacion;
                     }
                 @endforeach
@@ -218,7 +218,16 @@
     //////////////////////////////////////////////////////////////////////////////////
     ////////////POPUPS IMGS//////////////////////////////////
     @foreach($markerList as $marker)
-        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id=botonVer onclick='ocultar()'>+</button>");
+       /* @foreach($imageList as $image)
+        var_dump($image)
+            <img src='"
+                                                                                                                        @if(($marker->name)==($image->title))
+                                                                                                                            $image->route
+                                                                                                                        @endif
+                                                                                                                         "'>
+            @endforeach
+        */
+            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='botonVer' onclick='ocultar()'>+</button>");
         
     @endforeach
     

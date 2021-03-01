@@ -16,7 +16,7 @@ class CaratulaController extends Controller
     public function index()
     {
         $data['optionList'] = Option::all();
-         return view('frontend.caratula.index', $data);
+        return view('frontend.caratula.index', $data);
     }
 
     /**

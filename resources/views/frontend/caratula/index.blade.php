@@ -8,12 +8,17 @@
         <title>Document</title>
     </head>
     <body>
-        <div id="contenedor" style="background-image: "><!--Falta poner la ruta para la imagen de fondo, nos ahorramos ponerla en el css-->
+        <div id="contenedor"  style="background-image:".
+                                @foreach($optionList as $option)
+                                    @if(($option->Key)=="backgroundImage")
+                                        $option->value                                                                                  
+                                    @endif. 
+        >
             <div>
                 <p><a href="{{route('map.index')}}">Mapa</p>
             </div>
             <div>
-                <p><a href="{{route('')}}">Juego</p>
+                <p><a href="">Juego</p>
             </div>
         </div>
         <div id="footer">

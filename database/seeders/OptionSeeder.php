@@ -86,7 +86,7 @@ class OptionSeeder extends Seeder
 
         DB::table('options')->insert([
             'key' => 'backgroundImage',
-            'value' => 'ruta',
+            'value' => 'assets/images/5340906345208.jpg',
         ]);
     }
 }
