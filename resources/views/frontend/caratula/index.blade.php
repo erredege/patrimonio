@@ -13,6 +13,7 @@
                                     @if(($option->Key)=="backgroundImage")
                                         $option->value                                                                                  
                                     @endif. 
+                                @endforeach
         >
             <div>
                 <p><a href="{{route('map.index')}}">Mapa</p>
