@@ -40,9 +40,9 @@
         </tr>
         <tr>
             <td>{{$marker->title}}</td>
-            <td>{{$marker->name}}</td>
-            <td>{{$marker->latitude}}</td>
-            <td>{{$marker->length}}</td>
+            <td class="marker">{{$marker->name}}</td>
+            <td class="marker">{{$marker->latitude}}</td>
+            <td class="marker">{{$marker->length}}</td>
             <td class="marker">{{$marker->information}}</td>
             <td>{{$valor}}</td>
             <td>{{$marker->start_point}}</td>
