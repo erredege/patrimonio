@@ -21,7 +21,7 @@
             <td>{{$image->title}}</td>
             <td>{{$image->description}}</td>
             <td>{{$image->order}}</td>
-            <td><img src="{{$image->route}}" style="width: 45%" style="height: 30%" ></td>
+            <td><img src="{{url($image->route)}}" style="width: 45%" style="height: 30%" ></td>
             <td><a href="{{route('image.edit', $image->id)}}">Modificar</a></td>
             <td>
                 <form action = "{{route('image.destroy', $image->id)}}" method="POST">
