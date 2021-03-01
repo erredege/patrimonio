@@ -76,17 +76,6 @@
             if(info.style.display === "block"){
                 map.style.height = "65%";
                 boton.innerText = "-";
-<<<<<<< HEAD
-                
-=======
-                var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
-                @foreach ($markerList as $marker)
-                    if (elemento == {{$marker->name}}) {
-                        var informacion = "{{$marker->information}}";
-                        document.getElementById("info").innerHTML = informacion;
-                    }
-                @endforeach
->>>>>>> 02657fcc1ab520a0eeb8a750f70d4c1264d5450e
             }else{
                 map.style.height = "99%";
                 boton.innerText = "+";
