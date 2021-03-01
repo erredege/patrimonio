@@ -76,7 +76,17 @@
             if(info.style.display === "block"){
                 map.style.height = "65%";
                 boton.innerText = "-";
+<<<<<<< HEAD
                 
+=======
+                var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
+                @foreach ($markerList as $marker)
+                    if (elemento == {{$marker->name}}) {
+                        var informacion = "{{$marker->information}}";
+                        document.getElementById("info").innerHTML = informacion;
+                    }
+                @endforeach
+>>>>>>> 02657fcc1ab520a0eeb8a750f70d4c1264d5450e
             }else{
                 map.style.height = "99%";
                 boton.innerText = "+";
@@ -213,7 +223,9 @@
     @endforeach
     //////////////////////////////////////////////////////////////////////////////////
     ////////////POPUPS IMGS//////////////////////////////////
+    var encontrado= false;
     @foreach($markerList as $marker)
+<<<<<<< HEAD
        /* @foreach($imageList as $image)
         var_dump($image)
             <img src='"
@@ -225,6 +237,18 @@
         */
         {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'>+</button>");
         
+=======
+        @foreach($imageList as $image)
+            @if(($marker->name)==($image->title))
+                encontrado=true;
+                {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='botonVer' onclick='ocultar()'>+</button><img src={{$image->route}}>");
+            @endif 
+            
+        @endforeach
+        if(!encontrado){
+            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='botonVer' onclick='ocultar()'>+</button>");
+        }
+>>>>>>> 02657fcc1ab520a0eeb8a750f70d4c1264d5450e
     @endforeach
     
     ////////////////////////////////////////////////////////////////////////////////
