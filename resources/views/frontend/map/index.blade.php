@@ -235,7 +235,7 @@
                     @foreach ($imageList as $image)
                         @if ($image->title == $marker->title)
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="{{$imgPath }}" alt="{{$image->title}}">
+                                <img class="d-block w-100" src="{{$image->route }}" alt="{{$image->title}}">
                             </div>
                         @endif 
                     @endforeach

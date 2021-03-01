@@ -8,7 +8,7 @@
         <title>Document</title>
     </head>
     <body>
-        <div id="contenedor">
+        <div id="contenedor" style="background-image: "><!--Falta poner la ruta para la imagen de fondo, nos ahorramos ponerla en el css-->
             <div>
                 <p><a href="{{route('map.index')}}">Mapa</p>
             </div>
