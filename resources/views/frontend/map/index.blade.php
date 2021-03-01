@@ -72,30 +72,19 @@
             if(info.style.display === "block"){
                 map.style.height = "65%";
                 boton.innerText = "-";
-                var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
-                //var informationList = [];
+               /* var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
                 @foreach ($markerList as $marker)
-                    if (elemento == $marker->name) {
+                    if (elemento == $marker->name) 
                         var informacion = {{$marker->information}};
-                        document.getElementById("info").innerHTML = informacion;
-                    }
-                @endforeach
+                        var divInfo = document.getElementById("info");
+                        divInfo.innerHTML = informacion;
+                    
+                @endforeach*/
             }else{
                 map.style.height = "99%";
                 boton.innerText = "+";
             }
         }
-
-        /*function mostrar(){
-            var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
-            //var informationList = [];
-            @foreach ($markerList as $marker)
-                if (elemento == $marker->name) {
-                    var informacion = {{$marker->information}};
-                    document.getElementById("info").innerHTML = informacion;
-                }
-            @endforeach
-        }*/
     </script>
 </head>
 
