@@ -74,20 +74,11 @@
                 boton.innerText = "-";
                /* var elemento = document.getElementsByTagName("<?php '{{$marker->name}}' ?>");
                 @foreach ($markerList as $marker)
-<<<<<<< HEAD
                     if (elemento == {{$marker->name}}) {
                         var informacion = "{{$marker->information}}";
                         document.getElementById("info").innerHTML = informacion;
                     }
                 @endforeach
-=======
-                    if (elemento == $marker->name) 
-                        var informacion = {{$marker->information}};
-                        var divInfo = document.getElementById("info");
-                        divInfo.innerHTML = informacion;
-                    
-                @endforeach*/
->>>>>>> 1c0816a344e556c2e0d1bb90d06ef36c44ccb326
             }else{
                 map.style.height = "99%";
                 boton.innerText = "+";
