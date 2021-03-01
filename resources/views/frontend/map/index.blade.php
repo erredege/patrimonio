@@ -214,30 +214,16 @@
     ////////////POPUPS IMGS//////////////////////////////////
     var encontrado= false;
     @foreach($markerList as $marker)
-<<<<<<< HEAD
-       /* @foreach($imageList as $image)
-        var_dump($image)
-            <img src='"
-                                                                                                                        @if(($marker->name)==($image->title))
-                                                                                                                            $image->route
-                                                                                                                        @endif
-                                                                                                                         "'>
-            @endforeach
-        */
-        {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'>+</button>");
-        
-=======
         @foreach($imageList as $image)
             @if(($marker->name)==($image->title))
                 encontrado=true;
-                {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='botonVer' onclick='ocultar()'>+</button><img src={{$image->route}}>");
+                {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'>+</button><img src={{$image->route}}>");
             @endif 
             
         @endforeach
         if(!encontrado){
-            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='botonVer' onclick='ocultar()'>+</button>");
+            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'>+</button>");
         }
->>>>>>> 02657fcc1ab520a0eeb8a750f70d4c1264d5450e
     @endforeach
     
     ////////////////////////////////////////////////////////////////////////////////
