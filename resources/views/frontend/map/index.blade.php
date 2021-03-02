@@ -65,9 +65,7 @@
             var info = document.getElementById("info");
             var map = document.getElementById("map");
             var boton = document.getElementsByClassName("botonVer");
-            for(var i = 0; i < boton.length; i++){
-                boton[i].addEventListener('click', capturar);
-            }
+            
             if (info.style.display === "block") {
                 info.style.display = "none";
             } else {
@@ -80,6 +78,9 @@
                 map.style.height = "99%";
                 boton.innerText = "+";
             }
+            for(var i = 0; i < boton.length; i++){
+                boton[i].addEventListener('click', capturar);
+            }
         }
 
         function capturar(){
@@ -87,7 +88,8 @@
             @foreach ($markerList as $marker)
                 if (id == {{$marker->id}}) {
                     var informacion = "{{$marker->information}}";
-                    document.getElementById("texto").innerHTML = informacion;
+                    var titulo = "{{$marker->title}}";
+                    document.getElementById("info").innerHTML = titulo + "<br>" + informacion;
                 }
             @endforeach
         }
@@ -222,7 +224,7 @@
             
         @endforeach
         if(!encontrado){
-            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'>+</button>");
+            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'></button>");
         }
     @endforeach
     
@@ -274,7 +276,6 @@
               </div>  
         </div>
         <div id="info" >
-            <p id="texto">esto no vale</p>
         </div>
     </div>
 </body>
