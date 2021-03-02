@@ -59,6 +59,12 @@
             height: 34%;
             bottom: 0px;
         }
+
+        .botonVer{
+            float: right;
+            margin-top: -22px;
+            margin-right: -15px;
+        }
     </style>
     <script>
         function ocultar() {
@@ -73,10 +79,8 @@
             }
             if(info.style.display === "block"){
                 map.style.height = "65%";
-                boton.innerText = "-";
             }else{
                 map.style.height = "99%";
-                boton.innerText = "+";
             }
             for(var i = 0; i < boton.length; i++){
                 boton[i].addEventListener('click', capturar);
@@ -219,12 +223,12 @@
         @foreach($imageList as $image)
             @if(($marker->name)==($image->title))
                 encontrado=true;
-                {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'>+</button><img src={{$image->route}}>");
+                {{$marker->name}}.bindPopup("{{$marker->title}} <br> <img src={{$image->route}}> <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
             @endif 
             
         @endforeach
         if(!encontrado){
-            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'></button>");
+            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
         }
     @endforeach
     
