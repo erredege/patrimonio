@@ -9,7 +9,8 @@
     </head>
     <style>
         body{
-            background-image:"url{{('img/caratula.jpg')}}"
+            background-image:url( {{url('img/caratula.jpg')}} );
+
         }
     </style>
     <body class="animate__bounceInLeft">

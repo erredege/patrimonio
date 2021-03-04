@@ -1,12 +1,12 @@
 
   body {
-    /*background-image: url('img/caratula.jpg') center / cover no-repeat;*/
+      /*background-image: url('../img/caratula.jpg') center / cover no-repeat;*/
       height: 100vh;
       margin: 0;
       display: flex;
       justify-content: center;
     }
-    
+
     ul{
       display: flex;
       width: 100%;
@@ -16,27 +16,34 @@
       justify-content: space-between;
       text-align: center;
       list-style:none;
+
     }
     li {
+      font-family: cursive;
+      font-size: larger;
+
       padding: 1rem 2rem 1.15rem;
       text-transform: uppercase;
       cursor: pointer;
-      color: #ebebeb;
       min-width: 80px;
       margin: auto;
+      text-decoration:none;
+
     }
-    
+
     li:hover {
-      background-image: url('{{img/button.webp}}');
+      background-image: url('../img/button.webp');
       background-size: 100% 100%;
       animation: spring 300ms ease-out;
       text-shadow: 0 -1px 0 #ef816c;
       font-weight: bold;
+      text-decoration:none;
     }
     li:active {
+      text-decoration:none;
       transform: translateY(4px);
     }
-    
+
     @keyframes spring {
       15% {
         -webkit-transform-origin: center center;
@@ -55,4 +62,3 @@
         -webkit-transform: scale(1, 1);
       }
     }
-   
