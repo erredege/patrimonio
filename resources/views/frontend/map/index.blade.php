@@ -43,7 +43,6 @@
             position:static;
             float: right;
             overflow-y:scroll;
-            border:solid;
         }
 
         #galeria{
@@ -68,16 +67,18 @@
     </style>
     <script>
         function ocultar() {
-            var info = document.getElementById("info");
             var map = document.getElementById("map");
+            var fm = document.getElementById("footer-map");
+            var info = document.getElementById("info");
             var boton = document.getElementsByClassName("botonVer");
             
-            if (info.style.display === "block") {
-                info.style.display = "none";
+            if (fm.style.display === "block") {
+                fm.style.display = "none";
             } else {
-                info.style.display = "block";
+                fm.style.display = "block";
+                info.style.border = "solid";
             }
-            if(info.style.display === "block"){
+            if(fm.style.display === "block"){
                 map.style.height = "65%";
             }else{
                 map.style.height = "99%";
@@ -101,7 +102,7 @@
 </head>
 
 <body>
-    <div class="sidebar-map" id="map">
+    <div class="sidebar-map" id="map" style="z-index: 10">
         <div id="sidebar" class="sidebar collapsed">
             <!-- Nav tabs -->
             <div class="sidebar-tabs" style="background-image: url('');">
@@ -231,7 +232,7 @@
             {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
         }
     @endforeach
-    
+
     ////////////////////////////////////////////////////////////////////////////////
     // FUNCIONES FOCUS HACIA POPUP AL HACER CLICK EN CUALQUIER PUTNO DEL MARKET/////
     @foreach($markerList as $marker)
@@ -279,8 +280,7 @@
                 </button>
               </div>  
         </div>
-        <div id="info" >
-        </div>
+        <div id="info" ></div>
     </div>
 </body>
 
