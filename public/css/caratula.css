@@ -56,9 +56,7 @@ body {
   background-color: #ccf;
 }
 .text {
-  /*width: 200px;
-  height: 150px;*/
-  background-color: red;
+  
   transform: translateY(30px);
   opacity: 0;
   transition: all 0.3s ease;
