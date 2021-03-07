@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
-     public function marker(){
-         return $this->belongsTo(Marcker::Class);
-     }
+    public function marker(){
+        return $this->belongsTo(Marker::Class);
+    }
 }

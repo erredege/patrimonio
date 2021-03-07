@@ -88,6 +88,12 @@
             }
         }
 
+        function click(){
+            @foreach($markerList as $marker)
+                {{$marker->name}}.addEventListener('click', capturar);
+            @endforeach
+        }
+
         function capturar(){
             var id = this.id;
             @foreach ($markerList as $marker)
@@ -194,14 +200,15 @@
     /////////////// VARIABLES DE LOS PUNTOS ///////////////////
     @foreach($markerList as $marker)
         @if ($marker->type == 0)
-            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}]).addTo(map);
+            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}], {id:{{$marker->id}}}).addTo(map).on('click', click);
         @elseif($marker->type == 1)
             var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], {
+                id:{{$marker->id}},
                 radius:{{$marker->radio}},
                 fillOpacity:{{$marker->opacity}},
                 fillColor:"{{$marker->background_color}}",
                 color:"{{$marker->border_color}}",
-            }).addTo(map);
+            }).addTo(map).on('click', click);
         @else
             var {{$marker->name}} = L.polygon([
                 @foreach($pointsList as $point)
@@ -210,10 +217,11 @@
                     @endif
                 @endforeach
             ], {
+                id:{{$marker->id}},
                 fillOpacity:{{$marker->opacity}},
                 fillColor:"{{$marker->background_color}}",
                 color:"{{$marker->border_color}}",
-            }).addTo(map);
+            }).addTo(map).on('click', click);
 
         @endif
     @endforeach
@@ -260,25 +268,23 @@
     <div id ="footer-map">
         <div id=galeria >
             <!--aqui va la galertia-->
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach ($imageList as $image)
-                            @if ($image->title == $marker->title)
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="{{$image->route }}" alt="{{$image->title}}">
-                                </div>
-                            @endif 
-                        @endforeach
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {{--@foreach ($markerList->image as $image)
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{$image->route }}" alt="{{$image->title}}">
+                        </div>      
+                    @endforeach--}}
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
         <div id="info" ></div>
     </div>
