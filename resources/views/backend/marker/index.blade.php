@@ -11,16 +11,16 @@
     @foreach ($markersList as $marker)
 
     @if ($marker->type == 0)
-        @php 
-            $valor = "marcador" 
+        @php
+            $valor = "marcador"
         @endphp
-    @elseif($marker->type == 1) 
-        @php 
-            $valor = "circulo" 
+    @elseif($marker->type == 1)
+        @php
+            $valor = "circulo"
         @endphp
     @else
         @php
-            $valor = "poligono"   
+            $valor = "poligono"
         @endphp
     @endif
 
@@ -43,7 +43,7 @@
             <td class="marker">{{$marker->name}}</td>
             <td class="marker">{{$marker->latitude}}</td>
             <td class="marker">{{$marker->length}}</td>
-            <td class="marker">{{$marker->information}}</td>
+            <td class="col-xs-3">{{$marker->information}}</td>
             <td>{{$valor}}</td>
             <td>{{$marker->start_point}}</td>
             <td>{{$marker->radio}}</td>
