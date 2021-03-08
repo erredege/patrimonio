@@ -245,7 +245,7 @@
             @if ($marker->type == 2)
                 map.setZoom(17);
             @endif
-            {{$marker->name}}.openPopup();
+            //{{$marker->name}}.openPopup();
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
