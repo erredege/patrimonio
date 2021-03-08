@@ -58,8 +58,9 @@
         }
         .botonVer{
             float: right;
+            margin-right: 83px;
             margin-top: -22px;
-            margin-right: -15px;
+            
         }
     </style>
     <script>
@@ -217,12 +218,12 @@
         @foreach($imageList as $image)
             @if(($marker->name)==($image->title))
                 encontrado=true;
-                {{$marker->name}}.bindPopup("{{$marker->title}} <br> <img src={{$image->route}}> <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
+                {{$marker->name}}.bindPopup("{{$marker->title}} <br><br> <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
             @endif
 
         @endforeach
         if(!encontrado){
-            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
+            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' <br>class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
