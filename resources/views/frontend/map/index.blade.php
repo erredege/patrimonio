@@ -21,12 +21,14 @@
             height: 100%;
         }
         .leaflet-popup{
-            max-width: 1000px;
-            max-height: 1000px;
+            max-width: 15000px;
+            max-height: 1500px;
         }
         .leaflet-popup-content > img{
-           max-width:  68%;
-           max-height: 68%;
+            width: 200px;
+            height: 200px;
+           max-width:  auto;
+           max-height: auto%;
         }
         #bannerImg{
             width: 104.5em;
@@ -38,6 +40,7 @@
             display: none; /* Nos permite quitar la marca de agua de Leaflet*/
         }
         #info{
+            z-index: initial;
             width: 68%;
             height: 99%;
             position:static;
@@ -71,7 +74,7 @@
             var fm = document.getElementById("footer-map");
             var info = document.getElementById("info");
             var boton = document.getElementsByClassName("botonVer");
-            
+
             if (fm.style.display === "block") {
                 fm.style.display = "none";
             } else {
@@ -233,8 +236,8 @@
             @if(($marker->name)==($image->title))
                 encontrado=true;
                 {{$marker->name}}.bindPopup("{{$marker->title}} <br> <img src={{$image->route}}> <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
-            @endif 
-            
+            @endif
+
         @endforeach
         if(!encontrado){
             {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
@@ -273,7 +276,7 @@
                     {{--@foreach ($markerList->image as $image)
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="{{$image->route }}" alt="{{$image->title}}">
-                        </div>      
+                        </div>
                     @endforeach--}}
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">

@@ -9,6 +9,7 @@
     </head>
     <style>
         body{
+
             background-image: url({{url('img/caratula.jpg')}});
             background-size: cover;
             background-repeat: no-repeat;
@@ -31,11 +32,11 @@
     </body>
     <script>
     function redirect(id){
-            
+
         if(id=="juego"){
-            window.location.href = ''; 
+            window.location.href = '';
         }else if(id=="mapa"){
-            window.location.href ='{{route('map.index')}}';  
+            window.location.href ='{{route('map.index')}}';
         }else{
             window.location.href = '';
         }
