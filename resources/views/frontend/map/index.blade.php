@@ -74,7 +74,7 @@
             
             if (fm.style.display === "block") {
                 fm.style.display = "none";
-            } else {
+            }else {
                 fm.style.display = "block";
                 info.style.border = "solid";
             }
@@ -88,11 +88,11 @@
             }
         }
 
-        function click(){
+        /*function click(){
             @foreach($markerList as $marker)
                 {{$marker->name}}.addEventListener('click', capturar);
             @endforeach
-        }
+        }*/ 
 
         function capturar(){
             var id = this.id;
