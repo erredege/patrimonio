@@ -24,6 +24,8 @@ Route::get('/marker/{id}', 'MarkerController@show')->name('marker.show');
 Route::get('/marker/{id}/editar', 'MarkerController@edit')->name('marker.edit');
 Route::put('/marker/{id}', 'MarkerController@update')->name('marker.update');
 Route::delete('/marker/{id}/borrar', 'MarkerController@destroy')->name('marker.destroy');
+Route::get('/marker/getInfo/{id}', 'MarkerController@getInfo')->name('marker.getInfo');
+
 //-----------------------------------------------------------------------
 //-------------Options----------------------------------------------------
 Route::get('/option', 'OptionController@index')->name('option.index');

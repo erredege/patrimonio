@@ -63,4 +63,9 @@ class MarkerController extends Controller
         $marker->delete();
         return redirect()->route('marker.index');
     }
+
+    public function getInfo($id) {
+        $data = Marker::find($id);
+        return response()->json($data);
+    }
 }
