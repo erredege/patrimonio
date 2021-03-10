@@ -8,7 +8,21 @@
 }
 
 body{
-    background: #007bff;
+    background-image: url('../img/caratula.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imagenCelia{
+    background: url('../img/celiaEscudo.png') ;
+    background-size: cover;
+    position: absolute;
+    bottom: 1%;
+    border: none;
+    left: 1%;
+    width: 6vw;
+    height: 7.2vw;
+    
 }
 
 ::selection{
@@ -311,7 +325,7 @@ footer button.show{
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
-    width: 450px;
+    width: 500px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -381,3 +395,4 @@ footer button.show{
     color: #fff;
     background: #007bff;
 }
+

@@ -29,6 +29,7 @@
               <div  class="text" >Colaboradores</div>
             </div>
         </div>
+        <a class="imagenCelia"></a>
     </body>
     <script>
     function redirect(id){

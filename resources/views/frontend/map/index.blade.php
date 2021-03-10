@@ -129,7 +129,7 @@
                     <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
                 </ul>
                 <ul role="tablist">
-                    <li><a href="juego.html" role="tab"><i class="fa fa-gamepad"></i></a></li>
+                    <li><a href="/game/index.html" role="tab"><i class="fa fa-gamepad"></i></a></li>
                 </ul>
                 <!--<ul role="tablist">
                     <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
@@ -202,7 +202,9 @@
             img.style.width = '80px';
             return img;
         }
+        
     });
+    
     L.control.watermark= function (opts) {
         return new L.Control.Watermark(opts);
     }
