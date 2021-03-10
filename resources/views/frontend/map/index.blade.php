@@ -85,7 +85,29 @@
                 boton[i].addEventListener('click', capturar);
             }
         }
-        function capturar(){
+
+        var ajax = new XMLHttpRequest();
+
+        function capturar() {
+            var id = this.id;
+            ajax.onreadystatechange = procesarRespuesta; // Función que procesará la respuesta del servidor
+            ajax.open("GET", "{{ url('/marker/getInfo/') }}/"+id);
+            ajax.send();
+        }
+
+        function procesarRespuesta(data) {
+            if (ajax.readyState == 4) {
+                if(ajax.status == 200) {
+                    var titulo = data.title;
+                    var info = data.information;
+                    console.log(titulo);
+                    console.log(info);
+                    document.getElementById("info").innerHTML = titulo + "<br>" + info;
+                }
+            }
+        }
+
+        /*function capturar(){
             var id = this.id;
             @foreach ($markerList as $marker)
                 if (id == {{$marker->id}}) {
@@ -94,7 +116,7 @@
                     document.getElementById("info").innerHTML = titulo + "<br>" + informacion;
                 }
             @endforeach
-        }
+        }*/
     </script>
 </head>
 
@@ -230,6 +252,7 @@
     // FUNCIONES FOCUS HACIA POPUP AL HACER CLICK EN CUALQUIER PUTNO DEL MARKET/////
     @foreach($markerList as $marker)
         function click_{{$marker->name}}() {
+            map.setView([31.86043839842163, -45.337342818000984]);
             map.setView([{{$marker->latitude}}, {{$marker->length}}]);
             @if ($marker->type == 0)
                 map.setZoom(18);
