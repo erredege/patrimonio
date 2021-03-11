@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <a class="imagenCelia" onclick="window.location.href ='';"></a>
+        <a class="imagenCelia" onclick="window.location.href ='{{url('/')}}';"></a>
         
 
         <script src="{{ url('gameFiles/js/questions.js') }}"></script>
