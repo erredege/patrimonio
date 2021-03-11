@@ -95,11 +95,13 @@
             ajax.send();
         }
 
-        function procesarRespuesta(data) {
+        function procesarRespuesta($data) {
             if (ajax.readyState == 4) {
                 if(ajax.status == 200) {
+                    var data = JSON.parse($data);
                     var titulo = data.title;
                     var info = data.information;
+                    console.log(data);
                     console.log(titulo);
                     console.log(info);
                     document.getElementById("info").innerHTML = titulo + "<br>" + info;
