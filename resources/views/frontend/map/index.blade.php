@@ -95,15 +95,12 @@
             ajax.send();
         }
 
-        function procesarRespuesta($data) {
+        function procesarRespuesta() {
             if (ajax.readyState == 4) {
                 if(ajax.status == 200) {
-                    var data = JSON.parse($data);
+                    var data = JSON.parse(ajax.responseText);
                     var titulo = data.title;
                     var info = data.information;
-                    console.log(data);
-                    console.log(titulo);
-                    console.log(info);
                     document.getElementById("info").innerHTML = titulo + "<br>" + info;
                 }
             }
