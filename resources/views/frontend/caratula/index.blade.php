@@ -10,7 +10,7 @@
     <style>
         body{
 
-            background-image: url({{url('img/caratula.jpg')}});
+            background-image: url("{{url('img/caratula.jpg')}}");
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -35,7 +35,7 @@
     function redirect(id){
 
         if(id=="juego"){
-            window.location.href = '/game/index.html';
+            window.location.href = '{{route('game.index')}}';
         }else if(id=="mapa"){
             window.location.href ='{{route('map.index')}}';
         }else{

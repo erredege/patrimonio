@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/map', 'MapController@index')->name('map.index');
+Route::get('/game', 'GameController@index')->name('game.index');
 Route::get('/', 'CaratulaController@index')->name('caratula.index');
+
 
 //-------------Markers----------------------------------------------------
 Route::get('/marker', 'MarkerController@index')->name('marker.index');
