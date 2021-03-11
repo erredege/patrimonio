@@ -64,7 +64,7 @@
           color: #fff;
           background-color: #0074d9; }
         .sidebar-tabs > li.disabled, .sidebar-tabs > ul > li.disabled {
-          color: rgba(51, 51, 51, 0.4); }
+          color: rgba(70, 69, 69, 0.4); }
           .sidebar-tabs > li.disabled:hover, .sidebar-tabs > ul > li.disabled:hover {
             background: transparent; }
           .sidebar-tabs > li.disabled > a, .sidebar-tabs > ul > li.disabled > a {
