@@ -131,11 +131,11 @@
                     <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
                 </ul>
                 <ul role="tablist">
-                    <li><a href="/game/index.html" role="tab"><i class="fa fa-gamepad"></i></a></li>
+                    <li><a href="{{ url('/') }}" role="tab"><i class="fa fa-home"></i></a></li>
                 </ul>
-                <!--<ul role="tablist">
-                    <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
-                </ul>-->
+                <ul role="tablist">
+                    <li style="margin-bottom: 50px"><a href="/game/index.html" role="tab"><i class="fa fa-gamepad"></i></a></li>
+                </ul>
             </div>
 
             <!-- Tab panes -->
