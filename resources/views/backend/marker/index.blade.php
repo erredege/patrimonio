@@ -45,7 +45,9 @@
                 <td class="marker">{{$marker->name}}</td>
                 <td class="marker">{{$marker->latitude}}</td>
                 <td class="marker">{{$marker->length}}</td>
-                <td class="overflow-auto">{{$marker->information}}</td>
+                <td class="h-50 d-inline-block">
+                   <div class="overflow-auto">{{$marker->information}}</div> 
+                </td>
                 <td>{{$valor}}</td>
                 <td>{{$marker->start_point}}</td>
                 <td>{{$marker->radio}}</td>
