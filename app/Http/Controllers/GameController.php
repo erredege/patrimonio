@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Option;
+use App\Models\Marker;
+use App\Models\Image;
 
 class GameController extends Controller
 {
@@ -13,7 +16,11 @@ class GameController extends Controller
      */
     public function index()
     {
-        //
+        $data['optionList'] = Option::all();
+        $data['markerList'] = Marker::all();
+        $data['imageList'] = Image::all();
+        return view('frontend.game.index', $data);
+        
     }
 
     /**
