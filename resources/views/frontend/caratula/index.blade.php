@@ -29,12 +29,13 @@
               <div  class="text" >Colaboradores</div>
             </div>
         </div>
+        <a class="imagenCelia"></a>
     </body>
     <script>
     function redirect(id){
 
         if(id=="juego"){
-            window.location.href = '';
+            window.location.href = '/game/index.html';
         }else if(id=="mapa"){
             window.location.href ='{{route('map.index')}}';
         }else{

@@ -10,6 +10,17 @@ body {
   background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
   font-weight: 300;
 }
+.imagenCelia{
+  background: url('../img/celiaEscudo.png') ;
+  background-size: cover;
+  position: absolute;
+  bottom: 1%;
+  border: none;
+  left: 1%;
+  width: 6vw;
+  height: 7.2vw;
+  
+}
 .all {
   display: flex;
   perspective: 10px;
@@ -41,7 +52,7 @@ body {
   transform-style: preserve-3d;
   border-radius: 10px;
   border: 1px solid #fff;
-  box-shadow: 0 0 20px 5px rgba(100, 100, 255, 0.4);
+  box-shadow: 0 0 20px 5px rgba(142, 172, 255, 0.466);
   opacity: 0;
   transition: all 0.3s ease;
   transition-delay: 1s;
@@ -49,12 +60,12 @@ body {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #58d;
+  background-color: rgba(151, 151, 151, 0.5);
   cursor: pointer;
   background-blend-mode: color-burn;
 }
 .left:hover, .center:hover, .right:hover {
-  box-shadow: 0 0 30px 10px rgba(100, 100, 255, 0.6);
+  box-shadow: 0 0 30px 10px rgba(142, 172, 255, 0.466);
   background-color: #ccf;
 }
 .text {
@@ -68,7 +79,7 @@ body {
   position: absolute;
   will-change: transform;
   color: #fff;
-  text-shadow: 0 0 5px rgba(100, 100, 255, 0.6);
+  text-shadow: 0 0 5px rgba(142, 172, 255, 0.466);
 }
 
 .left {
@@ -89,14 +100,14 @@ body {
   font-size: 2rem;
   font-family: 'Architects Daughter', cursive;
   text-align: center;
-  color: #fff;
+  color: rgb(255, 255, 255);
   transition: all 0.6s ease;
   width: 100%;
   height: 100%;
-  background-color: #303050;
-  background-image: radial-gradient(circle at center top, #cce, #33a);
+  background-color: rgba(142, 172, 255, 0.281);
+  background-image: radial-gradient(circle at center top, #cce, rgb(51, 51, 170));
   border-radius: 10px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.445);
   display: flex;
   justify-content: center;
   align-items: center;
