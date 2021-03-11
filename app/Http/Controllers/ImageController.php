@@ -112,4 +112,9 @@ class ImageController extends Controller
         $image->delete();
         return redirect()->route('image.index');
     }
+
+    public function getInfo($id) {
+        $data = Image::find($id);
+        return response()->json($data);
+    }
 }

@@ -71,7 +71,7 @@
             var boton = document.getElementsByClassName("botonVer");
 
             if (fm.style.display === "block") {
-                fm.style.display = "none";
+                fm.style.display = "none";   
             } else {
                 fm.style.display = "block";
                 info.style.border = "solid";
@@ -92,6 +92,7 @@
             var id = this.id;
             ajax.onreadystatechange = procesarRespuesta; // Función que procesará la respuesta del servidor
             ajax.open("GET", "{{ url('/marker/getInfo/') }}/"+id);
+            ajax.open("GET", "{{ url('/image/getInfo/') }}/"+id);
             ajax.send();
         }
 
