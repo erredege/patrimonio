@@ -7,11 +7,9 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-
-        <script src=" url('gameFiles/js/questions.js') "></script>
-        <script src=" url('gameFiles/js/rutinas.js') "></script>
-        <link rel="stylesheet" href="{{ url('/gameFiles/css.css') }}">
-
+       
+        <link rel="stylesheet" href="{{ url('gameFiles/css.css') }}">
+        
         <script src="https://kit.fontawesome.com/a076d05399.js"></script><!--Iconos-->
     </head>
     <body>
@@ -77,14 +75,11 @@
             </div>
         </div>
 
-        <a class="imagenCelia" onclick="window.location.href ='';"></a>
+        <a class="imagenCelia" onclick="window.location.href ='{{url('/')}}';"></a>
         
 
-        <!-- JS de las Preguntas y Respuestas -->
-         <script src="js/questions.js"></script>
-
-        <!-- JS con todas las rutinas del juego -->
-         <script src="js/rutinas.js"></script>
+        <script src="{{ url('gameFiles/js/questions.js') }}"></script>
+        <script src="{{ url('gameFiles/js/rutinas.js') }}"></script>
 
     </body>
     

@@ -19,7 +19,7 @@ body {
   left: 1%;
   width: 6vw;
   height: 7.2vw;
-  
+
 }
 .all {
   display: flex;
@@ -96,16 +96,17 @@ body {
 }
 
 .explainer {
+
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: 'Architects Daughter', cursive;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   transition: all 0.6s ease;
   width: 100%;
   height: 100%;
   background-color: rgba(142, 172, 255, 0.281);
-  background-image: radial-gradient(circle at center top, #cce, rgb(51, 51, 170));
+  background-image: radial-gradient(circle at center top, #cce, rgba(237, 219, 85, 0.856));
   border-radius: 10px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.445);
   display: flex;

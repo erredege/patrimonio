@@ -3,7 +3,7 @@ let questions = [
     {
     numb: 1,
     question: "¿Por qué se denomina Camino Cruz de Caravaca?",
-    answer: "B)Rememora la Reconquista de los Reyes Católicos en 1489 y la rendición de El Zagal",
+    answer: "C)Rememora la Reconquista de los Reyes Católicos en 1489 y la rendición de El Zagal",
     options: [
       "A)Rememora la Conquista del Califa",
       "B)Rememora la Reconquista de los Reyes Católicos en 1479 y la rendición de El Zagal",
