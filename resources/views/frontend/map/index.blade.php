@@ -43,12 +43,14 @@
             position:static;
             float: right;
             overflow-y:scroll;
+            margin-right: 15px;
         }
         #galeria{
             width: 28%;
             height: 99%;
             position:absolute;
             float: left;
+            margin-left: 15px;
         }
         #footer-map{
             position: absolute;
@@ -68,6 +70,7 @@
             var map = document.getElementById("map");
             var fm = document.getElementById("footer-map");
             var info = document.getElementById("info");
+            var galeria = document.getElementById("galeria");
             var boton = document.getElementsByClassName("botonVer");
 
             if (fm.style.display === "block") {
@@ -75,6 +78,7 @@
             } else {
                 fm.style.display = "block";
                 info.style.border = "solid";
+                galeria.style.border = "solid";
             }
             if(fm.style.display === "block"){
                 map.style.height = "65%";
@@ -94,7 +98,7 @@
             ajax.open("GET", "{{ url('/marker/getInfo/') }}/"+id);
             ajax.open("GET", "{{ url('/image/getInfo/') }}/"+id);
             ajax.send();
-        }
+        } 
 
         function procesarRespuesta() {
             if (ajax.readyState == 4) {
@@ -102,21 +106,16 @@
                     var data = JSON.parse(ajax.responseText);
                     var titulo = data.title;
                     var info = data.information;
+                    var ruta = data.rute;
+                    var tituloImg = data.title;
                     document.getElementById("info").innerHTML = titulo + "<br>" + info;
+                    if (tituloImg == titulo) {
+                        document.getElementById("src").innerHTML = ruta ;
+                        document.getElementById("alt").innerHTML = titulo ;
+                    }
                 }
             }
         }
-
-        /*function capturar(){
-            var id = this.id;
-            @foreach ($markerList as $marker)
-                if (id == {{$marker->id}}) {
-                    var informacion = "{{$marker->information}}";
-                    var titulo = "{{$marker->title}}";
-                    document.getElementById("info").innerHTML = titulo + "<br>" + informacion;
-                }
-            @endforeach
-        }*/
     </script>
 </head>
 
@@ -275,27 +274,23 @@
     ////////////////////////////////////////////////////////////////////////////////
     </script>
     <div id ="footer-map">
-        <div id=galeria >
+        <div id="galeria" >
             <!--aqui va la galertia-->
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach ($imageList as $image)
-                            @if ($image->title == $marker->title)
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="{{$image->route }}" alt="{{$image->title}}">
-                                </div>
-                            @endif
-                        @endforeach
+            <div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel'>
+                <div class='carousel-inner'>
+                    <div class='carousel-item active'>
+                        <img class='d-block w-100' src='id=src' alt='id=alt'>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleControls'  data-bs-slide='prew'>
+                    <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+                    <span class='visually-hidden'>Previous</span>
+                </button>
+                <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleControls'  data-bs-slide='next'>
+                    <span class='carousel-control-next-icon' aria-hidden='true'></span>
+                    <span class='visually-hidden'>Next</span>
+                </button>
+            </div>   
         </div>
         <div id="info" ></div>
     </div>
