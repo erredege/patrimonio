@@ -22,7 +22,7 @@
                 <div  class="text" >Juego</div>
             </div>
             <div class="center" id="mapa" onclick="redirect(this.id)">
-              <div class="explainer"><span>La Aplicación de los Por Qués</span></div>
+              <div class="explainer"><span><strong> De los Porqués <br>La aplicación<br></strong></span></div>
               <div  class="text" > Mapa </div>
             </div>
             <div class="right" id="colaboradores" onclick="redirect(this.id)">
