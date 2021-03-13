@@ -1,21 +1,15 @@
 #map {
     position: absolute;
-    width: 99%;
+    width: 100%;
     height: 100%;
 }
 .leaflet-popup{
-    max-width: 1000px;
-    max-height: 1000px;
+    max-width: 1500px;
+    max-height: 1500px;
 }
 .leaflet-popup-content > img{
-   width: 200PX;
-   height: 200PX;
-}
-#bannerImg{
-    width: 104.5em;
-    height: 10em;
-    margin-left: 7%;
-    margin-right: 3%;
+   width: 300PX;
+   height: 300PX;
 }
 .leaflet-control-attribution{
     display: none; /* Nos permite quitar la marca de agua de Leaflet*/
@@ -41,7 +35,7 @@
 }
 .botonVer{
     float: right;
-    margin-right: 83px;
+    margin-right: 131px;
     margin-top: -22px;
 
 }

@@ -80,7 +80,7 @@
     <div class="sidebar-map" id="map" style="z-index: 10">
            <div id="sidebar" class="sidebar collapsed">
             <!-- Nav tabs -->
-            <div class="sidebar-tabs" style="background-image: url('');">
+            <div class="sidebar-tabs">
                 <ul role="tablist">
                     <li><a href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a></li>
                 </ul>
@@ -211,12 +211,12 @@
         @foreach($imageList as $image)
             @if(($marker->name)==($image->title))
                 encontrado=true;
-                {{$marker->name}}.bindPopup("{{$marker->title}} <br><br> <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
+                {{$marker->name}}.bindPopup("{{$marker->title}} <br><br> <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='25' height='25'></button>");
             @endif
 
         @endforeach
         if(!encontrado){
-            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' <br>class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='20' height='20'></button>");
+            {{$marker->name}}.bindPopup("{{$marker->title}} <br><button id='{{$marker->id}}' <br>class='botonVer' onclick='ocultar()'><img src='../img/info.png' width='25' height='25'></button>");
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
