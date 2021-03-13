@@ -3,18 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>sdddddd</title>
+        <title>Game</title>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
        
         <link rel="stylesheet" href="{{ url('gameFiles/css.css') }}">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         
         <script src="https://kit.fontawesome.com/a076d05399.js"></script><!--Iconos-->
     </head>
     <body>
         <!-- start Quiz button -->
-        <div class="start_btn"><button>Empezar </button></div>
+        <div class="start_btn"><button>Empezar el Juego</button></div>
 
         <!-- Info Box -->
         <div class="info_box">
@@ -74,8 +76,25 @@
                 <button class="quit">Salir</button>
             </div>
         </div>
+        <!--------------------------------Circular Menu Dentro de Mapa---------------------------------->
+                               
+        <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
+                
+            <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+            <i class="fa fa-bars"></i>
+            </a>
+        
+            <menu class="items-wrapper">
+            <a href="{{url('/')}}" class="menu-item fa fa-home"></a>
+            <a href="{{route('game.index')}}" class="menu-item fa fa-gamepad"></a>
+            <a href="https://iescelia.org/web/" class="menu-item fas fa-school"></a>
+            <a href="https://www.instagram.com/iescelia/?hl=es" class="menu-item fab fa-instagram"></a>
+            </menu>
+        
+        </div>
+        <!-----------------------------------------------------------------------------------
 
-        <a class="imagenCelia" onclick="window.location.href ='{{url('/')}}';"></a>
+        <a class="imagenCelia" class="animate__bounceIn" href ='{{url('/')}}';></a>-->
         
 
         <script src="{{ url('gameFiles/js/questions.js') }}"></script>
