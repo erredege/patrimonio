@@ -5,64 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="{{ url('icons/fontawesome-free-5.15.2-web/css/all.min.css') }}">
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+
     <link rel="stylesheet" href="{{ url('js/pluginSidebar/leaflet-sidebar.css') }}"/>
     <script src="{{ url('js/pluginSidebar/leaflet-sidebar.js') }}"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-    <style>
-        #map {
-            position: absolute;
-            width: 99%;
-            height: 100%;
-        }
-        .leaflet-popup{
-            max-width: 1000px;
-            max-height: 1000px;
-        }
-        .leaflet-popup-content > img{
-           width: 200PX;
-           height: 200PX;
-        }
-        #bannerImg{
-            width: 104.5em;
-            height: 10em;
-            margin-left: 7%;
-            margin-right: 3%;
-        }
-        .leaflet-control-attribution{
-            display: none; /* Nos permite quitar la marca de agua de Leaflet*/
-        }
-        #info{
-            width: 68%;
-            height: 99%;
-            position:static;
-            float: right;
-            overflow-y:scroll;
-        }
-        #galeria{
-            width: 28%;
-            height: 99%;
-            position:absolute;
-            float: left;
-        }
-        #footer-map{
-            position: absolute;
-            width: 99%;
-            height: 34%;
-            bottom: 0px;
-        }
-        .botonVer{
-            float: right;
-            margin-right: 83px;
-            margin-top: -22px;
-
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url('css/map.css') }}">
+    
     <script>
         function ocultar() {
             var map = document.getElementById("map");
@@ -120,35 +76,48 @@
 </head>
 
 <body>
+    
     <div class="sidebar-map" id="map" style="z-index: 10">
-        <div id="sidebar" class="sidebar collapsed">
+           <div id="sidebar" class="sidebar collapsed">
             <!-- Nav tabs -->
             <div class="sidebar-tabs" style="background-image: url('');">
                 <ul role="tablist">
-                    <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
-                </ul>
-                <ul role="tablist">
-                    <li style="margin-bottom: 510px"><a href="{{route('game.index')}}" role="tab"><i class="fa fa-gamepad"></i></a></li>
-                </ul>
-                <ul role="tablist">
-                    <li><a href="{{url('/')}}" role="tab"><i class="fa fa-home"></i></a></li>
+                    <li><a href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a></li>
                 </ul>
             </div>
 
             <!-- Tab panes -->
             <div class="sidebar-content" style="background-image: url('');">
                 <div class="sidebar-pane" id="home">
-                    <h1 class="sidebar-header">Listado<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
+                    <h1 class="sidebar-header">Puntos de Interes<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
 
                     @foreach ($markerList as $marker)
                         <p name='{{$marker->name}}' onClick='click_{{$marker->name}}()' id='{{$marker->id}}'>{{$marker->title}}</p>
                     @endforeach
                 </div>
             </div>
+             <!--------------------------------Circular Menu Dentro de Mapa---------------------------------->
+                               
+                <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
+                
+                    <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+                    <i class="fa fa-bars"></i>
+                    </a>
+                
+                    <menu class="items-wrapper">
+                    <a href="{{url('/')}}" class="menu-item fa fa-home"></a>
+                    <a href="{{route('game.index')}}" class="menu-item fa fa-gamepad"></a>
+                    <a href="https://iescelia.org/web/" class="menu-item fas fa-school"></a>
+                    <a href="https://www.instagram.com/iescelia/?hl=es" class="menu-item fab fa-instagram"></a>
+                    </menu>
+                
+                </div>
+             <!------------------------------------------------------------------------------------->
         </div>
+        
     </div>
 
-
+    
 
     <script>
     ////////Variable para que aprezca mapa/////////////////
@@ -194,7 +163,7 @@
     var sidebar = L.control.sidebar('sidebar').addTo(map);
     ////////////////////////////////////////////////////////
     //////////Marca de agua del Celia Viñas/////////////////
-    L.Control.Watermark = L.Control.extend({
+    /*L.Control.Watermark = L.Control.extend({
         onAdd:function(map) {
             var img = L.DomUtil.create('img');
             img.src =" {{url('img/celiaEscudo.png')}}";
@@ -207,7 +176,7 @@
     L.control.watermark= function (opts) {
         return new L.Control.Watermark(opts);
     }
-    L.control.watermark({position:'bottomleft'}).addTo(map);
+    L.control.watermark({position:'bottomleft'}).addTo(map);*/
     ////////////////////////////////////////////////////////
     /////////////// VARIABLES DE LOS PUNTOS ///////////////////
     @foreach($markerList as $marker)
