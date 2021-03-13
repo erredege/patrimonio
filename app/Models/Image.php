@@ -9,6 +9,6 @@ class Image extends Model
 {
     use HasFactory;
     public function marker(){
-        return $this->belongsTo(Marker::Class);
+        return $this->belongsTo(Marker::Class, "name", "title");
     }
 }

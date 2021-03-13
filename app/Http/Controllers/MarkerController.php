@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Marker;
+use DB;
 
 class MarkerController extends Controller
 {
@@ -66,6 +67,11 @@ class MarkerController extends Controller
 
     public function getInfo($id) {
         $data = Marker::find($id);
+        $data = DB::table('markers')
+        ->join('images', 'markers.name', '=', 'images.title')
+        ->select('markers.information', 'images.route', 'markers.title')
+        ->where('markers.id', '=', $id)
+        ->get();
         return response()->json($data);
     }
 }

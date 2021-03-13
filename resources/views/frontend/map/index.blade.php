@@ -17,7 +17,7 @@
     <style>
         #map {
             position: absolute;
-            width: 99%;
+            width: 100%;
             height: 100%;
         }
         .leaflet-popup{
@@ -96,22 +96,21 @@
             var id = this.id;
             ajax.onreadystatechange = procesarRespuesta; // Función que procesará la respuesta del servidor
             ajax.open("GET", "{{ url('/marker/getInfo/') }}/"+id);
-            ajax.open("GET", "{{ url('/image/getInfo/') }}/"+id);
             ajax.send();
         } 
 
         function procesarRespuesta() {
             if (ajax.readyState == 4) {
                 if(ajax.status == 200) {
+                    
                     var data = JSON.parse(ajax.responseText);
-                    var titulo = data.title;
-                    var info = data.information;
-                    var ruta = data.rute;
-                    var tituloImg = data.title;
+                    console.log(data);
+                    var titulo = data[0].title;
+                    var info = data[0].information;
+                    var ruta = data[0].route;
                     document.getElementById("info").innerHTML = titulo + "<br>" + info;
-                    if (tituloImg == titulo) {
-                        document.getElementById("src").innerHTML = ruta ;
-                        document.getElementById("alt").innerHTML = titulo ;
+                    for(data[i = 0]; i>data.length; i++){
+                        document.getElementById("carruselImg").innerHTML = "<img style='height:204px' src='" + ruta + "' class='d-block w-100' alt='" + titulo + "'>" ;
                     }
                 }
             }
@@ -128,7 +127,7 @@
                     <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
                 </ul>
                 <ul role="tablist">
-                    <li style="margin-bottom: 510px"><a href="{{route('game.index')}}" role="tab"><i class="fa fa-gamepad"></i></a></li>
+                    <li style="margin-bottom: 510px"><a href="{{url('game.index')}}" role="tab"><i class="fa fa-gamepad"></i></a></li>
                 </ul>
                 <ul role="tablist">
                     <li><a href="{{url('/')}}" role="tab"><i class="fa fa-home"></i></a></li>
@@ -278,8 +277,8 @@
             <!--aqui va la galertia-->
             <div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel'>
                 <div class='carousel-inner'>
-                    <div class='carousel-item active'>
-                        <img class='d-block w-100' src='id=src' alt='id=alt'>
+                    <div class='carousel-item active' id="carruselImg">
+                        
                     </div>
                 </div>
                 <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleControls'  data-bs-slide='prew'>
