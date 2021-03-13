@@ -15,23 +15,28 @@
     display: none; /* Nos permite quitar la marca de agua de Leaflet*/
 }
 #info{
-    width: 68%;
+    width: 66%;
     height: 99%;
     position:static;
     float: right;
     overflow-y:scroll;
+    border-radius: 20px;
+    background: rgba(156, 156, 156, 0.87);
 }
 #galeria{
     width: 28%;
     height: 99%;
     position:absolute;
     float: left;
+    margin-left: 60px;
 }
 #footer-map{
     position: absolute;
     width: 99%;
     height: 34%;
     bottom: 0px;
+    border-radius: 20px;
+    background: rgb(0, 0, 0);
 }
 .botonVer{
     float: right;

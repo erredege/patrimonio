@@ -44,6 +44,14 @@
             }
         }
 
+        /*function infoAjax(){
+            var marcador = document.getElementsByClassName("marcador");
+
+            for(var i = 0; i < marcador.length; i++){
+                marcador[i].addEventListener('click', capturar);
+            }
+        }*/
+
         var ajax = new XMLHttpRequest();
 
         function capturar() {
@@ -63,8 +71,10 @@
                     var info = data[0].information;
                     var ruta = data[0].route;
                     document.getElementById("info").innerHTML = titulo + "<br>" + info;
-                    for(data[i = 0]; i>data.length; i++){
-                        document.getElementById("carruselImg").innerHTML = "<img style='height:204px' src='" + ruta + "' class='d-block w-100' alt='" + titulo + "'>" ;
+                    for(var i=0; i<data.length; i++){
+                        for(var j=0; j<ruta.length; j++){
+                            document.getElementById("carruselImg").innerHTML = "<img style='height:204px' src='" + ruta + "' class='d-block w-100' alt='" + titulo + "'>" ;
+                        }
                     }
                 }
             }
@@ -179,9 +189,10 @@
     /////////////// VARIABLES DE LOS PUNTOS ///////////////////
     @foreach($markerList as $marker)
         @if ($marker->type == 0)
-            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}]).addTo(map);
+            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}], {class:'marcador'}).addTo(map);
         @elseif($marker->type == 1)
             var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], {
+                class:'marcador',
                 radius:{{$marker->radio}},
                 fillOpacity:{{$marker->opacity}},
                 fillColor:"{{$marker->background_color}}",
@@ -195,10 +206,11 @@
                     @endif
                 @endforeach
             ], {
+                class:'marcador',
                 fillOpacity:{{$marker->opacity}},
                 fillColor:"{{$marker->background_color}}",
                 color:"{{$marker->border_color}}",
-            }).addTo(map);
+            }).addTo(map)/*.on('click', infoAjax)*/;
         @endif
     @endforeach
     //////////////////////////////////////////////////////////////////////////////////
