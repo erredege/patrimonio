@@ -9,9 +9,7 @@
         <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
        
         <link rel="stylesheet" href="{{ url('gameFiles/css.css') }}">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        
+               
         <script src="https://kit.fontawesome.com/a076d05399.js"></script><!--Iconos-->
     </head>
     <body>
