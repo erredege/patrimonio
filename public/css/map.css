@@ -20,7 +20,6 @@
     position:static;
     float: right;
     overflow-y:scroll;
-    border-radius: 20px;
     background: rgba(156, 156, 156, 0.87);
 }
 #galeria{
@@ -35,7 +34,6 @@
     width: 99%;
     height: 34%;
     bottom: 0px;
-    border-radius: 20px;
     background: rgb(0, 0, 0);
 }
 .botonVer{

@@ -37,7 +37,7 @@
             if(fm.style.display === "block"){
                 map.style.height = "65%";
             }else{
-                map.style.height = "99%";
+                map.style.height = "100%";
             }
             for(var i = 0; i < boton.length; i++){
                 boton[i].addEventListener('click', capturar);
@@ -241,6 +241,15 @@
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
+    ///////Cerrar footercon click en el mapa////////
+    map.on('click', function(e) {    
+        var map = document.getElementById("map");
+        var fm = document.getElementById("footer-map");    
+        fm.style.display = "none";   
+        map.style.height = "100%";   
+        var info = document.getElementById("info").innerHTML = " ";
+        //var galeria = document.getElementById("galeria").innerHTML = " ";
+    });
     </script>
     <div id ="footer-map">
         <div id="galeria" >
