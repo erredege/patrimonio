@@ -32,7 +32,7 @@
             .informacion{
                 position: absolute;
                 overflow: auto;
-                width: 7%;
+                width: 8vw;
                 height: 6.5vh;
             }
             
