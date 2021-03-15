@@ -44,6 +44,13 @@
             }
         }
 
+        // function infoAjax(){
+        //     var marcador = document.getElementsByClassName("marcador");
+        //     for(var i = 0; i < marcador.length; i++){
+        //         marcador[i].addEventListener('click', capturar);
+        //     }
+        // }
+
         var ajax = new XMLHttpRequest();
 
         function capturar() {
@@ -63,8 +70,13 @@
                     var info = data[0].information;
                     var ruta = data[0].route;
                     document.getElementById("info").innerHTML = titulo + "<br>" + info;
-                    for(var i = 0; i < data.length; i++) {    
-                        document.getElementById("carruselImg").innerHTML += "<div class='carousel-item'><img style='height:204px' src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
+                    document.getElementById("carruselImg").innerHTML = "";
+                    for(var i = 0; i < data.length; i++) {
+                        if(i == 0)   { 
+                            document.getElementById("carruselImg").innerHTML += "<div class='carousel-item active'><img style='height:204px' src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
+                        }else{
+                            document.getElementById("carruselImg").innerHTML += "<div class='carousel-item'><img style='height:204px' src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
+                        }
                     }
                 }
             }
@@ -179,15 +191,15 @@
     /////////////// VARIABLES DE LOS PUNTOS ///////////////////
     @foreach($markerList as $marker)
         @if ($marker->type == 0)
-            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}], {id:{{$marker->id}}}).addTo(map)/*.on('click', capturar)*/;
+            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}], {class:"marcador"}).addTo(map)/*.on('click', infoAjax)*/;
         @elseif($marker->type == 1)
             var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], {
-                id:{{$marker->id}},
+                class:"marcador",
                 radius:{{$marker->radio}},
                 fillOpacity:{{$marker->opacity}},
                 fillColor:"{{$marker->background_color}}",
                 color:"{{$marker->border_color}}",
-            }).addTo(map)/*.on('click', capturar)*/;
+            }).addTo(map)/*.on('click', infoAjax)*/;
         @else
             var {{$marker->name}} = L.polygon([
                 @foreach($pointsList as $point)
@@ -196,11 +208,11 @@
                     @endif
                 @endforeach
             ], {
-                id:{{$marker->id}},
+                class:"marcador",
                 fillOpacity:{{$marker->opacity}},
                 fillColor:"{{$marker->background_color}}",
                 color:"{{$marker->border_color}}",
-            }).addTo(map)/*.on('click', capturar)*/;
+            }).addTo(map)/*.on('click', infoAjax)*/;
         @endif
     @endforeach
     //////////////////////////////////////////////////////////////////////////////////
@@ -248,7 +260,6 @@
         fm.style.display = "none";   
         map.style.height = "100%";   
         var info = document.getElementById("info").innerHTML = " ";
-        //var galeria = document.getElementById("galeria").innerHTML = " ";
     });
     </script>
     <div id ="footer-map">
@@ -257,9 +268,7 @@
 
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 204px">
                 <div class="carousel-inner" id="carruselImg">
-                    <div class="carousel-item active">
-
-                    </div>
+                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
