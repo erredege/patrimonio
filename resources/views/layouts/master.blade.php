@@ -23,11 +23,17 @@
                 margin: auto;
                 text-align: center;
                 table-layout: fixed;
-                overflow: hidden;
+                overflow: auto;
             }
             .marker{
                 max-height: calc(100vh - 110px);
                 overflow:auto;
+            }
+            .informacion{
+                position: absolute;
+                overflow: auto;
+                width: 7%;
+                height: 6.5vh;
             }
             
         </style>

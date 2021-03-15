@@ -14,6 +14,11 @@
 .leaflet-control-attribution{
     display: none; /* Nos permite quitar la marca de agua de Leaflet*/
 }
+.leaflet-popup-content > .texto {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
 #info{
     width: 66%;
     height: 99%;
