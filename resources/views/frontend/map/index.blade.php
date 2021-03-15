@@ -241,7 +241,7 @@
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
-    ///////Cerrar footercon click en el mapa////////
+    ///////Cerrar footer con click en el mapa////////
     map.on('click', function(e) {    
         var map = document.getElementById("map");
         var fm = document.getElementById("footer-map");    
