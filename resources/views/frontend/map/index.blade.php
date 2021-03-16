@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <link rel="stylesheet" href="{{ url('icons/fontawesome-free-5.15.2-web/css/all.min.css') }}">
-    
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 
@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{{ url('css/map.css') }}">
-    
+
     <script>
         function ocultar() {
             var map = document.getElementById("map");
@@ -28,7 +28,7 @@
             var boton = document.getElementsByClassName("botonVer");
 
             if (fm.style.display === "block") {
-                fm.style.display = "none";   
+                fm.style.display = "none";
             } else {
                 fm.style.display = "block";
                 info.style.border = "solid";
@@ -58,12 +58,12 @@
             ajax.onreadystatechange = procesarRespuesta; // Función que procesará la respuesta del servidor
             ajax.open("GET", "{{ url('/marker/getInfo/') }}/"+id);
             ajax.send();
-        } 
+        }
 
         function procesarRespuesta() {
             if (ajax.readyState == 4) {
                 if(ajax.status == 200) {
-                    
+
                     var data = JSON.parse(ajax.responseText);
                     console.log(data);
                     var titulo = data[0].title;
@@ -72,7 +72,7 @@
                     document.getElementById("info").innerHTML = titulo + "<br>" + info;
                     document.getElementById("carruselImg").innerHTML = "";
                     for(var i = 0; i < data.length; i++) {
-                        if(i == 0)   { 
+                        if(i == 0)   {
                             document.getElementById("carruselImg").innerHTML += "<div class='carousel-item active'><img style='height:204px' src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
                         }else{
                             document.getElementById("carruselImg").innerHTML += "<div class='carousel-item'><img style='height:204px' src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
@@ -85,7 +85,7 @@
 </head>
 
 <body>
-    
+
     <div class="sidebar-map" id="map" style="z-index: 10">
            <div id="sidebar" class="sidebar collapsed">
             <!-- Nav tabs -->
@@ -105,29 +105,29 @@
                     @endforeach
                 </div>
                 <!--------------------------------Circular Menu Dentro de Mapa---------------------------------->
-                               
+
                 <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
-                
+
                     <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
                     <i class="fa fa-bars"></i>
                     </a>
-                
+
                     <menu class="items-wrapper">
                     <a href="{{url('/')}}" class="menu-item fa fa-home"></a>
                     <a href="{{route('game.index')}}" class="menu-item fa fa-gamepad"></a>
                     <a href="https://iescelia.org/web/" class="menu-item fas fa-school"></a>
                     <a href="https://www.instagram.com/iescelia/?hl=es" class="menu-item fab fa-instagram"></a>
                     </menu>
-                
+
                 </div>
              <!------------------------------------------------------------------------------------->
             </div>
-             
+
         </div>
-        
+
     </div>
 
-    
+
 
     <script>
     ////////Variable para que aprezca mapa/////////////////
@@ -180,9 +180,9 @@
             img.style.width = '80px';
             return img;
         }
-        
+
     });
-    
+
     L.control.watermark= function (opts) {
         return new L.Control.Watermark(opts);
     }
@@ -205,6 +205,7 @@
             var {{$marker->name}} = L.polygon([
                 @foreach($pointsList as $point)
                     @if($marker->name == $point->name)
+
                         [{{$point->latitude}}, {{$point->length}}],
                     @endif
                 @endforeach
@@ -256,21 +257,21 @@
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
     ///////Cerrar footer con click en el mapa////////
-    map.on('click', function(e) {    
+    map.on('click', function(e) {
         var map = document.getElementById("map");
-        var fm = document.getElementById("footer-map");    
-        fm.style.display = "none";   
-        map.style.height = "100%";   
+        var fm = document.getElementById("footer-map");
+        fm.style.display = "none";
+        map.style.height = "100%";
         var info = document.getElementById("info").innerHTML = " ";
     });
     </script>
     <div id ="footer-map">
         <div id="galeria" >
-            <!--aqui va la galertia-->   
+            <!--aqui va la galertia-->
 
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 204px">
                 <div class="carousel-inner" id="carruselImg">
-                    
+
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
