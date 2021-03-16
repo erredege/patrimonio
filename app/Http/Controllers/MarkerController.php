@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Marker;
+use App\Models\Point;
 use DB;
 
 class MarkerController extends Controller
@@ -24,6 +25,8 @@ class MarkerController extends Controller
 
     public function store(Request $r) {
         $marker = new Marker();
+        $point = new Point();
+        
         $marker->latitude = $r->latitude;
         $marker->length = $r->length;
         $marker->name = $r->name;

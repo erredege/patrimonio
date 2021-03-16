@@ -37,11 +37,11 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Color del borde</label>
-                <input type="text" class="form-control" name="border_color" value="{{$marker->border_color ?? '' }}">
+                <input type="number" class="form-control " name="border_color" value="{{$marker->border_color ?? '' }}">
             </div>
             <div class="form-group">
                 <label class="control-label">Color del fondo</label>
-                <input type="text" class="form-control" name="background_color" value="{{$marker->background_color ?? '' }}">
+                <input type="number" class="form-control " style="width: " name="background_color" value="{{$marker->background_color ?? '' }}">
             </div>
             <div class="form-group">
                 <label class="control-label">Opacidad</label>
@@ -53,7 +53,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Tipo</label>
-                <select class="form-control" name="type">
+                <select class="form-control" name="type" id="tipoPunto" onchange="agregarPuntos()">
                     @isset($marker)
                         
                         @if ($marker->type == "0")
@@ -74,10 +74,27 @@
                         <option value="1">Circulo</option>
                         <option value="2">Poligono</option>
                     @endisset   
-            </select><br>
+                </select>
+            </div>
+            <div id='pointPolygon' class="form-group">
+            
+            </div>
+            <br>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
+            
         </form>
-
+    <script>
+        function agregarPuntos(){
+            if (document.getElementById('tipoPunto').value == 2){
+                document.getElementById('pointPolygon').innerHTML =" <label class='control-label'>Puntos para el poligono</label>";
+                document.getElementById('pointPolygon').innerHTML += "<input class='form-control' type='text' name='puntosPoligono' data-toggle='popover' data-placement='right' data-content='Agrege / para indicar el fin de un punto'>";
+                $('#pointPolygon').popover('show');
+                //Investigar popover
+            }else{
+                document.getElementById('pointPolygon').innerHTML = "";
+            }
+        }
+    </script>
 @endsection
