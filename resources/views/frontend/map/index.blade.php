@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="{{ url('css/map.css') }}">
     
     <script>
-        function ocultar() {
+        var ajax = new XMLHttpRequest();
+
+        function ocultar(id) {
             var map = document.getElementById("map");
             var fm = document.getElementById("footer-map");
             var info = document.getElementById("info");
@@ -33,32 +35,18 @@
                 fm.style.display = "block";
                 info.style.border = "solid";
                 galeria.style.border = "solid";
+                info.innerHTML = ""
             }
             if(fm.style.display === "block"){
                 map.style.height = "65%";
             }else{
                 map.style.height = "100%";
             }
-            // for(var i = 0; i < boton.length; i++){
-            //     boton[i].addEventListener('click', capturar);
-            // }
-        }
-
-        function infoAjax(){
-            var marcador = document.getElementsByClassName("marcador");
-            for(var i = 0; i < marcador.length; i++){
-                marcador[i].addEventListener('click', capturar);
-            }
-        }
-
-        var ajax = new XMLHttpRequest();
-
-        function capturar() {
-            var id = this.id;
+            
             ajax.onreadystatechange = procesarRespuesta; // Función que procesará la respuesta del servidor
             ajax.open("GET", "{{ url('/marker/getInfo/') }}/"+id);
             ajax.send();
-        } 
+        }
 
         function procesarRespuesta() {
             if (ajax.readyState == 4) {
@@ -191,7 +179,7 @@
     /////////////// VARIABLES DE LOS PUNTOS ///////////////////
     @foreach($markerList as $marker)
         @if ($marker->type == 0)
-            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}], {class:"marcador", id:{{$marker->id}}}).addTo(map).on('click', infoAjax);
+            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}], {class:"marcador", id:{{$marker->id}}}).addTo(map);
         @elseif($marker->type == 1)
             var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], {
                 id:{{$marker->id}},
@@ -200,7 +188,7 @@
                 fillOpacity:{{$marker->opacity}},
                 fillColor:"{{$marker->background_color}}",
                 color:"{{$marker->border_color}}",
-            }).addTo(map).on('click', infoAjax);
+            }).addTo(map);
         @else
             var {{$marker->name}} = L.polygon([
                 @foreach($pointsList as $point)
@@ -214,7 +202,7 @@
                 fillOpacity:{{$marker->opacity}},
                 fillColor:"{{$marker->background_color}}",
                 color:"{{$marker->border_color}}",
-            }).addTo(map).on('click', infoAjax);
+            }).addTo(map);
         @endif
     @endforeach
     //////////////////////////////////////////////////////////////////////////////////
@@ -224,7 +212,7 @@
         @foreach($imageList as $image)
             @if(($marker->name)==($image->title))
                 encontrado=true;
-                {{$marker->name}}.bindPopup("<p class='texto'><strong>{{$marker->title}}</strong></p>  <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar()'><img src='../img/info5.png' width='25' height='25'></button>");
+                {{$marker->name}}.bindPopup("<p class='texto'><strong>{{$marker->title}}</strong></p>  <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'></button>");
             @endif
 
         @endforeach
