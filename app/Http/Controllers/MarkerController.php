@@ -25,8 +25,8 @@ class MarkerController extends Controller
 
     public function store(Request $r) {
         $marker = new Marker();
-        $point = new Point();
-        
+       /* $point = new Point();*/
+
         $marker->latitude = $r->latitude;
         $marker->length = $r->length;
         $marker->name = $r->name;
@@ -37,6 +37,13 @@ class MarkerController extends Controller
         $marker->border_color = $r->border_color;
         $marker->background_color = $r->background_color;
         $marker->opacity = $r->opacity;
+
+        /*$arrayPuntos = explode("/",$r->puntosPoligono);
+        $punto = explode(",",$arrayPuntos);
+        $point->latitude = head($punto);
+        $point->length = last($punto);
+
+        $point->save();*/
         $marker->save();
         return redirect()->route('marker.index');
     }
