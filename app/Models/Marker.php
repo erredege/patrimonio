@@ -13,6 +13,6 @@ class Marker extends Model
     }
 
     public function point(){
-        return $this->hasMany(Point::Class, "id", "marker_id");
+        return $this->hasMany(Point::Class, "name", "marker_name");
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Marker;
 use App\Models\Point;
 use DB;
+use PhpParser\Node\Stmt\For_;
 
 class MarkerController extends Controller
 {
@@ -38,22 +39,21 @@ class MarkerController extends Controller
         $marker->border_color = $r->border_color;
         $marker->background_color = $r->background_color;
         $marker->opacity = $r->opacity;
-        $marker->save();
-
-
+                
         $arrayPuntos = explode("/",$r->puntosPoligono);
-        var_dump($arrayPuntos);
+
         if($r->type == '2'){
             foreach($arrayPuntos as $punto){
-                $punto = explode(",",$punto);
-                $point->latitude = head($punto);
-                $point->length = last($punto);
-                $point->marker_id = $marker->id;
-                var_dump($punto);
+                $cordenada = explode(",",$punto);
+                echo(var_dump($cordenada));
+                $point->latitude = $cordenada[0];
+                $point->length = $cordenada[1];
+                $point->marker_name = $marker->name;
+               
                 $point->save();
             }
         }
-
+        $marker->save();
         return redirect()->route('marker.index');
     }
 

@@ -20,7 +20,7 @@ class CreatePointsTable extends Migration
             $table->string("name")->nullable();
             $table->double("latitude");
             $table->double("length");
-            $table->integer("marker_id");
+            $table->string("marker_name");
         });
     }
 

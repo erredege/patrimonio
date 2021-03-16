@@ -10,6 +10,6 @@ class Point extends Model
     use HasFactory;
 
     public function marker(){
-        return $this->belongsTo(Marker::Class, "marker_id", "id");
+        return $this->belongsTo(Marker::Class, "marker_name", "name");
     }
 }
