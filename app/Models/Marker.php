@@ -11,4 +11,8 @@ class Marker extends Model
     public function image(){
         return $this->hasMany(Image::Class, "title", "name");
     }
+
+    public function point(){
+        return $this->hasMany(Point::Class, "name", "marker_name");
+    }
 }

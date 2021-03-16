@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreatePointsTable extends Migration
 {
@@ -16,9 +17,10 @@ class CreatePointsTable extends Migration
         Schema::create('points', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string("name");
+            $table->string("name")->nullable();
             $table->double("latitude");
             $table->double("length");
+            $table->string("marker_name");
         });
     }
 

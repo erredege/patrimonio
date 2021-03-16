@@ -94,7 +94,7 @@
             </div>
 
         </form>
-    <!--<script>
+    <script>
         function agregarPuntos(){
             if (document.getElementById('tipoPunto').value == 2){
                 document.getElementById('pointPolygon').innerHTML =" <label class='control-label'>Puntos para el poligono</label>";
@@ -103,5 +103,5 @@
                 document.getElementById('pointPolygon').innerHTML = "";
             }
         }
-    </script>-->
+    </script>
 @endsection
