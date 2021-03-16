@@ -251,6 +251,7 @@
         fm.style.display = "none";   
         map.style.height = "100%";   
         document.getElementById("info").innerHTML = " ";
+        document.getElementById("carruselImg").innerHTML = " ";
     });
     </script>
     <div id ="footer-map">

@@ -45,12 +45,12 @@ class OptionSeeder extends Seeder
 
         DB::table('options')->insert([
             'key' => 'latitudeNortheast',
-            'value' => '36.867133',
+            'value' => '36.87224',
         ]);
 
         DB::table('options')->insert([
             'key' => 'lengthNortheast',
-            'value' => '-2.491599',
+            'value' => '-2.49818',
         ]);
         //////////////////////////////////////////////////////////////////
 
