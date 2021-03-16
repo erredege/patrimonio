@@ -17,11 +17,11 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Latitud</label>
-                <input type="number" class="form-control" name="latitude" value="{{$marker->latitude ?? '' }}">
+                <input type="text" class="form-control" name="latitude" value="{{$marker->latitude ?? '' }}">
             </div>
             <div class="form-group">
                 <label class="control-label">Longitud</label>
-                <input type="number" class="form-control" name="length" value="{{$marker->length ?? '' }}">
+                <input type="text" class="form-control" name="length" value="{{$marker->length ?? '' }}">
             </div>
             <div class="form-group">
                 <label class="control-label">Nombre</label>
@@ -29,11 +29,11 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Pnto de inicio</label>
-                <input type="number" class="form-control" name="start_point" value="{{$marker->start_point ?? '' }}">
+                <input type="text" class="form-control" name="start_point" value="{{$marker->start_point ?? '' }}">
             </div>
             <div class="form-group">
                 <label class="control-label">Radio</label>
-                <input type="number" class="form-control" name="radio" value="{{$marker->radio ?? '' }}">
+                <input type="text" class="form-control" name="radio" value="{{$marker->radio ?? '' }}">
             </div>
             <div class="form-group">
                 <label class="control-label">Color del borde</label>
@@ -54,7 +54,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Opacidad</label>
-                <input type="number" class="form-control" name="opacity" value="{{$marker->opacity ?? '' }}">
+                <input type="text" class="form-control" name="opacity" value="{{$marker->opacity ?? '' }}">
             </div>
             <div class="form-group">
                 <label class="control-label">Informacion</label>

@@ -26,7 +26,7 @@ class MarkerController extends Controller
     public function store(Request $r) {
         $marker = new Marker();
        /* $point = new Point();*/
-
+        $marker->title = $r->title;
         $marker->latitude = $r->latitude;
         $marker->length = $r->length;
         $marker->name = $r->name;
