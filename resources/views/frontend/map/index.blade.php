@@ -191,9 +191,10 @@
             }).addTo(map);
         @else
             var {{$marker->name}} = L.polygon([
+                [{{$marker->latitude}},{{$marker->length}}],
                 @foreach($pointsList as $point)
                     @if($marker->name == $point->marker_name)
-
+                        
                         [{{$point->latitude}}, {{$point->length}}],
                     @endif
                 @endforeach
