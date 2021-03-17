@@ -192,7 +192,7 @@
         @else
             var {{$marker->name}} = L.polygon([
                 @foreach($pointsList as $point)
-                    @if($marker->name == $point->name)
+                    @if($marker->name == $point->marker_name)
 
                         [{{$point->latitude}}, {{$point->length}}],
                     @endif

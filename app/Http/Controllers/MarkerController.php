@@ -26,7 +26,7 @@ class MarkerController extends Controller
 
     public function store(Request $r) {
         $marker = new Marker();
-        $point = new Point();
+        
 
         $marker->title = $r->title;
         $marker->latitude = $r->latitude;
@@ -44,6 +44,7 @@ class MarkerController extends Controller
 
         if($r->type == '2'){
             foreach($arrayPuntos as $punto){
+                $point = new Point();
                 $cordenada = explode(",",$punto);
                 echo(var_dump($cordenada));
                 $point->latitude = $cordenada[0];

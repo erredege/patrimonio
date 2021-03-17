@@ -130,10 +130,10 @@ class MarkerSeeder extends Seeder
         ]);
 
         DB::table('markers')->insert([
-            'title' => 'Plaze del Educador',
+            'title' => 'Plaza del Educador',
             'latitude' => '36.83897171955203',
             'length' => '-2.4635565602280396',
-            'name' => 'plkazaEducador',
+            'name' => 'plazaEducador',
             'information' => 'La Plaza Juan Cassinello, nombre del arquitecto del edificio Banesto, es más conocida como Plaza del Educador. Está situada en el Paseo de Almería. Una estatua de 1969 homenajea a la figura del maestro, representada por un profesor impartiendo conocimiento a sus alumnos.',
             'type' => '0',
             'start_point' => null,
@@ -179,7 +179,7 @@ class MarkerSeeder extends Seeder
             'title' => 'IES Celia Viñas',
             'latitude' => '36.83801157287049',
             'length' => '-2.461368970896174',
-            'name' => 'celiaViñas',
+            'name' => 'celiaViñasFachada',
             'information' => 'Originalmente, el edificio destinado a la Escuela Superior de Artes Industriales iba a ser construido en un solar delimitado en 1908 junto a la Rambla de Belén de la capital almeriense, según planos de Trinidad Cuartara. No obstante, el edificio actual es resultado del concurso del Estado ganado por el arquitecto Joaquín Rojí y López-Calvo, quien actualizó el proyecto en 1919, no poniéndolo en marcha hasta 1923. Las obras no concluyeron del todo hasta comenzados los años 30.
             En 1951 pasó a realizar funciones de Instituto de Educación Secundaria, intercambiando funciones con la Escuela de Artes Aplicadas y Oficios Artísticos. Durante más de una década fue mixto hasta que en 1966 se inaugurara el Instituto de Enseñanza Secundaria Nicolás Salmerón, en el barrio del Zapillo.
             Fue un polo cultural de la capital, pues albergó además una importante biblioteca y dos salas expositivas que fueron germen del futuro Museo de Almería.',
