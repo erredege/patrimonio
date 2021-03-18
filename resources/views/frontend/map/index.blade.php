@@ -33,7 +33,6 @@
                 fm.style.display = "none";
             } else {
                 fm.style.display = "block";
-                info.style.border = "solid";
                 galeria.style.border = "solid";
                 info.innerHTML = ""
             }
@@ -94,9 +93,9 @@
                 </div>
                 <!--------------------------------Circular Menu Dentro de Mapa---------------------------------->
 
-                <div id="circularMenu1" class="circular-menu circular-menu-left active">
+                <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
 
-                    <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+                    <a style="z-index: 50" class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');" z>
                     <i class="fa fa-bars"></i>
                     </a>
 
@@ -159,6 +158,7 @@
     ////////////////////////////////////////////////////////
     //////////Variables para el sidebar ////////////////////
     var sidebar = L.control.sidebar('sidebar').addTo(map);
+    sidebar.open('home');
     ////////////////////////////////////////////////////////
     //////////Marca de agua del Celia Viñas/////////////////
     /*L.Control.Watermark = L.Control.extend({
