@@ -212,7 +212,7 @@
     var encontrado= false;
     @foreach($markerList as $marker)
         @foreach($imageList as $image)
-            @if(($marker->name)==($image->title))
+            @if(($marker->name)==($image->title) && ($image->order==1))
                 encontrado=true;
                 {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p>  <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'>nformacion</button>");
             @endif
