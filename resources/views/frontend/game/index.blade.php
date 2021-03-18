@@ -7,9 +7,9 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-       
+
         <link rel="stylesheet" href="{{ url('gameFiles/css.css') }}">
-               
+
         <script src="https://kit.fontawesome.com/a076d05399.js"></script><!--Iconos-->
     </head>
     <body>
@@ -75,29 +75,29 @@
             </div>
         </div>
         <!--------------------------------Circular Menu Dentro de Mapa---------------------------------->
-                               
-        <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
-                
+
+        <div id="circularMenu1" class="circular-menu circular-menu-left active">
+
             <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
             <i class="fa fa-bars"></i>
             </a>
-        
+
             <menu class="items-wrapper">
             <a href="{{url('/')}}" class="menu-item fa fa-home"></a>
             <a href="{{route('game.index')}}" class="menu-item fa fa-gamepad"></a>
             <a href="https://iescelia.org/web/" class="menu-item fas fa-school"></a>
             <a href="https://www.instagram.com/iescelia/?hl=es" class="menu-item fab fa-instagram"></a>
             </menu>
-        
+
         </div>
         <!-----------------------------------------------------------------------------------
 
         <a class="imagenCelia" class="animate__bounceIn" href ='{{url('/')}}';></a>-->
-        
+
 
         <script src="{{ url('gameFiles/js/questions.js') }}"></script>
         <script src="{{ url('gameFiles/js/rutinas.js') }}"></script>
 
     </body>
-    
+
 </html>
