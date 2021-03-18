@@ -42,7 +42,7 @@
             }else{
                 map.style.height = "100%";
             }
-            
+
             ajax.onreadystatechange = procesarRespuesta; // Función que procesará la respuesta del servidor
             ajax.open("GET", "{{ url('/marker/getInfo/') }}/"+id);
             ajax.send();
@@ -86,7 +86,7 @@
             <!-- Tab panes -->
             <div class="sidebar-content" style="background-image: url('');">
                 <div class="sidebar-pane" id="home">
-                    <h1 class="sidebar-header">Puntos de Interes<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
+                    <h1 class="sidebar-header">Puntos de Interés<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
 
                     @foreach ($markerList as $marker)
                         <p name='{{$marker->name}}' onClick='click_{{$marker->name}}()' id='{{$marker->id}}'>{{$marker->title}}</p>
@@ -94,7 +94,7 @@
                 </div>
                 <!--------------------------------Circular Menu Dentro de Mapa---------------------------------->
 
-                <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
+                <div id="circularMenu1" class="circular-menu circular-menu-left active">
 
                     <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
                     <i class="fa fa-bars"></i>
@@ -194,7 +194,7 @@
                 [{{$marker->latitude}},{{$marker->length}}],
                 @foreach($pointsList as $point)
                     @if($marker->name == $point->marker_name)
-                        
+
                         [{{$point->latitude}}, {{$point->length}}],
                     @endif
                 @endforeach
@@ -214,7 +214,7 @@
         @foreach($imageList as $image)
             @if(($marker->name)==($image->title))
                 encontrado=true;
-                {{$marker->name}}.bindPopup("<p class='texto'><strong><u>{{$marker->title}}</u></strong></p>  <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'></button>");
+                {{$marker->name}}.bindPopup("<p class='texto'><strong><u>{{$marker->title}}</u></strong></p>  <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'>nformación</button>");
             @endif
 
         @endforeach
@@ -248,9 +248,9 @@
     ///////Cerrar footer con click en el mapa////////
     map.on('click', function(e) {
         var map = document.getElementById("map");
-        var fm = document.getElementById("footer-map");    
-        fm.style.display = "none";   
-        map.style.height = "100%";   
+        var fm = document.getElementById("footer-map");
+        fm.style.display = "none";
+        map.style.height = "100%";
         document.getElementById("info").innerHTML = " ";
         document.getElementById("carruselImg").innerHTML = " ";
     });
