@@ -38,7 +38,7 @@
                 info.innerHTML = ""
             }
             if(fm.style.display === "block"){
-                map.style.height = "65%";
+                map.style.height = "66%";
             }else{
                 map.style.height = "100%";
             }
@@ -57,13 +57,13 @@
                     var titulo = data[0].title;
                     var info = data[0].information;
                     var ruta = data[0].route;
-                    document.getElementById("info").innerHTML = "<strong><u>" + titulo + "</u></strong> <br>" + info;
+                    document.getElementById("info").innerHTML = "<p class='texto'>" + titulo + "</p> <p class='texto2'>" + info + "</p>";
                     document.getElementById("carruselImg").innerHTML = "";
                     for(var i = 0; i < data.length; i++) {
                         if(i == 0)   {
-                            document.getElementById("carruselImg").innerHTML += "<div class='carousel-item active'><img style='height:204px' src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
+                            document.getElementById("carruselImg").innerHTML += "<div class='carousel-item active' id='imgCarrusel'><img src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
                         }else{
-                            document.getElementById("carruselImg").innerHTML += "<div class='carousel-item'><img style='height:204px' src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
+                            document.getElementById("carruselImg").innerHTML += "<div class='carousel-item' id='imgCarrusel'><img src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
                         }
                     }
                 }
@@ -214,12 +214,12 @@
         @foreach($imageList as $image)
             @if(($marker->name)==($image->title))
                 encontrado=true;
-                {{$marker->name}}.bindPopup("<p class='texto'><strong><u>{{$marker->title}}</u></strong></p>  <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'></button>");
+                {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p>  <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'></button>");
             @endif
 
         @endforeach
         if(!encontrado){
-            {{$marker->name}}.bindPopup("<p class='texto'><strong><u>{{$marker->title}}</u></strong></p> <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'></button>");
+            {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p> <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'></button>");
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
