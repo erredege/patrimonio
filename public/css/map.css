@@ -25,7 +25,6 @@
     position:static;
     float: right;
     margin-right: 5px;
-    /*border-radius: 20px;*/
     overflow-y: scroll;
     scrollbar-width:80%; 
 }
@@ -79,6 +78,7 @@
 .texto2{
   padding-right: 10px;
   padding-left: 10px;
+  text-align: left;
 }
 
 .texto2::first-letter{

@@ -95,7 +95,7 @@
 
                 <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
 
-                    <a style="z-index: 50" class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');" z>
+                    <a style="z-index: 50" class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
                     <i class="fa fa-bars"></i>
                     </a>
 
