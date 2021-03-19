@@ -31,7 +31,7 @@
                 <th>Longitud</th>
                 <th>Informacion</th>
                 <th>Tipo</th>
-                <th>Punto Inicio</th>
+               
                 <th>Radio</th>
                 <th>Color Borde</th>
                 <th>Color Fondo</th>
@@ -47,7 +47,7 @@
                 <td class="marker">{{$marker->length}}</td>
                 <td class="informacion">{{$marker->information}}</td>
                 <td>{{$valor}}</td>
-                <td>{{$marker->start_point}}</td>
+                
                 <td>{{$marker->radio}}</td>
                 <td>{{$marker->border_color}}</td>
                 <td>{{$marker->background_color}}</td>

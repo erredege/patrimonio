@@ -17,12 +17,12 @@ class CreateMarkersTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string("title");
-            $table->double("latitude");
-            $table->double("length");
+            $table->double("latitude")->nullable();
+            $table->double("length")->nullable();
             $table->string("name");
             $table->text("information");
             $table->integer("type");
-            $table->double("start_point")->nullable();
+            //$table->string("start_point")->nullable();
             $table->double("radio")->nullable();
             $table->string("border_color")->nullable();
             $table->string("background_color")->nullable();

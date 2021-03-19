@@ -27,10 +27,7 @@
                 <label class="control-label">Nombre</label>
                 <input type="text" class="form-control" name="name" value="{{$marker->name ?? '' }}">
             </div>
-            <div class="form-group">
-                <label class="control-label">Pnto de inicio</label>
-                <input type="text" class="form-control" name="start_point" value="{{$marker->start_point ?? '' }}">
-            </div>
+            
             <div class="form-group">
                 <label class="control-label">Radio</label>
                 <input type="text" class="form-control" name="radio" value="{{$marker->radio ?? '' }}">
