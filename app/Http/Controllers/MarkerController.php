@@ -13,7 +13,6 @@ class MarkerController extends Controller
     public function index() {
         $markersList = DB::table('markers')->select('*')->orderBy('title')->get();
         return view('backend.marker.index', ['markersList'=>$markersList]);
-        return view('frontend.map.index', ['markersList'=>$markersList]);
     }
 
     public function show($id) {
