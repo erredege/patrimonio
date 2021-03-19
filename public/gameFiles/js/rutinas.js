@@ -110,8 +110,8 @@
         }
     }
     // creacion div para los iconos
-    let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
-    let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
+    let tickIconTag = '<div></div>';
+    let crossIconTag = '<div></div>';
 
     //if user clicked on option
     function optionSelected(answer){
