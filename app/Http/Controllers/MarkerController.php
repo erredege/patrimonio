@@ -11,7 +11,7 @@ use PhpParser\Node\Stmt\For_;
 class MarkerController extends Controller
 {
     public function index() {
-        $markersList = Marker::all();
+        $markersList = DB::table('markers')->select('*')->orderBy('title')->get();
         return view('backend.marker.index', ['markersList'=>$markersList]);
     }
 
