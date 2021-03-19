@@ -58,14 +58,6 @@
     bottom: 0px;
     border-top: 3px outset rgba(128, 128, 128, 0.363);
 }
-.botonVer{
-    font-size: medium;
-    float: right;
-    margin-right: 95px;
-    margin-top: -25px;
-    border-radius: 50%;
-    height: 35px;
-}
 
 .texto{
   padding-right: 8%;
@@ -87,6 +79,35 @@
 .texto2::first-letter{
   font-size: 25px;
 }
+/****************************Boton Informacion**************************************/
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #7ab3ec 5%, #79bbff 100%);
+	background-color:#79bbff;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+  margin-left: 20%;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #79bbff 5%, #77f3d4 100% );
+	background-color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
 /***************************MENU CIRCULAR DENTREO MAPA*****************************/
 .circular-menu {
     position: fixed;

@@ -78,7 +78,7 @@
             <!-- Nav tabs -->
             <div class="sidebar-tabs">
                 <ul role="tablist">
-                    <li style="height:620px"><a  href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a></li>
+                    <li style="height:5000000px"><a  href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a></li>
                 </ul>
             </div>
 
@@ -214,12 +214,12 @@
         @foreach($imageList as $image)
             @if(($marker->name)==($image->title) && ($image->order==1))
                 encontrado=true;
-                {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p>  <img src={{$image->route}}> <br><br><br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'>nformacion</button>");
+                {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p>  <img src={{$image->route}}> <br><br><br><a id='{{$marker->id}}'  onclick='ocultar({{$marker->id}})' class='myButton'>Información</a>");
             @endif
 
         @endforeach
         if(!encontrado){
-            {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p> <br><button id='{{$marker->id}}' class='botonVer' onclick='ocultar({{$marker->id}})'><img src='../img/info5.png' width='25' height='25'></button>");
+            {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p> <br><button id='{{$marker->id}}'  onclick='ocultar({{$marker->id}})'><a class='myButton'>Información</a></button>");
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
@@ -241,7 +241,7 @@
             @if ($marker->type == 2)
                 map.setZoom(17);
             @endif
-            //{{$marker->name}}.openPopup();
+            {{$marker->name}}.openOn(map);
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
