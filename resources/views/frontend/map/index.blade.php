@@ -78,11 +78,8 @@
             <!-- Nav tabs -->
             <div class="sidebar-tabs">
                 <ul role="tablist">
-<<<<<<< HEAD
+
                     <li style="height:5000px"><a  href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a></li>
-=======
-                    <li style="height:5000000px"><a  href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a></li>
->>>>>>> 4dc7ca90e45a60788d2bd22f7e09f51d099b93bf
                 </ul>
             </div>
 
