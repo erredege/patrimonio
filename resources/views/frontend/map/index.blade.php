@@ -78,6 +78,7 @@
             <!-- Nav tabs -->
             <div class="sidebar-tabs">
                 <ul role="tablist">
+
                     <li style="height:5000000px"><a  href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a></li>
                 </ul>
             </div>
