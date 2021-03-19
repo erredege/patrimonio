@@ -231,18 +231,22 @@
             map.setView([{{$marker->latitude}}, {{$marker->length}}]);
             @if ($marker->type == 0)
                 map.setZoom(18);
+                {{$marker->name}}.openPopup();
             @endif
             @if ($marker->type == 1)
                 @if ($marker->radio > 20)
                     map.setZoom(17);
+                    {{$marker->name}}.openPopup();
                 @else
                     map.setZoom(18);
+                    {{$marker->name}}.openPopup();
                 @endif
             @endif
             @if ($marker->type == 2)
                 map.setZoom(17);
+                {{$marker->name}}.openPopup();
             @endif
-            {{$marker->name}}.openOn(map);
+            //{{$marker->name}}.openPopup();
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
