@@ -196,7 +196,17 @@ class MarkerSeeder extends Seeder
             'latitude' => '36.837984250313205',
             'length' => '-2.461137584716642',
             'name' => 'celiaViñasSalonActos',
-            'information' => 'dfhndnafnd',
+            'information' => 'Destacar las vidrieras del Salón de Actos, posiblemente las más bellas que
+            podamos encontrar en la ciudad. Estas vidrieras quedan situadas en la fachada oeste del edifico
+            encima de la puerta monumental de entrada, es decir, en la planta segunda. Las medidas totales son,
+            aproximadamente, de 7,43 metros de largo por 3,46 de alto. Las vidrieras están configuradas en cinco cuerpos en sentido vertical y con una decoración
+            geométrica de cuadrados y rombos emplomados. En el cuerpo central aparece el escudo de la
+            ciudad de Almería, que se repite en el exterior (pero más simplificado) cuatro veces bajo cada una
+            de las columnas del segundo cuerpo en la puerta principal. En los cuerpos laterales, a un lado y a otro del escudo de Almería, está representada la
+            alegoría de las Artes y de los Oficios -el cartabón, el yunque y el compás-. En los cuerpos extremos
+            se encuentran unas guirnaldas de frutas y elementos florales. Los colores predominantes en estos
+            motivos son el amarillo, el rojo, el blanco y el ocre.
+            ',
             'type' => '0',
             //'start_point' => null,
             'radio' => null,
@@ -301,7 +311,11 @@ class MarkerSeeder extends Seeder
             'latitude' => '36.84250102543934',
             'length' => '-2.468613775143747',
             'name' => 'ermitaCerroSanCristobal',
-            'information' => 'fgbadfbdf',
+            'information' => 'Dicho monumento que preside el Cerro de San Cristóbal, llamado así por la antigua ermita (de San Cristóbal) que se encontraba en dicho lugar, constituye un fantástico mirador de la ciudad, con vistas a la ciudad y a la Alcazaba. 
+            Los almerienses que amamos esta ciudad, estamos esperanzados en la remodelación que está en proyecto por parte del Ayuntamiento capitalino, que por otra parte es muy necesaria. Desde él las vistas de la ciudad con la Alcazaba y el mar son formidables, y por ello necesita una digna restauración. Una vez realizada, sin duda, será una visita obligada de todos los almerienses y personas de otras provincias andaluzas y comunidades autónomas que se acerquen a conocer nuestra querida y entrañable ciudad. 
+            En esta sección del Patrimonio Perdido en la Guerra, vamos a dedicar un artículo a lo realmente sucedió en la Guerra con la monumental imagen de mármol del Sagrado Corazón de Jesús, para que no se especule más, porque está documentado.
+            En uno de los Boletines Eclesiásticos del Obispado, en 1944, se hace referencia a la reconstrucción del Monumento al Sagrado Corazón de Jesús, relatando lo que realmente sucedió con él: El 25 de julio de 1936, el monumento al Sagrado Corazón de Jesús caía a las dos de la tarde a fuerza de dinamita. Los bloques del monumento cayeron sobre la ermita de San Cristóbal tapiando la puerta. La cabeza y el busto cayeron en la sacristía. En este derribo, sin embargo, la cabeza del monumento quedó intacta sin ningún deterioro. 
+            Los brazos desaparecieron y el corazón presentó un pequeño desconchado en la parte superior de la cruz. El busto de la imagen se conservó al igual que el pedestal del monumento, aunque éste muy deteriorado. La imagen derribada en la Guerra, no desapareció, restaurándose con posterioridad.',
             'type' => '0',
             //'start_point' => null,
             'radio' => null,
@@ -490,7 +504,15 @@ class MarkerSeeder extends Seeder
             'latitude' => '36.85048840935207',
             'length' => '-2.463165876625142',
             'name' => 'molineta',
-            'information' => 'fbdfbbfbfb',
+            'information' => 'Junto al viejo cortijo llamado de Góngora, a un lado de la Rambla de Belén, se abre un sendero que lleva hasta el corazón de la Molineta. Nada más empezar el camino aparece un pino seco, como un anuncio del abandono que ha sufrido este lugar en los últimos cuarenta años.  El árbol está cerca de un palomar de piedra derruido, cuyo majestuoso arco descansa entre las rocas y la vegetación que con las últimas lluvias ha poblado el paisaje.
+            Subiendo, antes de perder de vista el palacio, se puede ver lo que queda de la antigua casa de los aparceros, frente a los restos de un aljibe y un bosque de eucaliptos que llena de sombras la hacienda. A medida que se empieza a subir el cerro uno descubre el alma de aquel lugar: los restos del canal de San Indalecio que con su entramado de acequias y balsas le dieron vida a la Molineta en las primeras décadas del siglo pasado, haciendo que el milagro del agua llegara desde los montes de Benahadux. Ahí están los restos del cauce contando su historia y los árboles que aguantaban el avance de la erosión para que el cerro no se tragara la acequia.
+            Lugar mágico 
+            Aquel camino de cuestas lleva hasta un lugar mágico que desde lejos parece la base de una pirámide. Son las piedras de la balsa conocida con el nombre de ‘los cien escalones’, un escenario mítico para varias generaciones de adolescentes que conocieron la balsa cuando todavía tenía agua y cuando aún corría la leyenda de que un guarda despiadado con escopeta y cartuchos de sal rondaba por la zona para que ningún niño osara a darse un baño en aquellas aguas sagradas.  En realidad, la balsa tiene cincuenta y dos escalones, pero si uno los baja y luego los sube entiende por qué el nombre de los cien escalones.
+            Frente a la gigantesca balsa estaba la casa del relojero, el encargado de abrir y cerrar las llaves de paso del agua cuando había que repartir las horas de riego entre los agricultores. De la vivienda quedan las piedras y un trozo de pared que ha sobrevivido al paso del tiempo.
+            La balsa de los cien escalones esconde una inmensa cueva en su interior, que linda con la zona donde  estuvieron instalados los polvorines. Es la zona conocida también como las cuevas de Conan porque allí se  estuvieron rodando escenas de la famosa película que en 1982 trajo a Almería al actor americano Arnold Schwarzenegger.  En su origen, este paraje era una gran cantera de donde se extrajo la piedra con la que se construyó el dique de levante del puerto. Hasta la reforma de la Rambla de Belén, todavía era posible encontrarse con los restos de la vía estrecha por la que bajaba el tren cargado de  piedras camino del muelle. Cuando se abandonaron las canteras la zona se transformó en un almacén de pólvora.
+            La columna
+            Una mina de las que atraviesan y rodean el cerro se abre paso entre las rocas, perforando la montaña hasta el lado de poniente. Allí se encuentra otra gruta  que los niños del lugar bautizaron con el nombre de la cueva de la Columna, en honor a la piedra gigantesca que cuelga del techo. Se trata de una antigua balsa que se quedó sin agua como poco a poco se fue quedando sin vida aquel inmenso parque al norte de la ciudad.
+            La Molineta es un mundo perdido y una oportunidad desperdiciada. No existe  otro parque con mayores  posibilidades que aquellos cerros surcados por acequias, donde todavía huele a tomillo y donde se han hecho fuertes los okupas que han convertido las cuevas en espacios habitables. La Molineta es también un mundo de contrastes. En su interior encierra el corazón de otra época, mientras que en sus aledaños ya se siente el avance del progreso que está construyendo en una de sus laderas un grupo de viviendas que será el primero de nuevas urbanizaciones que iran convirtiendo en ciudad aquel espacio lleno de naturaleza. ',
             'type' => '0',
             //'start_point' => null,
             'radio' => null,
@@ -519,7 +541,13 @@ class MarkerSeeder extends Seeder
             'latitude' => '36.84294027083929',
             'length' => '-2.461729549095982',
             'name' => 'torrePerdigones',
-            'information' => 'dsvadfbdfbfad',
+            'information' => 'La calle del Relámpago está formada por cinco callejones que desde la calle de Granada se van entrelazando hasta desembocar en la calle de Murcia. Cinco pequeños pasadizos, estrechos y escondidos, que por la forma que van tomando desde su origen hasta su desenlace componen la figura con la que solemos dibujar un rayo sobre un papel. Tal vez por esa apariencia la calle se llamó del Relámpago. Es un lugar que a pesar de formar parte del centro de la ciudad, de esa gran manzana que se extiende desde la iglesia de San Sebastián hacia las calles de Granada y Murcia, suele pasar desapercibido. Tanto que hay cientos de almerienses que transitan a diario por las dos esquinas de la calle y nunca se han internado en su peculiar laberinto.
+            Por dentro, la calle del Relámpago nos va llevando a una Almería ya en retirada, a esa ciudad de los años cincuenta que todavía se puede descubrir en algunos de sus viejos edificios, hoy abandonados. Allí se encuentran los restos de la trastienda de la vieja bodega "La Oficina", auténtico templo de un tiempo donde sus taburetes y sus mesas eran patrimonio de los hombres que se reunían a diario en su salón a compartir sus sueños alrededor de una botella de vino de la tierra.
+            En el corazón de ese entramado de recodos que van componiendo la calle sobresale, como escapada de un cuento antiguo, una extraña torre cuadrangular que destaca como un anacronismo en medio de un corralón de casas y grandes edificios. La altura de los pisos que la rodean sólo permite ver la parte alta del torreón, que aún se levanta firme para mostrar las arrugas de los años. Es la torre de los Perdigones, una reliquia de otro siglo que en su tiempo sirvió de fábrica de municiones. Allí, en el horno que culminaba la estancia superior, se fundía el plomo  que después se iba cribando para conseguir los perdigones de distinto calibre. Su origen nos lleva a las primeras décadas del siglo diecinueve, cuando aquella zona de la ciudad se quedaba a extramuros y estaba rodeada de huertas.
+            La torre debió de quedar abandonada en las últimas décadas del siglo, cuando Almería fue creciendo  y las ordenanzas prohibieron que se pudiera construir o mantener dentro del recinto de la ciudad este tipo de fundiciones. La vieja torre de los Perdigones se quedó sin actividad y fue cayendo en el olvido, rodeada de un manojo de casas que la fue ocultando. En septiembre de 1922, los vecinos de las viviendas colindantes, denunciaron el peligro que suponía el estado ruinoso en el que se encontraba la torre. “Abandonada, constituye un foco de infección y en el caso de un posible derrumbamiento, los escombros irían a caer sobre las casas”, decían los vecinos.
+            En esa época, los vecinos de la zona intentaron modernizar aquel entramado de callejones que rodeaban la torre, y solicitaron a las autoridades que se prolongara la calle del Relámpago para que pudiera tener una salida en línea recta a la calle de Murcia. La iniciativa fue aprobada en 1925 y un año después se echó marcha atrás por los costes que para las arcas municipales supondrían las obras y las expropiaciones para poder hacer realidad el nuevo trazado.
+            La calle siguió manteniendo su apariencia antigua, tal y como está en la actualidad, y la torre de los Perdigones fue resistiendo el paso del tiempo, arropada en su escondite, ajena a una ciudad que seguía creciendo sin ningún plan. La construcción de grandes edificios modernos a su alrededor, a comienzos de los años setenta, la aislaron un poco más hasta hacerla casi imperceptible.
+            Antiguos vecinos de la calle del Relámpago, como el periodista almeriense Diego García Morell, o el que fuera niño del Hogar del Canario José Terol Ruiz, que pasaron una parte de su infancia en la calle del Relámpago, recuerdan que en la posguerra la vieja torre era un lugar abandonado, al que sólo se podía acceder a través de la azoteas de las casas que la rodeaban. Cuando a finales de los años sesenta la moda de la televisión fue llegando a todos los hogares, los vecinos que habitaban el corralón de la torre aprovecharon la altura de la misma para colgar allí sus antenas y coger la señal con más claridad.',
             'type' => '0',
             //'start_point' => null,
             'radio' => null,
@@ -547,7 +575,7 @@ class MarkerSeeder extends Seeder
             'latitude' => '36.846019563057624',
             'length' => '-2.455607773969145',
             'name' => 'avenidaSantaIsabelInicio',
-            'information' => 'sddbdfbdzf',
+            'information' => 'Comienza en Calle Sor Policarpa y finaliza en una entrada a Carretera de Ronda ',
             'type' => '0',
             //'start_point' => null,
             'radio' => null,
@@ -561,7 +589,7 @@ class MarkerSeeder extends Seeder
             'latitude' => '36.84877022957813',
             'length' => '-2.4537131877258664',
             'name' => 'avenidaSantaIsabelFin',
-            'information' => 'sddbdfbdzf',
+            'information' => 'Comienza en Calle Sor Policarpa y finaliza en una entrada a Carretera de Ronda',
             'type' => '0',
             //'start_point' => null,
             'radio' => null,
@@ -575,7 +603,14 @@ class MarkerSeeder extends Seeder
             'latitude' => '36.84858919011009',
             'length' => '-2.4648717906966375',
             'name' => 'barrioCaridad',
-            'information' => 'sddbdfbdzf',
+            'information' => 'Amanecía en Almería el 11 de septiembre de 1891. El cielo barruntaba lluvia y vaya que si llovió. La capital soportó una gran tormenta que dejó más de 158 litros de agua y provocó importantes pérdidas humanas y materiales. Pero no solo Almería sufrió aquel día. Adra perdió prácticamente su vega y y la ciudad de Albox quedó totalmente destrozada.
+            En la capital varias personas fallecieron por culpa de la riada, otras desparecieron y muchas sufrieron heridas al ser arrastrada por el agua. El periodista Eduardo del Pino lo cuenta en su blog: “La gran tormenta del once de septiembre dejó malheridos a los barrios más humildes, donde las aguas anegaron las calles y el interior de las viviendas”.
+            De aquellas riadas que destrozaron edificios y vidas hoy solo queda el recuerdo. Bueno…y algo más. Al margen de los artículos en la prensa local que recuerdan la tragedia, si paseamos por Almería encontramos algunos “homenajes” a lo ocurrido aquel año. Uno de ellos es la pastelería ‘El 11 de Septiembre’, establecimiento que iba a ser inaugurado ese día pero el desastre lo impidió. Sus propietarios decidieron ponerle este nombre para recordar siempre aquella terrible fecha.
+            La Caridad Universal
+            Otro de los homenajes que quedan en el paisaje de la ciudad es la estatua que saluda a los almerienses en la Avenida Federico García Lorca, en la Plaza de las Velas. Es la ‘Estatua de la Caridad’, una mujer que abraza a un niño, sostiene en brazos a otro y en su mano muestra un pergamino con le fecha ‘1891’. Simboliza a la Caridad Universal.
+            Fue la Reina María Cristina la que pidió que se construyera esta estatua y el escultor almeriense Luis Fernández el encargado de elaborarla y cobrar poco más de cinco mil pesetas de la época por ello.
+            Al parecer, a sus pies, y oculto entre los sillares, se introdujo un tubo de plomo a modo de ‘cápsula del tiempo’, tal y como cuenta Manuel Artero en La Voz de Almería. En este tubo, además de “un ejemplar de la “Gaceta de Madrid”, del 16 de septiembre de 1891 y unas monedas de plata con el busto de Don Alfonso XIII” también se introdujo un texto que narraba el suceso y explicaba las obras de encauzamiento de la rambla.
+            A día de hoy, todavía hay quien deja flores a los pies del monumento cuando llega el mes de septiembre.',
             'type' => '0',
             //'start_point' => null,
             'radio' => null,
