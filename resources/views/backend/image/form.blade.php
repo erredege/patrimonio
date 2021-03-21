@@ -28,7 +28,7 @@
             <input type="file" class="form-control" name="imageFile" value="">
         </div><br>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-success">Enviar</button>
         </div>
         </form>
 

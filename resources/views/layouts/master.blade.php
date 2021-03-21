@@ -33,7 +33,7 @@
                 position: absolute;
                 overflow: auto;
                 width: 10%;
-                height: 6.5%;
+                height: 7.2%;
             }
             #buttonNew{
                 margin-left: 5vh;
