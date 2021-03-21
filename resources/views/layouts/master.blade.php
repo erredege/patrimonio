@@ -32,8 +32,8 @@
             .informacion{
                 position: absolute;
                 overflow: auto;
-                width: 8vw;
-                height: 6.5vh;
+                width: 10%;
+                height: 6.5%;
             }
             #buttonNew{
                 margin-left: 5vh;
