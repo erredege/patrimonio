@@ -18,12 +18,12 @@
         <tr>
             <td>{{$option->key}}</td>
             <td>{{$option->value}}</td>
-            <td><a href="{{route('option.edit', $option->id)}}">Modificar</a></td>
+            <td><a href="{{route('option.edit', $option->id)}}"><button id="buttonNew" type="button" class="btn btn-warning" >Modificar</button></a></td>
             <td>
                 <form action = "{{route('option.destroy', $option->id)}}" method="POST">
                     @csrf
                     @method("DELETE")
-                    <input type="submit" value="Borrar">
+                    <input class="btn btn-danger" type="submit" value="Borrar">
                 </form>
                    {{--<button type="button" onclick="destroy('{{route('option.destroy',$option->id)}}')">Eliminar</button>--}}
             </td>

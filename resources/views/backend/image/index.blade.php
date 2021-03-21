@@ -22,12 +22,12 @@
             <td>{{$image->description}}</td>
             <td>{{$image->order}}</td>
             <td><img src="{{url($image->route)}}" style="width: 45%" style="height: 30%" ></td>
-            <td><a href="{{route('image.edit', $image->id)}}">Modificar</a></td>
+            <td><a href="{{route('image.edit', $image->id)}}"><button id="buttonNew" type="button" class="btn btn-warning" >Modificar</button></a></td>
             <td>
                 <form action = "{{route('image.destroy', $image->id)}}" method="POST">
                     @csrf
                     @method("DELETE")
-                    <input type="submit" value="Borrar">
+                    <input class="btn btn-danger" type="submit" value="Borrar">
                 </form>
 
                 {{--<button type="button" onclick="destroy('{{route('marker.destroy',$marker->id)}}')">Eliminar</button>--}}

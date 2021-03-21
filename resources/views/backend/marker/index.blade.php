@@ -52,12 +52,12 @@
                 <td>{{$marker->border_color}}</td>
                 <td>{{$marker->background_color}}</td>
                 <td>{{$marker->opacity}}</td>
-                <td><a href="{{route('marker.edit', $marker->id)}}">Modificar</a></td>
+                <td><a href="{{route('marker.edit', $marker->id)}}"><button id="buttonNew" type="button" class="btn btn-warning" >Modificar</button></a></td>
                 <td>
                     <form action = "{{route('marker.destroy', $marker->id)}}" method="POST">
                         @csrf
                         @method("DELETE")
-                        <input type="submit" value="Borrar">
+                        <input class="btn btn-danger" type="submit" value="Borrar">
                     </form>
 
                     {{--<button type="button" onclick="destroy('{{route('marker.destroy',$marker->id)}}')">Eliminar</button>--}}
