@@ -6,7 +6,7 @@
 
 @section("content")
 <br>
-<a href="{{ route('marker.create') }}">Nuevo</a>
+ <a href="{{ route('marker.create') }}"><button id="buttonNew" type="button" class="btn btn-primary" >Nuevo</button></a>
 <table border='1' class="table table-hover">
     @foreach ($markersList as $marker)
 
@@ -25,18 +25,18 @@
     @endif
         <thead>
             <tr>
-                <th>Titulo</th>
-                <th>Nombre</th>
-                <th>Latitud</th>
-                <th>Longitud</th>
-                <th>Informacion</th>
-                <th>Tipo</th>
+                <th class="text-center">Titulo</th>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Latitud</th>
+                <th class="text-center">Longitud</th>
+                <th class="text-center">Informacion</th>
+                <th class="text-center">Tipo</th>
                
-                <th>Radio</th>
-                <th>Color Borde</th>
-                <th>Color Fondo</th>
-                <th>Opacidad</th>
-                <th colspan="2">Opciones</th>
+                <th class="text-center">Radio</th>
+                <th class="text-center">Color Borde</th>
+                <th class="text-center">Color Fondo</th>
+                <th class="text-center">Opacidad</th>
+                <th class="text-center" colspan="2">Opciones</th>
             </tr>
         </thead>
         <tbody>

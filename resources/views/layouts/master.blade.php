@@ -35,6 +35,16 @@
                 width: 8vw;
                 height: 6.5vh;
             }
+            #buttonNew{
+                margin-left: 5vh;
+                margin-bottom: 1%;
+            }
+
+           
+            .header{
+                margin-left: 5vh;
+            }
+            
             
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -58,7 +68,7 @@
                 </div>
             </nav>
 
-            <h2>Juego del patrimonoio</h2>
+            <h2>Juego de patrimonio</h2>
             @yield('header')
         </div>
 
@@ -69,7 +79,7 @@
         <footer>
             <br><br>
             <center>
-                <small> proyecto Celia Viñas 2ºDAW 2020/2021</small>
+                <small> Proyecto Celia Viñas 2ºDAW 2020/2021</small>
             </center>
         </footer>
     </body>

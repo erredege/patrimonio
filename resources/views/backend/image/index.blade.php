@@ -6,7 +6,7 @@
 
 @section("content")
 <br>
-<a href="{{ route('image.create') }}">Nuevo</a>
+<a href="{{ route('marker.create') }}"><button id="buttonNew" type="button" class="btn btn-primary" >Nuevo</button></a>
 <table border='1' class="table">
     @foreach ($imagesList as $image)
 
