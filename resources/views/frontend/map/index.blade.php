@@ -223,7 +223,7 @@
 
         @endforeach
         if(!encontrado){
-            {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p> <br><button id='{{$marker->id}}'  onclick='ocultar({{$marker->id}})'><a class='myButton'>Información</a></button>");
+            {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p> <br><a id='{{$marker->id}}'  onclick='ocultar({{$marker->id}})' class='myButton'>Información</a>");
         }
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
@@ -234,7 +234,7 @@
             map.setView([{{$marker->latitude}}, {{$marker->length}}]);
             @if ($marker->type == 0)
                 map.setZoom(18);
-                {{$marker->name}}.bounce(20)
+                {{$marker->name}}.bounce(7)
             @endif
             @if ($marker->type == 1)
                 @if ($marker->radio > 20)
