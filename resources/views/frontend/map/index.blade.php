@@ -95,7 +95,7 @@
                         <p name='{{$marker->name}}' onClick='click_{{$marker->name}}()' id='{{$marker->id}}'>{{$marker->title}}</p>
                     @endforeach
                 </div>
-                <!--------------------------------Circular Menu Dentro de Mapa---------------------------------->
+                <!--------------------------------Circular Menu --------------------------------------------->
 
                 <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
 
