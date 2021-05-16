@@ -63,6 +63,7 @@
                     <a class="nav-item nav-link" href='{{route("marker.index")}}'>MARCADORES<a>
                     <a class="nav-item nav-link" href='{{route("option.index")}}'>OPCIONES<a>
                     <a class="nav-item nav-link" href='{{route("image.index")}}'>IMAGENES<a>
+                    <a class="nav-item nav-link" href='{{route("user.index")}}'>USUARIOS<a>
                     <a class="nav-item nav-link" href='{{route("map.index")}}'>MAPA<a>
                   </div>
                 </div>
