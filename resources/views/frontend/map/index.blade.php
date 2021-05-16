@@ -18,9 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{{ url('css/map.css') }}">
-    
+
     <script  type = "text/javascript" src = "https://cdn.jsdelivr.net/gh/hosuaby/Leaflet.SmoothMarkerBouncing@v2.0.0/dist/bundle.js " crossorigin = " anónimo "></script>
-     
+
 
     <script>
         var ajax = new XMLHttpRequest();
@@ -95,7 +95,7 @@
                         <p name='{{$marker->name}}' onClick='click_{{$marker->name}}()' id='{{$marker->id}}'>{{$marker->title}}</p>
                     @endforeach
                 </div>
-                <!--------------------------------Circular Menu Dentro de Mapa---------------------------------->
+                <!--------------------------------Circular Menu --------------------------------------------->
 
                 <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
 
@@ -248,7 +248,7 @@
             @endif
             //{{$marker->name}}.openPopup();
         }
-       
+
     @endforeach
     ////////////////////////////////////////////////////////////////////////////////
     ///////Cerrar footer con click en el mapa////////

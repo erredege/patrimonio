@@ -6,7 +6,7 @@
 
 @section("content")
 <br>
-<a href="{{ route('marker.create') }}"><button id="buttonNew" type="button" class="btn btn-primary" >Nuevo</button></a>
+<a href="{{ route('image.create') }}"><button id="buttonNew" type="button" class="btn btn-primary" >Nuevo</button></a>
 <table border='1' class="table">
     @foreach ($imagesList as $image)
 
@@ -32,7 +32,7 @@
 
                 {{--<button type="button" onclick="destroy('{{route('marker.destroy',$marker->id)}}')">Eliminar</button>--}}
             </td>
-        
+
     @endforeach
 </table>
 @endsection

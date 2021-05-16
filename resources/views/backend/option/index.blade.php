@@ -6,10 +6,10 @@
 
 @section("content")
 <br>
-<a href="{{ route('marker.create') }}"><button id="buttonNew" type="button" class="btn btn-primary" >Nuevo</button></a>
+<a href="{{ route('option.create') }}"><button id="buttonNew" type="button" class="btn btn-primary" >Nuevo</button></a>
 <table border='1' class="table">
     @foreach ($optionsList as $option)
-    
+
         <tr>
             <td>Clave</td>
             <td>Valor</td>

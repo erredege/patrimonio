@@ -27,7 +27,7 @@
                 <label class="control-label">Nombre</label>
                 <input type="text" class="form-control" name="name" value="{{$marker->name ?? '' }}">
             </div>
-            
+
             <div class="form-group">
                 <label class="control-label">Radio</label>
                 <input type="text" class="form-control" name="radio" value="{{$marker->radio ?? '' }}">
@@ -54,7 +54,7 @@
                 <input type="text" class="form-control" name="opacity" value="{{$marker->opacity ?? '' }}">
             </div>
             <div class="form-group">
-                <label class="control-label">Informacion</label>
+                <label class="control-label" class="input-group-text">Informacion</label>
                 <input type="text" class="form-control" name="information" value="{{$marker->information ?? '' }}" size=20 style="height:250px">
             </div>
             <div class="form-group">
