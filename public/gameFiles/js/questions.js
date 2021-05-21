@@ -110,5 +110,5 @@ let questions = [
       "D)Un solar"
     ]
   },
-  
+
 ];
