@@ -48,7 +48,7 @@
         result_box.classList.remove("activeResult");
         timeValue = 30;
         que_count = 0;
-        que_numb = 1;
+        que_numb = Math.floor((Math.random() * 10)+1);
         userScore = 0;
         widthValue = 0;
         showQuetions(que_count); //llamada showQestions function

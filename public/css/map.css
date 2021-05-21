@@ -44,11 +44,11 @@
 }
 
 #carruselImg{
-  height: 32.7vh;
+  height: auto;
 }
 
 #imgCarrusel>{
-  height: 100%;
+  height: auto;
 }
 
 #footer-map{

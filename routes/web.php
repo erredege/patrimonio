@@ -13,10 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//------------Map--------------------------------------------------------
 Route::get('/map', 'MapController@index')->name('map.index');
-Route::get('/game', 'GameController@index')->name('game.index');
-Route::get('/', 'CaratulaController@index')->name('caratula.index');
+//-----------------------------------------------------------------------
 
+//-----------Juego-------------------------------------------------------
+Route::get('/game', 'GameController@index')->name('game.index');
+//-----------------------------------------------------------------------
+
+//-----------Caratula----------------------------------------------------
+Route::get('/', 'CaratulaController@index')->name('caratula.index');
+//-----------------------------------------------------------------------
 
 //-------------Markers----------------------------------------------------
 Route::get('/marker', 'MarkerController@index')->name('marker.index');
@@ -27,8 +34,8 @@ Route::get('/marker/{id}/editar', 'MarkerController@edit')->name('marker.edit');
 Route::put('/marker/{id}', 'MarkerController@update')->name('marker.update');
 Route::delete('/marker/{id}/borrar', 'MarkerController@destroy')->name('marker.destroy');
 Route::get('/marker/getInfo/{id}', 'MarkerController@getInfo')->name('marker.getInfo');
-
 //-----------------------------------------------------------------------
+
 //-------------Options----------------------------------------------------
 Route::get('/option', 'OptionController@index')->name('option.index');
 Route::post('/option/store', 'OptionController@store')->name('option.store');
@@ -48,3 +55,18 @@ Route::get('/image/{id}/editar', 'ImageController@edit')->name('image.edit');
 Route::put('/image/{id}', 'ImageController@update')->name('image.update');
 Route::delete('/image/{id}/borrar', 'ImageController@destroy')->name('image.destroy');
 //-----------------------------------------------------------------------
+
+//-------------Usuario---------------------------------------------------
+Route::get('/user', 'UserController@index')->name('user.index');
+Route::post('/user/store', 'UserController@store')->name('user.store');
+Route::get('/user/crear', 'UserController@create')->name('user.create');
+Route::get('/user/{id}', 'UserController@show')->name('user.show');
+Route::get('/user/{id}/editar', 'UserController@edit')->name('user.edit');
+Route::put('/user/{id}', 'UserController@update')->name('user.update');
+Route::delete('/user/{id}/borrar', 'UserController@destroy')->name('user.destroy');
+//-----------------------------------------------------------------------
+
+//-------------Logout----------------------------------------------------
+Auth::routes();
+
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
