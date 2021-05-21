@@ -68,5 +68,4 @@ Route::delete('/user/{id}/borrar', 'UserController@destroy')->name('user.destroy
 
 //-------------Logout----------------------------------------------------
 Auth::routes();
-
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');

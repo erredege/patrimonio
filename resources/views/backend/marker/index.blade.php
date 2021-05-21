@@ -1,8 +1,8 @@
 @extends("layouts.master")
 
-@section("title", "Administración de marcadores")
+@section("title", "Administración de Marcadores")
 
-@section("header", "Administración de marcadores")
+@section("header", "Administración de Marcadores")
 
 @section("content")
 <br>

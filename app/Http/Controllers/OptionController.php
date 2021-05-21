@@ -7,6 +7,11 @@ use App\Models\Option;
 
 class OptionController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index() {
         $optionsList = Option::all();
         return view('backend.option.index', ['optionsList'=>$optionsList]);
