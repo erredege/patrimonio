@@ -9,13 +9,12 @@
     </head>
     <style>
         body{
-
-            background-image: url("{{url('img/caratula.jpg')}}");
+            background-image: url("{{url('img/caratula.png')}}");
             background-size: cover;
             background-repeat: no-repeat;
         }
     </style>
-    <body class="animate__bounceInLeft">
+    <body>
 
         <div class="all">
             <div class="left" id="juego" onclick="redirect(this.id)">
@@ -29,9 +28,67 @@
               <div  class="text" >Colaboradores</div>
             </div>
         </div>
+
+        <div class="device" style="display:none">
+            <div class="container" >
+                <button id="burger" class="open-main-nav">
+                    <span class="burger"></span>
+                    <span class="burger-text">Menu</span>
+                </button>
+                <nav class="main-nav" id="main-nav">
+                    <ul>
+                        <li>
+                            <a href="{{route('game.index')}}">Juego</a>
+                        </li>
+                        <li>
+                            <a href="{{route('map.index')}}">Mapa</a>
+                        </li>
+                        <li>
+                            <a href="">Colaboradores</a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
         <a class="imagenCelia"></a>
     </body>
+
     <script>
+        /*SCRIPT MENU MOVIL/TABLETS*/
+     let burger = document.getElementById('burger'),
+	 nav    = document.getElementById('main-nav'),
+	 slowmo = document.getElementById('slowmo');
+
+    burger.addEventListener('click', function(e){
+        this.classList.toggle('is-open');
+        nav.classList.toggle('is-open');
+    });
+
+    slowmo.addEventListener('click', function(e){
+        this.classList.toggle('is-slowmo');
+    });
+
+    /* Onload demo - dirty timeout */
+    let clickEvent = new Event('click');
+
+    window.addEventListener('load', function(e) {
+        slowmo.dispatchEvent(clickEvent);
+        burger.dispatchEvent(clickEvent);
+        
+        setTimeout(function(){
+            burger.dispatchEvent(clickEvent);
+            
+            setTimeout(function(){
+                slowmo.dispatchEvent(clickEvent);
+            }, 3500);
+        }, 5500);
+    });
+    </script>
+
+    <script>
+    /* SCRIPT MENU DE CUADROS*/ 
     function redirect(id){
 
         if(id=="juego"){
@@ -45,4 +102,3 @@
     </script>
 </html>
 
-<!--a href="{{route('map.index')}}"-->
