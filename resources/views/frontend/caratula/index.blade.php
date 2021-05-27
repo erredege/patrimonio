@@ -8,14 +8,22 @@
         <title>Caratula</title>
     </head>
     <style>
+        html{
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            padding-top:2px;
+        }
         body{
+            overflow: hidden;
             background-image: url("{{url('img/caratula.png')}}");
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
         }
     </style>
     <body>
-
+        
         <div class="all">
             <div class="left" id="juego" onclick="redirect(this.id)">
                 <div  class="text" >Juego</div>
@@ -31,9 +39,9 @@
 
         <div class="device" style="display:none">
             <div class="container" >
-                <button id="burger" class="open-main-nav">
+                <button id="burger" class="open-main-nav" onclick="translateButtonMenuMovil(this.id)">
                     <span class="burger"></span>
-                    <span class="burger-text">Menu</span>
+                    <span class="burger-text"><strong> De los Porqués <br>La aplicación<br></strong></span>
                 </button>
                 <nav class="main-nav" id="main-nav">
                     <ul>
@@ -86,7 +94,15 @@
         }, 5500);
     });
     </script>
+    <script>
+        function translateButtonMenuMovil (id){
+            var burger1 = document.getElementById(id);
 
+            burger1.classList.toggle("arriba");
+
+                      
+        }
+    </script>    
     <script>
     /* SCRIPT MENU DE CUADROS*/ 
     function redirect(id){

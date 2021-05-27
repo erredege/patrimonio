@@ -150,12 +150,20 @@ body {
 
 /********************************MENU MOVIL/TABLETS******************************************************************/
 
-@media only screen and (min-width: 481px) and (max-width:767px) and (orientation:landspace) {
+@media only screen and (max-width: 823px) {
     .all {
-        display: none;
+        display: none !important;
     }
     .device {
-        display: content;
+        display: unset !important;
+    }
+    .arriba {
+        top: 35px !important;
+        left: 75px !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+    #burger {
+        transition: all 0.5s ease-in-out;
     }
     /* Main menu positionning */
     .main-nav {
@@ -165,11 +173,12 @@ body {
         left: 0;
         bottom: 0;
         text-align: center;
-        background: #FFF;
+        background-color: rgba(151, 151, 151, 0.5);
         opacity: 0;
         z-index: -1;
         visibility: hidden;
         transition: all .375s;
+        opacity: 1;
     }
     .main-nav.is-open {
         opacity: 1;
@@ -249,9 +258,10 @@ body {
     /* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
     .open-main-nav {
         position: absolute;
-        top: 15px;
+        top: 50%;
         padding-top: 20px;
-        right: 15px;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2.5);
         z-index: 1000;
         background: none;
         border: 0;
@@ -309,7 +319,7 @@ body {
     .device {
         position: relative;
         width: 345px;
-        height: 600px;
+        height: 80%;
         background: #FFF;
         border: 1px solid #EEE;
         border-radius: 3px;
