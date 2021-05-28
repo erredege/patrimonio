@@ -58,9 +58,9 @@ class MarkerSeeder extends Seeder
             'name' => 'mercadoAbastos',
             'information' => 'Ejemplo magnífico de arquitectura del hierro junto con el Cable Inglés, la antigua Estación de Ferrocarril o la Plaza de Toros. La Almería burguesa de finales del siglo XIX necesita equipamientos de ocio y educativos (colegios, teatros, plaza de toros...) y comerciales e industriales (mercados, naves, estación...) como símbolos del progreso y de una ciudad en crecimiento. El nuevo mercado central pretende acabar con la venta por puntos diversos de la ciudad (tenderetes ambulantes con carácter antihigiénico y creando basura) y centralizar el abastecimiento alimentario.
             El modelo será la planta basilical de cinco naves (la central sobreelevada permitiendo una galería de ventanas dando luz al interior), definidas por columnas de fundición y un esquema en cruz terminando en cuatro puertas
-            La aparición en la segunda mitad del siglo XIX de un ensanche burgués a levante de la ciudad, arrinconó los proyectos de construirlo en el casco antiguo, prosperando la idea de situarlo en el área de residencia de la burguesía local.           
-            Su ubicación era la más idónea, cerca de la confluencia de los dos ejes viarios más importantes del ensanche burgués, la calle Obispo Orberá y el Paseo, abierto a éste a través de una calle que a tal fin se proyectaba (calle Aguilar de Campoo), en cuyo fondo se situaría la fachada principal.            
-            El edificio fue encargado en 1892 al arquitecto Antonio Martínez Pérez, aunque fue finalmente diseñado y ejecutado por el entonces arquitecto municipal Trinidad Cuartara Cassinello en 1893. La inauguración tuvo lugar cuatro años después, en 1897. La construcción, que se engloba dentro de la Arquitectura del Hierro, se hizo prácticamente entera de este material, salvo el basamento y el pabellón de la fachada principal que se levantaron con fábrica de mampostería, ladrillo y cantería. La armadura de las cubiertas es metálica y la cerrazón de los paramentos hecha a base de persianas y cristales. En la portada principal, de la calle Aguilar de Campoo, se encuentra representado el símbolo de la abundancia, una figura femenina con un cesto de frutas.          
+            La aparición en la segunda mitad del siglo XIX de un ensanche burgués a levante de la ciudad, arrinconó los proyectos de construirlo en el casco antiguo, prosperando la idea de situarlo en el área de residencia de la burguesía local.
+            Su ubicación era la más idónea, cerca de la confluencia de los dos ejes viarios más importantes del ensanche burgués, la calle Obispo Orberá y el Paseo, abierto a éste a través de una calle que a tal fin se proyectaba (calle Aguilar de Campoo), en cuyo fondo se situaría la fachada principal.
+            El edificio fue encargado en 1892 al arquitecto Antonio Martínez Pérez, aunque fue finalmente diseñado y ejecutado por el entonces arquitecto municipal Trinidad Cuartara Cassinello en 1893. La inauguración tuvo lugar cuatro años después, en 1897. La construcción, que se engloba dentro de la Arquitectura del Hierro, se hizo prácticamente entera de este material, salvo el basamento y el pabellón de la fachada principal que se levantaron con fábrica de mampostería, ladrillo y cantería. La armadura de las cubiertas es metálica y la cerrazón de los paramentos hecha a base de persianas y cristales. En la portada principal, de la calle Aguilar de Campoo, se encuentra representado el símbolo de la abundancia, una figura femenina con un cesto de frutas.
             El Mercado se ha conservado prácticamente intacto hasta nuestros días. En 1982 se llevó a cabo una importante restauración. Asimismo, en 2009, se llevó a cabo una reforma de modernización adecuando la presente estructura a la realidad económica y comercial de nuestros días',
             'type' => '0',
             //'start_point' => null,
@@ -76,10 +76,10 @@ class MarkerSeeder extends Seeder
             'length' => '-2.4646839894335444',
             'name' => 'refugios',
             'information' => 'Los refugios subterráneos de Almería son una estructura ubicada en la ciudad de Almería, España, a raíz de los 52 bombardeos por aire y mar que sufrió la población, en los que cayeron un total de 754 bombas durante la Guerra Civil Española.1​ Esto provocó que se decidiera construir un sistema de refugios subterráneos, con más de 4 kilómetros de longitud en total, un quirófano y capacidad para albergar a unos 40 000 habitantes de la ciudad por la época.
-            Estos fueron diseñados por el arquitecto local Guillermo Langle Rubio, con la ayuda del ingeniero de minas Carlos Fernández Celaya y el ingeniero de caminos José Fornieles;2​ y se convertirían en unos de los más importantes y mejor conservados a nivel europeo.3​ Estos refugios han soportado el principal ataque que ha sufrido la ciudad en toda su historia, el Bombardeo de Almería. Desde 2013 forman parte de la red de Lugares de Memoria Histórica de la Junta de Andalucía.4​            
-            Existía un código de conducta dentro de estos refugios. De principio, estaba prohibido fumar, para evitar que el refugio se llenara de humo si la ventilación natural era incapaz de eliminarlo. Los niños no podían estar solos dentro y, además, para evitar enfrentamientos dentro, se pedía que no se hablara de política o de religión.11​ También estaba prohibido entrar con armas, ya fueran blancas o de fuego. Una vez acabada la contienda, los refugios permanecieron abiertos por temor a la entrada de España en la Segunda Guerra Mundial, siendo finalmente cerrados en 1944 dado que se convirtieron en hogar de personas sin techo.12​ Hasta septiembre de 1945 no se dieron por concluidas las labores de sellado de los refugios, desinfectación y desescombro de las calles.           
-            Cuando aún no habían concluido los enfrentamientos, ya se proyectó que el uso que se daría al conjunto de refugios una vez terminada la guerra sería como alcantarillado de la urbe, algo de lo que finalmente no pudo disponer la ciudad hasta los años 1970.5​     
-            Tras la clausura completa de los refugios, durante el Franquismo, estos pasadizos cayeron en el olvido13​ hasta que fueron encontrados fortuitamente el año 2001. Así, los refugios pasaron desapercibidos para los almerienses, que durante generaciones ignoraron su existencia.     
+            Estos fueron diseñados por el arquitecto local Guillermo Langle Rubio, con la ayuda del ingeniero de minas Carlos Fernández Celaya y el ingeniero de caminos José Fornieles;2​ y se convertirían en unos de los más importantes y mejor conservados a nivel europeo.3​ Estos refugios han soportado el principal ataque que ha sufrido la ciudad en toda su historia, el Bombardeo de Almería. Desde 2013 forman parte de la red de Lugares de Memoria Histórica de la Junta de Andalucía.4​
+            Existía un código de conducta dentro de estos refugios. De principio, estaba prohibido fumar, para evitar que el refugio se llenara de humo si la ventilación natural era incapaz de eliminarlo. Los niños no podían estar solos dentro y, además, para evitar enfrentamientos dentro, se pedía que no se hablara de política o de religión.11​ También estaba prohibido entrar con armas, ya fueran blancas o de fuego. Una vez acabada la contienda, los refugios permanecieron abiertos por temor a la entrada de España en la Segunda Guerra Mundial, siendo finalmente cerrados en 1944 dado que se convirtieron en hogar de personas sin techo.12​ Hasta septiembre de 1945 no se dieron por concluidas las labores de sellado de los refugios, desinfectación y desescombro de las calles.
+            Cuando aún no habían concluido los enfrentamientos, ya se proyectó que el uso que se daría al conjunto de refugios una vez terminada la guerra sería como alcantarillado de la urbe, algo de lo que finalmente no pudo disponer la ciudad hasta los años 1970.5​
+            Tras la clausura completa de los refugios, durante el Franquismo, estos pasadizos cayeron en el olvido13​ hasta que fueron encontrados fortuitamente el año 2001. Así, los refugios pasaron desapercibidos para los almerienses, que durante generaciones ignoraron su existencia.
             Su hallazgo fue accidental, pues unas obras contiguas para la realización de un aparcamiento subterráneo en la cercana Rambla Obispo Orberá en el año 2001 se toparon con estas galerías.',
             'type' => '0',
             //'start_point' => null,
@@ -88,38 +88,18 @@ class MarkerSeeder extends Seeder
             'background_color' => null,
             'opacity' => null,
         ]);
-
+        //36.83873442036214, -2.4634421656642216
         DB::table('markers')->insert([
             'title' => 'Paseo de Almeria',
-            'latitude' => '36.84159141131295',
-            'length' => '-2.4639249336854663',
+            'latitude' => '36.83873442036214',
+            'length' => '-2.4634421656642216',
             'name' => 'paseoAlmeriaInicio',
             'information' => 'Constituye su apertura la gran operación urbanística burguesa realizada en el siglo XIX en Almería, equivalente a la Gran Vía de Madrid o Granada, o la Diagonal de Barcelona, como un ensanche o crecimiento burgués de la ciudad, aprovechando el espacio dejado por el frente oriental de murallas que se derriba y los solares de los conventos desamortizados (San Francisco, Santo Domingo y la Trinidad).
-            Es tras la demolición de las murallas a partir de 1855 cuando comienzan las alineaciones y aperturas de nuevas calles. En 1856 presentan un proyecto para abrir y urbanizar un amplio salón entre la Puerta de Purchena y la Puerta del Sol (la salida de la calle Trajano al Paseo, cuya prolongación es la actual calle Rueda López). Se delineó una perspectiva amplia y recta y se trazó el paseo con amplio andén central elevado y dos calzadas laterales. Los edificios empezaron a bordearlo. En 1865 se paga a Ramón Orozco, el gran terrateniente y hombre más rico de Almería, el precio por los terrenos ocupados y dos años después el Paseo está prácticamente terminado.      
-            La primera fase del Paseo fue diseñada por el arquitecto Fabio Gago en 1859 y llegaba hasta la actual Plaza del Educador. Las viviendas responden al modelo arquitectónico de vivienda unifamiliar de la burguesía liberal.           
-            La segunda fase, hasta Rueda López, corresponde a un proyecto de ensanche de 1860 del arquitecto municipal Martín Baldó, siguiendo el Paseo en línea recta sin respetar el quiebro de la antigua muralla.        
-            La tercera y última fase responde a un proyecto de Trinidad Cuartara de 1874, organizando el Paseo como un boulevard con calzada central y dos paseos laterales con árboles y aceras.      
-            En 1890 se decide construir una plaza circular en la confluencia del Paseo y la Rambla así como una calle (Reina Regente) que una el paseo con el nuevo puerto. Todas las edificaciones debían ajustarse a un modelo, con aprobación del Ayuntamiento.         
-            En marzo de 1867 se enciende el alumbrado de hidrógeno. En 1882 Juan Lirola le pone aceras de Portland. En 1892 don Francisco Jover, quita el andén central y se estrena el alumbrado eléctrico. En 1911 don Braulio Moreno manda hacer las aceras y pavimenta la calzada. En 1857 se dedicó a Alfonso XII, el Paseo del Príncipe y posteriormente Paseo de Cádiz, con la Primera República lo llamaron Paseo de Orozco. Tras la proclamación de la Segunda República en 1931 se convierte en la avenida de la República y tras la Guerra Civil en 1939 a avenida del Generalísimo. Desde 1979 vuelve a tener el nombre de Paseo de Almería.',
-            'type' => '0',
-            //'start_point' => null,
-            'radio' => null,
-            'border_color' => null,
-            'background_color' => null,
-            'opacity' => null,
-        ]);
-
-        DB::table('markers')->insert([
-            'title' => 'Paseo de Almeria',
-            'latitude' => '36.83556979472669',
-            'length' => '-2.4629481757629925',
-            'name' => 'paseoAlmeriaFin',
-            'information' => 'Constituye su apertura la gran operación urbanística burguesa realizada en el siglo XIX en Almería, equivalente a la Gran Vía de Madrid o Granada, o la Diagonal de Barcelona, como un ensanche o crecimiento burgués de la ciudad, aprovechando el espacio dejado por el frente oriental de murallas que se derriba y los solares de los conventos desamortizados (San Francisco, Santo Domingo y la Trinidad).
-            Es tras la demolición de las murallas a partir de 1855 cuando comienzan las alineaciones y aperturas de nuevas calles. En 1856 presentan un proyecto para abrir y urbanizar un amplio salón entre la Puerta de Purchena y la Puerta del Sol (la salida de la calle Trajano al Paseo, cuya prolongación es la actual calle Rueda López). Se delineó una perspectiva amplia y recta y se trazó el paseo con amplio andén central elevado y dos calzadas laterales. Los edificios empezaron a bordearlo. En 1865 se paga a Ramón Orozco, el gran terrateniente y hombre más rico de Almería, el precio por los terrenos ocupados y dos años después el Paseo está prácticamente terminado.      
-            La primera fase del Paseo fue diseñada por el arquitecto Fabio Gago en 1859 y llegaba hasta la actual Plaza del Educador. Las viviendas responden al modelo arquitectónico de vivienda unifamiliar de la burguesía liberal.           
-            La segunda fase, hasta Rueda López, corresponde a un proyecto de ensanche de 1860 del arquitecto municipal Martín Baldó, siguiendo el Paseo en línea recta sin respetar el quiebro de la antigua muralla.        
-            La tercera y última fase responde a un proyecto de Trinidad Cuartara de 1874, organizando el Paseo como un boulevard con calzada central y dos paseos laterales con árboles y aceras.      
-            En 1890 se decide construir una plaza circular en la confluencia del Paseo y la Rambla así como una calle (Reina Regente) que una el paseo con el nuevo puerto. Todas las edificaciones debían ajustarse a un modelo, con aprobación del Ayuntamiento.         
+            Es tras la demolición de las murallas a partir de 1855 cuando comienzan las alineaciones y aperturas de nuevas calles. En 1856 presentan un proyecto para abrir y urbanizar un amplio salón entre la Puerta de Purchena y la Puerta del Sol (la salida de la calle Trajano al Paseo, cuya prolongación es la actual calle Rueda López). Se delineó una perspectiva amplia y recta y se trazó el paseo con amplio andén central elevado y dos calzadas laterales. Los edificios empezaron a bordearlo. En 1865 se paga a Ramón Orozco, el gran terrateniente y hombre más rico de Almería, el precio por los terrenos ocupados y dos años después el Paseo está prácticamente terminado.
+            La primera fase del Paseo fue diseñada por el arquitecto Fabio Gago en 1859 y llegaba hasta la actual Plaza del Educador. Las viviendas responden al modelo arquitectónico de vivienda unifamiliar de la burguesía liberal.
+            La segunda fase, hasta Rueda López, corresponde a un proyecto de ensanche de 1860 del arquitecto municipal Martín Baldó, siguiendo el Paseo en línea recta sin respetar el quiebro de la antigua muralla.
+            La tercera y última fase responde a un proyecto de Trinidad Cuartara de 1874, organizando el Paseo como un boulevard con calzada central y dos paseos laterales con árboles y aceras.
+            En 1890 se decide construir una plaza circular en la confluencia del Paseo y la Rambla así como una calle (Reina Regente) que una el paseo con el nuevo puerto. Todas las edificaciones debían ajustarse a un modelo, con aprobación del Ayuntamiento.
             En marzo de 1867 se enciende el alumbrado de hidrógeno. En 1882 Juan Lirola le pone aceras de Portland. En 1892 don Francisco Jover, quita el andén central y se estrena el alumbrado eléctrico. En 1911 don Braulio Moreno manda hacer las aceras y pavimenta la calzada. En 1857 se dedicó a Alfonso XII, el Paseo del Príncipe y posteriormente Paseo de Cádiz, con la Primera República lo llamaron Paseo de Orozco. Tras la proclamación de la Segunda República en 1931 se convierte en la avenida de la República y tras la Guerra Civil en 1939 a avenida del Generalísimo. Desde 1979 vuelve a tener el nombre de Paseo de Almería.',
             'type' => '0',
             //'start_point' => null,
@@ -163,7 +143,7 @@ class MarkerSeeder extends Seeder
             'length' => '-2.46428',
             'name' => 'escuelaArtes',
             'information' => 'El antiguo convento fue suprimido en 1810 por las tropas napoleónicas, en 1822 por el gobierno constitucional, y definitivamente en 1835 durante la desamortización de Mendizábal.
-            En 1841 se destinó el edificio a la enseñanza, lo que trajo consigo importantes reformas, tanto en su interior como en sus fachadas, que dirigieron los arquitectos almerienses Guillermo Langle y Trinidad Cuartara. Durante la guerra civil española sus instalaciones sirvieron a la causa republicana, designándose los sótanos para establecer la central de telégrafos de la ciudad, las dos primeras plantas estaban destinadas a las fuerzas del bando republicano y la tercera y última como alojamiento de refugiados llegados de Málaga. Además, sus puertas quedaban abiertas durante los bombardeos como refugio.1​ La Escuela de Artes quedó definitivamente instalada en el edificio en 1951.  
+            En 1841 se destinó el edificio a la enseñanza, lo que trajo consigo importantes reformas, tanto en su interior como en sus fachadas, que dirigieron los arquitectos almerienses Guillermo Langle y Trinidad Cuartara. Durante la guerra civil española sus instalaciones sirvieron a la causa republicana, designándose los sótanos para establecer la central de telégrafos de la ciudad, las dos primeras plantas estaban destinadas a las fuerzas del bando republicano y la tercera y última como alojamiento de refugiados llegados de Málaga. Además, sus puertas quedaban abiertas durante los bombardeos como refugio.1​ La Escuela de Artes quedó definitivamente instalada en el edificio en 1951.
             El antiguo claustro hoy hace las veces de patio interior. Edificado probablemente en el siglo XVI, fue remodelado durante el siglo XVIII, concluyéndose las obras en 1728, y muestra detalles góticos y manieristas, más blasones reales y de la Orden de Santo Domingo
             Curiosidades
             Hacia 1989, el director de cine Steven Spielberg grabó parte del largometraje Indiana Jones y la última cruzada en el patio del edificio. Inicialmente, Spielberg quería grabar la escena en la que se muestra un Rolls-Royce Phantom II en el conocido Patio de los Leones de la Alhambra, pero los directores del monumento granadino se negaron a introducir el coche usando un helicóptero como se sugería. Al volver a Almería, donde se rodaban otras partes de la película, se encontró con este emplazamiento, el cual le pareció adecuado. Para introducir el vehículo, se ideó una rampa de madera para librar los escalones que descienden hasta el lugar, que finalmente no fue capaz de soportar el peso. El golpe deterioró tres escalones que, a día de hoy, se ven de diferente color que los demás. Se dice que Spielberg pagó la reparación y además donó 300 000 pesetas para el viaje de estudios de la escuela.',
@@ -311,10 +291,10 @@ class MarkerSeeder extends Seeder
             'latitude' => '36.84250102543934',
             'length' => '-2.468613775143747',
             'name' => 'ermitaCerroSanCristobal',
-            'information' => 'Dicho monumento que preside el Cerro de San Cristóbal, llamado así por la antigua ermita (de San Cristóbal) que se encontraba en dicho lugar, constituye un fantástico mirador de la ciudad, con vistas a la ciudad y a la Alcazaba. 
-            Los almerienses que amamos esta ciudad, estamos esperanzados en la remodelación que está en proyecto por parte del Ayuntamiento capitalino, que por otra parte es muy necesaria. Desde él las vistas de la ciudad con la Alcazaba y el mar son formidables, y por ello necesita una digna restauración. Una vez realizada, sin duda, será una visita obligada de todos los almerienses y personas de otras provincias andaluzas y comunidades autónomas que se acerquen a conocer nuestra querida y entrañable ciudad. 
+            'information' => 'Dicho monumento que preside el Cerro de San Cristóbal, llamado así por la antigua ermita (de San Cristóbal) que se encontraba en dicho lugar, constituye un fantástico mirador de la ciudad, con vistas a la ciudad y a la Alcazaba.
+            Los almerienses que amamos esta ciudad, estamos esperanzados en la remodelación que está en proyecto por parte del Ayuntamiento capitalino, que por otra parte es muy necesaria. Desde él las vistas de la ciudad con la Alcazaba y el mar son formidables, y por ello necesita una digna restauración. Una vez realizada, sin duda, será una visita obligada de todos los almerienses y personas de otras provincias andaluzas y comunidades autónomas que se acerquen a conocer nuestra querida y entrañable ciudad.
             En esta sección del Patrimonio Perdido en la Guerra, vamos a dedicar un artículo a lo realmente sucedió en la Guerra con la monumental imagen de mármol del Sagrado Corazón de Jesús, para que no se especule más, porque está documentado.
-            En uno de los Boletines Eclesiásticos del Obispado, en 1944, se hace referencia a la reconstrucción del Monumento al Sagrado Corazón de Jesús, relatando lo que realmente sucedió con él: El 25 de julio de 1936, el monumento al Sagrado Corazón de Jesús caía a las dos de la tarde a fuerza de dinamita. Los bloques del monumento cayeron sobre la ermita de San Cristóbal tapiando la puerta. La cabeza y el busto cayeron en la sacristía. En este derribo, sin embargo, la cabeza del monumento quedó intacta sin ningún deterioro. 
+            En uno de los Boletines Eclesiásticos del Obispado, en 1944, se hace referencia a la reconstrucción del Monumento al Sagrado Corazón de Jesús, relatando lo que realmente sucedió con él: El 25 de julio de 1936, el monumento al Sagrado Corazón de Jesús caía a las dos de la tarde a fuerza de dinamita. Los bloques del monumento cayeron sobre la ermita de San Cristóbal tapiando la puerta. La cabeza y el busto cayeron en la sacristía. En este derribo, sin embargo, la cabeza del monumento quedó intacta sin ningún deterioro.
             Los brazos desaparecieron y el corazón presentó un pequeño desconchado en la parte superior de la cruz. El busto de la imagen se conservó al igual que el pedestal del monumento, aunque éste muy deteriorado. La imagen derribada en la Guerra, no desapareció, restaurándose con posterioridad.',
             'type' => '0',
             //'start_point' => null,
@@ -366,26 +346,12 @@ class MarkerSeeder extends Seeder
             'background_color' => null,
             'opacity' => null,
         ]);
-
+            //36.83451289249774, -2.4633868548686366
         DB::table('markers')->insert([
             'title' => 'Calle Reina Regente',
-            'latitude' => '36.83379889736059',
-            'length' => '-2.4639100666575082',
+            'latitude' => '36.83451289249774',
+            'length' => '-2.4633868548686366',
             'name' => 'calleReinaRegenteInicio',
-            'information' => 'Conecta la plaza circular con el puerto, nombre en honor a la rina de la eopca por la ayuda tras las inundaciones.',
-            'type' => '0',
-            //'start_point' => null,
-            'radio' => null,
-            'border_color' => null,
-            'background_color' => null,
-            'opacity' => null,
-        ]);
-
-        DB::table('markers')->insert([
-            'title' => 'Calle Reina Regente',
-            'latitude' => '36.83540896595454',
-            'length' => '-2.462928378189209',
-            'name' => 'calleReinaRegenteFin',
             'information' => 'Conecta la plaza circular con el puerto, nombre en honor a la rina de la eopca por la ayuda tras las inundaciones.',
             'type' => '0',
             //'start_point' => null,
@@ -470,11 +436,11 @@ class MarkerSeeder extends Seeder
             'background_color' => null,
             'opacity' => null,
         ]);
-
+            //36.85429567665765, -2.456892272954218
         DB::table('markers')->insert([
             'title' => 'Camino Cruz Caravaca',
-            'latitude' => '36.850349919867284',
-            'length' => '-2.4544953693318594',
+            'latitude' => '36.85429567665765',
+            'length' => '-2.456892272954218',
             'name' => 'caminoCruzCaravacaInicio',
             'information' => 'El Barrio Araceli comenzó a edificarse en la década de 1940 por obras del Obispado de Almería. Por ello, en los años cincuenta era conocido como el Barrio del Obispo.Debido a su situación sobre una zona de cerros, sus calles son estrechas y con pendientes, siendo en la década de 1970, el barrio con más casas-cueva de Almería​. A partir de esa época, con el desarrollismo se construyeron numerosos bloques de edificios, y a finales del siglo XX, dúplex en la parte norte2​. A partir del año 2009, con el desdoblamiento y construcción del bulevar de la N-340, el barrio ha sufrido un positivo cambio de imagen​. En el 2019 comienzan a construirse unos huertos urbanos en el barrio de 1.014 m², cuya gestión sea correspondiente a las asociaicones vecinales, con la intención de darle un uso social, terapiacional y medio ambiental.',
             'type' => '0',
@@ -485,19 +451,6 @@ class MarkerSeeder extends Seeder
             'opacity' => null,
         ]);
 
-        DB::table('markers')->insert([
-            'title' => 'Camino Cruz Caravaca',
-            'latitude' => '36.856733590916456',
-            'length' => '-2.4611706705957332',
-            'name' => 'caminoCruzCaravacaFin',
-            'information' => 'El Barrio Araceli comenzó a edificarse en la década de 1940 por obras del Obispado de Almería. Por ello, en los años cincuenta era conocido como el Barrio del Obispo.Debido a su situación sobre una zona de cerros, sus calles son estrechas y con pendientes, siendo en la década de 1970, el barrio con más casas-cueva de Almería​. A partir de esa época, con el desarrollismo se construyeron numerosos bloques de edificios, y a finales del siglo XX, dúplex en la parte norte2​. A partir del año 2009, con el desdoblamiento y construcción del bulevar de la N-340, el barrio ha sufrido un positivo cambio de imagen​. En el 2019 comienzan a construirse unos huertos urbanos en el barrio de 1.014 m², cuya gestión sea correspondiente a las asociaicones vecinales, con la intención de darle un uso social, terapiacional y medio ambiental.',
-            'type' => '0',
-            //'start_point' => null,
-            'radio' => null,
-            'border_color' => null,
-            'background_color' => null,
-            'opacity' => null,
-        ]);
 
         DB::table('markers')->insert([
             'title' => 'Molineta',
@@ -506,7 +459,7 @@ class MarkerSeeder extends Seeder
             'name' => 'molineta',
             'information' => 'Junto al viejo cortijo llamado de Góngora, a un lado de la Rambla de Belén, se abre un sendero que lleva hasta el corazón de la Molineta. Nada más empezar el camino aparece un pino seco, como un anuncio del abandono que ha sufrido este lugar en los últimos cuarenta años.  El árbol está cerca de un palomar de piedra derruido, cuyo majestuoso arco descansa entre las rocas y la vegetación que con las últimas lluvias ha poblado el paisaje.
             Subiendo, antes de perder de vista el palacio, se puede ver lo que queda de la antigua casa de los aparceros, frente a los restos de un aljibe y un bosque de eucaliptos que llena de sombras la hacienda. A medida que se empieza a subir el cerro uno descubre el alma de aquel lugar: los restos del canal de San Indalecio que con su entramado de acequias y balsas le dieron vida a la Molineta en las primeras décadas del siglo pasado, haciendo que el milagro del agua llegara desde los montes de Benahadux. Ahí están los restos del cauce contando su historia y los árboles que aguantaban el avance de la erosión para que el cerro no se tragara la acequia.
-            Lugar mágico 
+            Lugar mágico
             Aquel camino de cuestas lleva hasta un lugar mágico que desde lejos parece la base de una pirámide. Son las piedras de la balsa conocida con el nombre de ‘los cien escalones’, un escenario mítico para varias generaciones de adolescentes que conocieron la balsa cuando todavía tenía agua y cuando aún corría la leyenda de que un guarda despiadado con escopeta y cartuchos de sal rondaba por la zona para que ningún niño osara a darse un baño en aquellas aguas sagradas.  En realidad, la balsa tiene cincuenta y dos escalones, pero si uno los baja y luego los sube entiende por qué el nombre de los cien escalones.
             Frente a la gigantesca balsa estaba la casa del relojero, el encargado de abrir y cerrar las llaves de paso del agua cuando había que repartir las horas de riego entre los agricultores. De la vivienda quedan las piedras y un trozo de pared que ha sobrevivido al paso del tiempo.
             La balsa de los cien escalones esconde una inmensa cueva en su interior, que linda con la zona donde  estuvieron instalados los polvorines. Es la zona conocida también como las cuevas de Conan porque allí se  estuvieron rodando escenas de la famosa película que en 1982 trajo a Almería al actor americano Arnold Schwarzenegger.  En su origen, este paraje era una gran cantera de donde se extrajo la piedra con la que se construyó el dique de levante del puerto. Hasta la reforma de la Rambla de Belén, todavía era posible encontrarse con los restos de la vía estrecha por la que bajaba el tren cargado de  piedras camino del muelle. Cuando se abandonaron las canteras la zona se transformó en un almacén de pólvora.
@@ -569,11 +522,11 @@ class MarkerSeeder extends Seeder
             'background_color' => '#FAF77F',
             'opacity' => '0.25',
         ]);
-
+            //36.84797361975952, -2.45446604411782
         DB::table('markers')->insert([
             'title' => 'Avenida Santa Isabel',
-            'latitude' => '36.846019563057624',
-            'length' => '-2.455607773969145',
+            'latitude' => '36.84797361975952',
+            'length' => '-2.45446604411782',
             'name' => 'avenidaSantaIsabelInicio',
             'information' => 'Comienza en Calle Sor Policarpa y finaliza en una entrada a Carretera de Ronda ',
             'type' => '0',
@@ -584,19 +537,6 @@ class MarkerSeeder extends Seeder
             'opacity' => null,
         ]);
 
-        DB::table('markers')->insert([
-            'title' => 'Avenida Santa Isabel',
-            'latitude' => '36.84877022957813',
-            'length' => '-2.4537131877258664',
-            'name' => 'avenidaSantaIsabelFin',
-            'information' => 'Comienza en Calle Sor Policarpa y finaliza en una entrada a Carretera de Ronda',
-            'type' => '0',
-            //'start_point' => null,
-            'radio' => null,
-            'border_color' => null,
-            'background_color' => null,
-            'opacity' => null,
-        ]);
 
         DB::table('markers')->insert([
             'title' => 'Barrio de la Caridad',
