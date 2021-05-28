@@ -1,3 +1,23 @@
+@media only screen and (max-width: 823px) {
+
+  #map {
+    position: absolute;
+    width: 98%;
+    height: 98%;
+  }
+
+  #galeria{
+    width: 28%;
+    height: 99%;
+    position:absolute;
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    border: none !important; 
+  }
+}
+
+
 #map {
     position: absolute;
     width: 100%;
@@ -24,7 +44,7 @@
     height: 99%;
     position:static;
     float: right;
-    margin-right: 5px;
+    margin-right: -35px;
     overflow-y: scroll;
     scrollbar-width:80%;
 }
@@ -39,8 +59,9 @@
     height: 99%;
     position:absolute;
     float: left;
-    margin-top: 1px;
+    margin-top: 5px;
     margin-left: 60px;
+    border: none !important; 
 }
 
 #carruselImg{

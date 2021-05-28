@@ -21,6 +21,12 @@
 
     <script  type = "text/javascript" src = "https://cdn.jsdelivr.net/gh/hosuaby/Leaflet.SmoothMarkerBouncing@v2.0.0/dist/bundle.js " crossorigin = " anónimo "></script>
 
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+	/>
 
     <script>
         var ajax = new XMLHttpRequest();
@@ -261,12 +267,12 @@
         document.getElementById("carruselImg").innerHTML = " ";
     });
     </script>
-    <div id ="footer-map">
-        <div id="galeria" >
+    <div id ="footer-map" class="prueba col-12 col-lg-4 mw-100 hw-100">
+        <div id="galeria" style="border: none;" class="prueba col-12 col-lg-4 mw-100 ">
             <!--aqui va la galertia-->
 
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 204px">
-                <div class="carousel-inner" id="carruselImg">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" id="carruselImg" class="prueba col-12 col-lg-4 mw-100">
 
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
@@ -279,7 +285,7 @@
                 </button>
             </div>
         </div>
-        <div id="info" ></div>
+        <div id="info" class="prueba col-12 col-lg-4 mw-100 text-center"></div>
     </div>
 </body>
 
