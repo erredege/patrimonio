@@ -12,7 +12,7 @@ class MarkerController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth');
+        $this->middleware('auth')->except("getInfo");
     }
 
     public function index() {
@@ -31,7 +31,7 @@ class MarkerController extends Controller
 
     public function store(Request $r) {
         $marker = new Marker();
-        
+
 
         $marker->title = $r->title;
         $marker->latitude = $r->latitude;
@@ -44,7 +44,7 @@ class MarkerController extends Controller
         $marker->border_color = $r->border_color;
         $marker->background_color = $r->background_color;
         $marker->opacity = $r->opacity;
-                
+
         $arrayPuntos = explode("/",$r->puntosPoligono);
 
         if($r->type == '2'){
@@ -55,7 +55,7 @@ class MarkerController extends Controller
                 $point->latitude = $cordenada[0];
                 $point->length = $cordenada[1];
                 $point->marker_name = $marker->name;
-               
+
                 $point->save();
             }
         }
