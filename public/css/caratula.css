@@ -150,7 +150,7 @@ body {
 
 /********************************MENU MOVIL/TABLETS******************************************************************/
 
-@media only screen and (max-width: 823px) {
+@media only screen and (max-width: 936px) {
     .all {
         display: none !important;
     }
@@ -173,6 +173,7 @@ body {
         left: 0;
         bottom: 0;
         text-align: center;
+        font-size: 1.20rem;
         background-color: rgba(151, 151, 151, 0.5);
         opacity: 0;
         z-index: -1;
@@ -193,7 +194,7 @@ body {
         bottom: 0;
         left: 0;
         right: -15px;
-        background: #FEDC2A;
+        background:rgba(142, 172, 255, 0.466);
         transform-origin: 0 0;
         transform: skew(-14deg) translateX(-120%);
         transition: all .275s .1s;
@@ -320,8 +321,8 @@ body {
         position: relative;
         width: 345px;
         height: 80%;
-        background: #FFF;
-        border: 1px solid #EEE;
+        background: rgba(255, 255, 255, 0.041);
+        border: 1px solid rgb(238, 238, 238);
         border-radius: 3px;
         box-shadow: 0 0 0 10px rgba(0, 0, 0, .1);
     }
@@ -332,7 +333,8 @@ body {
         bottom: 0;
         left: 0;
         overflow: hidden;
-        background: linear-gradient(to bottom, #eee, #ddd);
+        background-color: rgba(237, 219, 85, 0.856);
+        /*box-shadow: 0 0 20px 5px rgba(237, 219, 85, 0.856));*/
     }
     html {
         height: 100%;
