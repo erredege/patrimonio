@@ -7,15 +7,32 @@
   }
 
   #galeria{
-    width: 28%;
-    height: 99%;
+    width: 45% !important;
+    height: 99% !important;
     position:absolute;
-    float: left;
-    margin-top: 2%;
-    margin-left: 2%;
-    border: none !important; 
+    margin-top: 18% !important;
+    margin-left: 2% !important;
+    border: none !important;
   }
 }
+
+@media only screen and (max-width: 823px) and (orientation:landscape){
+
+    #map {
+      position: absolute;
+      width: 98%;
+      height: 98%;
+    }
+
+    #galeria{
+      width: 38% !important;
+      height: 50% !important;
+      position:absolute;
+      margin-top: 2% !important;
+      margin-left: 2% !important;
+      border: none !important;
+    }
+  }
 
 
 #map {
@@ -61,7 +78,7 @@
     float: left;
     margin-top: 5px;
     margin-left: 60px;
-    border: none !important; 
+    border: none !important;
 }
 
 #carruselImg{
