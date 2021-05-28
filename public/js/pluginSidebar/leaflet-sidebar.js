@@ -9,14 +9,14 @@
  * @param {string} [options.position=left] - Position of the sidebar: 'left' or 'right'
  * @see L.control.sidebar
  */
-L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
+L.Control.Sidebar = L.Control.extend( /** @lends L.Control.Sidebar.prototype */ {
     includes: (L.Evented.prototype || L.Mixin.Events),
 
     options: {
         position: 'right'
     },
 
-    initialize: function (id, options) {
+    initialize: function(id, options) {
         var i, child;
 
         L.setOptions(this, options);
@@ -35,7 +35,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
         for (i = this._sidebar.children.length - 1; i >= 0; i--) {
             child = this._sidebar.children[i];
             if (child.tagName == 'DIV' &&
-                    L.DomUtil.hasClass(child, 'sidebar-content'))
+                L.DomUtil.hasClass(child, 'sidebar-content'))
                 this._container = child;
         }
 
@@ -67,7 +67,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
      * @param {L.Map} map
      * @returns {Sidebar}
      */
-    addTo: function (map) {
+    addTo: function(map) {
         var i, child;
 
         this._map = map;
@@ -75,9 +75,9 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
         for (i = this._tabitems.length - 1; i >= 0; i--) {
             child = this._tabitems[i];
             var sub = child.querySelector('a');
-            if (sub.hasAttribute('href') && sub.getAttribute('href').slice(0,1) == '#') {
+            if (sub.hasAttribute('href') && sub.getAttribute('href').slice(0, 1) == '#') {
                 L.DomEvent
-                    .on(sub, 'click', L.DomEvent.preventDefault )
+                    .on(sub, 'click', L.DomEvent.preventDefault)
                     .on(sub, 'click', this._onClick, child);
             }
         }
@@ -96,10 +96,10 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
      * @param {L.Map} map
      * @returns {Sidebar}
      */
-     removeFrom: function(map) {
-         console.log('removeFrom() has been deprecated, please use remove() instead as support for this function will be ending soon.');
-         this.remove(map);
-     },
+    removeFrom: function(map) {
+        console.log('removeFrom() has been deprecated, please use remove() instead as support for this function will be ending soon.');
+        this.remove(map);
+    },
 
     /**
      * Remove this sidebar from the map.
@@ -107,7 +107,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
      * @param {L.Map} map
      * @returns {Sidebar}
      */
-    remove: function (map) {
+    remove: function(map) {
         var i, child;
 
         this._map = null;
@@ -195,7 +195,7 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
     /**
      * @private
      */
-    _onCloseClick: function () {
+    _onCloseClick: function() {
         this.close();
     }
 });
@@ -211,6 +211,6 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
  * @param {string} [options.position=left] - Position of the sidebar: 'left' or 'right'
  * @returns {Sidebar} A new sidebar instance
  */
-L.control.sidebar = function (id, options) {
+L.control.sidebar = function(id, options) {
     return new L.Control.Sidebar(id, options);
 };
