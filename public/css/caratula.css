@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fascinate&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fascinate&display=swap");
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -11,7 +11,7 @@ body {
 }
 
 .imagenCelia {
-    background: url('../img/celiaEscudo.png');
+    background: url("../img/celiaEscudo.png");
     background-size: cover;
     position: absolute;
     bottom: 1%;
@@ -42,7 +42,7 @@ body {
     opacity: 1;
 }
 
-.all:hover>div {
+.all:hover > div {
     opacity: 1;
     transition-delay: 0s;
 }
@@ -81,7 +81,7 @@ body {
 
 .text {
     font-size: 30px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: "Architects Daughter", cursive;
     transform: translateY(30px);
     opacity: 0;
     transition: all 0.3s ease;
@@ -95,30 +95,34 @@ body {
 
 .left {
     transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-    background-image: url('../img/gamePad.png');
+    background-image: url("../img/gamePad.png");
 }
 
 .center {
     opacity: 1;
-    background-image: url('../img/mapa.png');
+    background-image: url("../img/mapa.png");
 }
 
 .right {
     transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-    background-image: url('../img/partner.png');
+    background-image: url("../img/partner.png");
 }
 
 .explainer {
     font-weight: 300;
     font-size: 3rem;
-    font-family: 'Architects Daughter', cursive;
+    font-family: "Architects Daughter", cursive;
     text-align: center;
     color: rgb(0, 0, 0);
     transition: all 0.6s ease;
     width: 100%;
     height: 100%;
     background-color: rgba(142, 172, 255, 0.281);
-    background-image: radial-gradient(circle at center top, #cce, rgba(237, 219, 85, 0.856));
+    background-image: radial-gradient(
+        circle at center top,
+        #cce,
+        rgba(237, 219, 85, 0.856)
+    );
     border-radius: 10px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.445);
     display: flex;
@@ -144,9 +148,7 @@ body {
     font-size: 12px;
 }
 
-
 /********************************************************************************************************************/
-
 
 /********************************MENU MOVIL/TABLETS******************************************************************/
 
@@ -173,12 +175,12 @@ body {
         left: 0;
         bottom: 0;
         text-align: center;
-        font-size: 1.20rem;
+        font-size: 1.2rem;
         background-color: rgba(151, 151, 151, 0.5);
         opacity: 0;
         z-index: -1;
         visibility: hidden;
-        transition: all .375s;
+        transition: all 0.375s;
         opacity: 1;
     }
     .main-nav.is-open {
@@ -188,16 +190,16 @@ body {
     }
     /* Yellow band effect */
     .main-nav::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: -15px;
-        background:rgba(142, 172, 255, 0.466);
+        background: rgba(142, 172, 255, 0.466);
         transform-origin: 0 0;
         transform: skew(-14deg) translateX(-120%);
-        transition: all .275s .1s;
+        transition: all 0.275s 0.1s;
     }
     .main-nav.is-open::before {
         transform: skew(-14deg) translateX(0);
@@ -214,7 +216,7 @@ body {
     }
     .main-nav li {
         display: block;
-        margin: .5rem 0;
+        margin: 0.5rem 0;
         text-align: right;
         transform: skew(16deg);
     }
@@ -228,19 +230,19 @@ body {
         transform: translateY(0);
     }
     .main-nav li:nth-child(1) a {
-        transition: all 275ms 175ms
+        transition: all 275ms 175ms;
     }
     .main-nav li:nth-child(2) a {
-        transition: all 275ms 225ms
+        transition: all 275ms 225ms;
     }
     .main-nav li:nth-child(3) a {
-        transition: all 275ms 275ms
+        transition: all 275ms 275ms;
     }
     .main-nav li:nth-child(4) a {
-        transition: all 275ms 325ms
+        transition: all 275ms 325ms;
     }
     .main-nav li:nth-child(5) a {
-        transition: all 275ms 375ms
+        transition: all 275ms 375ms;
     }
     /* Decoration */
     .main-nav ul,
@@ -251,7 +253,7 @@ body {
     .main-nav a {
         display: block;
         padding: 12px 0;
-        color: #5A3B5D;
+        color: #5a3b5d;
         font-size: 1.4em;
         text-decoration: none;
         font-weight: bold;
@@ -277,17 +279,17 @@ body {
         width: 28px;
         height: 4px;
         margin: 0 auto;
-        background: #5A3B5D;
+        background: #5a3b5d;
         transform: skew(5deg);
-        transition: all .275s;
+        transition: all 0.275s;
     }
     .burger:after,
     .burger:before {
-        content: '';
+        content: "";
         display: block;
         height: 100%;
-        background: #5A3B5D;
-        transition: all .275s;
+        background: #5a3b5d;
+        transition: all 0.275s;
     }
     .burger:after {
         transform: translateY(-12px) translateX(-2px) skew(-20deg);
@@ -309,13 +311,13 @@ body {
     /* MENU Text part */
     .burger-text {
         display: block;
-        font-size: .675rem;
-        letter-spacing: .05em;
-        margin-top: .5em;
+        font-size: 0.675rem;
+        letter-spacing: 0.05em;
+        margin-top: 0.5em;
         text-transform: uppercase;
         font-weight: 500;
         text-align: center;
-        color: #5A3B5D;
+        color: #5a3b5d;
     }
     .device {
         position: relative;
@@ -324,7 +326,7 @@ body {
         background: rgba(255, 255, 255, 0.041);
         border: 1px solid rgb(238, 238, 238);
         border-radius: 3px;
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, .1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .container {
         position: absolute;
@@ -353,11 +355,11 @@ body {
         padding: 10px;
         border: 0;
         font-size: 1rem;
-        background: #FEDC2A;
-        color: #5A3B5D;
+        background: #fedc2a;
+        color: #5a3b5d;
         font-weight: bold;
         cursor: pointer;
-        transition: all .275s;
+        transition: all 0.275s;
     }
     [id="slowmo"] span {
         display: block;
@@ -365,37 +367,37 @@ body {
     }
     [id="slowmo"]:hover,
     [id="slowmo"]:focus {
-        background: #5A3B5D;
-        color: #FEDC2A;
+        background: #5a3b5d;
+        color: #fedc2a;
     }
     [id="slowmo"].is-slowmo span:after {
-        content: 'Activated';
+        content: "Activated";
         display: block;
         font-weight: bold;
     }
     /* When slowmotion is activated */
-    .is-slowmo+.device .open-main-nav .burger,
-    .is-slowmo+.device .open-main-nav .burger:before,
-    .is-slowmo+.device .open-main-nav .burger:after,
-    .is-slowmo+.device .main-nav,
-    .is-slowmo+.device .main-nav::before,
-    .is-slowmo+.device .main-nav a {
+    .is-slowmo + .device .open-main-nav .burger,
+    .is-slowmo + .device .open-main-nav .burger:before,
+    .is-slowmo + .device .open-main-nav .burger:after,
+    .is-slowmo + .device .main-nav,
+    .is-slowmo + .device .main-nav::before,
+    .is-slowmo + .device .main-nav a {
         transition-duration: 3s;
     }
-    .is-slowmo+.device .main-nav li:nth-child(1) a {
-        transition-delay: 1750ms
+    .is-slowmo + .device .main-nav li:nth-child(1) a {
+        transition-delay: 1750ms;
     }
-    .is-slowmo+.device .main-nav li:nth-child(2) a {
-        transition-delay: 2250ms
+    .is-slowmo + .device .main-nav li:nth-child(2) a {
+        transition-delay: 2250ms;
     }
-    .is-slowmo+.device .main-nav li:nth-child(3) a {
-        transition-delay: 2750ms
+    .is-slowmo + .device .main-nav li:nth-child(3) a {
+        transition-delay: 2750ms;
     }
-    .is-slowmo+.device .main-nav li:nth-child(4) a {
-        transition-delay: 3250ms
+    .is-slowmo + .device .main-nav li:nth-child(4) a {
+        transition-delay: 3250ms;
     }
-    .is-slowmo+.device .main-nav li:nth-child(5) a {
-        transition-delay: 3750ms
+    .is-slowmo + .device .main-nav li:nth-child(5) a {
+        transition-delay: 3750ms;
     }
     /* Notice */
     .notice {
@@ -404,8 +406,8 @@ body {
         left: 0;
         right: 0;
         padding: 20px;
-        background: #F2F2F2;
-        color: #5A3B5D;
+        background: #f2f2f2;
+        color: #5a3b5d;
         font-size: 14px;
         font-weight: 400;
         line-height: 1.5;
@@ -417,10 +419,9 @@ body {
     }
     .notice a {
         padding: 2px 3px;
-        background: #FEDC2A;
+        background: #fedc2a;
         text-decoration: none;
     }
 }
-
 
 /*******************************************************************************************************************************************/
