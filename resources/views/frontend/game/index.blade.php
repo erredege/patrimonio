@@ -90,9 +90,20 @@
             </menu>
 
         </div>
-        <!-----------------------------------------------------------------------------------
+        <!----------------------------------------------------------------------------------->
 
-        <a class="imagenCelia" class="animate__bounceIn" href ='{{url('/')}}';></a>-->
+        <!-------------------------------MENU MODO MOVIL----------------------------------->
+        <div class="movileMenu" style="display: none">
+            <div class="label">MENU</div>
+            <div class="spacer"></div>
+            <div class="item"><span><a href="{{route('game.index')}}">Mapa</a></span></div>
+            <div class="item"><span><a href="{{route('map.index')}}">Juego</a></span></div>
+            <div class="item"><span><a href="https://iescelia.org/web/">Celia Viñas</a></span></div>
+            <div class="item"><span><a href="https://www.instagram.com/iescelia/?hl=es">Instagram</a></span></div>
+          </div>
+        <!------------------------------------------------------------------------------------->
+
+        <a class="imagenCelia" class="animate__bounceIn" href ='{{url('/')}}';></a>
 
 
         <script src="{{ url('gameFiles/js/questions.js') }}"></script>
