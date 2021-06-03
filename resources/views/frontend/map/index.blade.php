@@ -46,7 +46,7 @@
                 info.innerHTML = ""
             }
             if(fm.style.display === "block"){
-                map.style.height = "66%";
+                map.style.height = "65%";
             }else{
                 map.style.height = "100%";
             }

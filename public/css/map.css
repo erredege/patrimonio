@@ -10,8 +10,8 @@
     width: 45% !important;
     height: 99% !important;
     position:absolute;
-    margin-top: 18% !important;
-    margin-left: 2% !important;
+    margin-top: 12% !important;
+    margin-left: 1px !important;
     border: none !important;
   }
 }
@@ -57,7 +57,7 @@
   font-size: 20px;
 }
 #info{
-    width: 66%;
+    width: 65%;
     height: 99%;
     position:static;
     float: right;

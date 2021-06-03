@@ -89,6 +89,28 @@
     overflow-y: auto;
     width:75%;
     margin-left: 115px; }
+    @media (max-width: 768px) {
+      .sidebar-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 75%;
+        margin-left: 36px; }
+    }
+    @media (max-width: 425px) {
+      .sidebar-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        overflow-x: hidden;
+        overflow-y: auto;
+        width:60%;
+        margin-left: 175px; }
+    }
     .sidebar-left .sidebar-content {
       left: 40px;
       right: 0; }
@@ -126,6 +148,16 @@
     font-size: 14.4pt;
     color: #fff;
     background-color: #0074d9; }
+    @media (max-width: 320px) {
+      .sidebar-header {
+        margin: -10px -20px 0;
+        height: 70px;
+        padding: 0 20px;
+        line-height: 40px;
+        font-size: 14.4pt;
+        color: #fff;
+        background-color: #0074d9; }
+    }
     .sidebar-right .sidebar-header {
       padding-left: 40px; }
   
