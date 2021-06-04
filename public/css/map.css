@@ -1,5 +1,4 @@
 @media only screen and (max-width: 823px) {
-<<<<<<< HEAD
 
   #map {
     position: absolute;
@@ -15,21 +14,6 @@
     margin-left: 1px !important;
     border: none !important;
   }
-=======
-    #map {
-        position: absolute;
-        width: 98%;
-        height: 98%;
-    }
-    #galeria {
-        width: 45% !important;
-        height: 99% !important;
-        position: absolute;
-        margin-top: 18% !important;
-        margin-left: 2% !important;
-        border: none !important;
-    }
->>>>>>> 31b719975fd56aa6bbc39ab286e6256a8b806239
 }
 
 @media only screen and (max-width: 823px) and (orientation:landscape) {
@@ -74,14 +58,8 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
-<<<<<<< HEAD
 #info{
     width: 65%;
-=======
-
-#info {
-    width: 66%;
->>>>>>> 31b719975fd56aa6bbc39ab286e6256a8b806239
     height: 99%;
     position: static;
     float: right;
