@@ -19,6 +19,10 @@ class CaratulaController extends Controller
         return view('frontend.caratula.index', $data);
     }
 
+    public function colaboradores()
+    {
+        return view('frontend.colaboradores.index');
+    }
     /**
      * Show the form for creating a new resource.
      *

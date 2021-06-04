@@ -52,7 +52,7 @@
                             <a href="{{route('map.index')}}">Mapa</a>
                         </li>
                         <li>
-                            <a href="">Colaboradores</a>
+                            <a href="{{route('colaboradores.index')}}">Colaboradores</a>
                         </li>
                         
                     </ul>
@@ -112,7 +112,7 @@
         }else if(id=="mapa"){
             window.location.href ='{{route('map.index')}}';
         }else{
-            window.location.href = '';
+            window.location.href = '{{route('colaboradores.index')}}';
         }
     }
     </script>

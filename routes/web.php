@@ -25,6 +25,10 @@ Route::get('/game', 'GameController@index')->name('game.index');
 Route::get('/', 'CaratulaController@index')->name('caratula.index');
 //-----------------------------------------------------------------------
 
+//-----------Colaboradores----------------------------------------------------
+Route::get('/colaboradores', 'CaratulaController@colaboradores')->name('colaboradores.index');
+//-----------------------------------------------------------------------
+
 //-------------Markers----------------------------------------------------
 Route::get('/marker', 'MarkerController@index')->name('marker.index');
 Route::post('/marker/store', 'MarkerController@store')->name('marker.store');
