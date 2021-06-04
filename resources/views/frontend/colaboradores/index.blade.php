@@ -10,66 +10,74 @@
     <body>
         <div class="lookbook-gallery">
 
-            <h2 class="look-hed">Desarrolladores</h2>
-            <div class="lookbook-grid" role="region">
-              
-              <figure class="model">
-                <img src="../img/user-tie.png" />
-                <figcaption class="model--caption">
-                  <h3>De Quero Granados Rosendo</h3>
-                  <p><a href="https://github.com/erredege">GitHub</a><p>
-                </figcaption>
-              </figure>
-              
-              <figure class="model">
-                <img src="../img/user-tie.png" />
-                <figcaption class="model--caption">
-                  <h3>Montoya Sanchez Ivan</h3>
-                  <p><a href="https://github.com/MontoyaSanchezIvan">GitHub</a><p>
-                </figcaption>
-              </figure>
-            </div> 
-
-            <h2 class="look-hed">Profesores</h2>
-            <div class="lookbook-grid" role="region">
-              <figure class="model">
-                 <img src="../img/user-tie.png" />
-                 <figcaption class="model--caption">
-                  <h3>Expósito López Felix</h3>
-              </figure>
-              
-              <figure class="model">
-                 <img src="../img/user-tie.png" />
-                <figcaption class="model--caption">
-                  <h3>Moreno Vozmediano Alfredo</h3>
-                </figcaption>
-              </figure>
-
-              <figure class="model">
-                 <img src="../img/user-tie.png" />
-                <figcaption class="model--caption">
-                  <h3>Piñero Mendoza Manuel Cristóbal</h3>
-                </figcaption>
-              </figure>
+            <h2 class="look-hed" style="text-align: center">Desarrolladores</h2>
+            <div class="bloque1">
+                <div class="lookbook-grid" >
+                
+                <figure class="model">
+                    <img src="../img/user-tie.png" />
+                    <figcaption class="model--caption">
+                    <h3>De Quero Granados Rosendo</h3>
+                    <p><a href="https://github.com/erredege">GitHub</a><p>
+                    </figcaption>
+                </figure>
+                
+                <figure class="model">
+                    <img src="../img/user-tie.png" />
+                    <figcaption class="model--caption">
+                    <h3>Montoya Sanchez Ivan</h3>
+                    <p><a href="https://github.com/MontoyaSanchezIvan">GitHub</a><p>
+                    </figcaption>
+                </figure>
+                </div> 
             </div>
+            <br>
 
-            <h2 class="look-hed">Colaboradores</h2>
-            <div class="lookbook-grid" role="region">
-              <figure class="model">
-                 <img src="../img/user-tie.png" />
-                 <figcaption class="model--caption">
-                  <h3>Lopez Morales Javier</h3>
-                    <p><a href="">GitHub</a><p>
-                </figcaption>
-              </figure>
-          
-              <figure class="model">
-                 <img src="../img/user-tie.png" />
-                <figcaption class="model--caption">
-                  <h3>Alejandra</h3>
-                </figcaption>
-              </figure>
+            <h2 class="look-hed" style="text-align: center">Profesores</h2>
+            <div class="bloque2">
+                <div class="lookbook-grid" >
+                <figure class="model">
+                    <img src="../img/user-tie.png" />
+                    <figcaption class="model--caption">
+                    <h3>Expósito López Felix</h3>
+                </figure>
+                
+                <figure class="model">
+                    <img src="../img/user-tie.png" />
+                    <figcaption class="model--caption">
+                    <h3>Moreno Vozmediano Alfredo</h3>
+                    </figcaption>
+                </figure>
+
+                <figure class="model">
+                    <img src="../img/user-tie.png" />
+                    <figcaption class="model--caption">
+                    <h3>Piñero Mendoza Manuel Cristóbal</h3>
+                    </figcaption>
+                </figure>
+                </div>
             </div>
-          </div>
+            <br>
+
+            <h2 class="look-hed" style="text-align: center">Colaboradores</h2>
+            <div class="bloque1">
+                <div class="lookbook-grid" role="region">
+                <figure class="model">
+                    <img src="../img/user-tie.png" />
+                    <figcaption class="model--caption">
+                    <h3>Lopez Morales Javier</h3>
+                        <p><a href="">GitHub</a><p>
+                    </figcaption>
+                </figure>
+            
+                <figure class="model">
+                    <img src="../img/user-tie.png" />
+                    <figcaption class="model--caption">
+                    <h3>Alejandra</h3>
+                    </figcaption>
+                </figure>
+                </div>
+            </div>
+        </div>
     </body>  
 </html>
