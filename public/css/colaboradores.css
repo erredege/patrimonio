@@ -1,5 +1,5 @@
 .bloque1{
-    text-align: center;
+	text-align: center;
     color: white;
     margin-left: 33%;
 }
@@ -96,4 +96,73 @@
 		}
 	}
 }
+
+@media (max-width: 320px){
+	.bloque1{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+	
+	.bloque2{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+}
  
+@media (max-width: 375px){
+	.bloque1{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+	
+	.bloque2{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+}
+
+@media (max-width: 425px){
+	.bloque1{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+	
+	.bloque2{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+}
+
+@media (max-width: 768px){
+	.bloque1{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+	
+	.bloque2{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+}
+
+@media (max-width: 1024px){
+	.bloque1{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+	
+	.bloque2{
+		text-align: center;
+		color: white;
+		margin-left: 2%;
+	}
+}

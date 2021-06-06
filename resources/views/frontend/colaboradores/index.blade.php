@@ -7,6 +7,18 @@
         <link rel="stylesheet" href="{{ url('css/colaboradores.css') }}"/>
         <title>Colaboradores</title>
     </head>
+    <style>
+        html{
+            background-image: url("{{url('img/caratula.png')}}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        html::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
     <body>
         <div class="lookbook-gallery">
 
