@@ -20,6 +20,9 @@
         }
     </style>
     <body>
+        <div class="volver">
+            <a href="{{route('caratula.index')}}"><img src="../img/home.png" style="height: 50px; float: right;"/></a>
+        </div>
         <div class="lookbook-gallery">
 
             <h1 class="look-hed" style="text-align: center">Desarrolladores</h1>
