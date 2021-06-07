@@ -43,12 +43,12 @@
 	 bottom: 0;
 	 left: 0;
 	 right: 0;
-	 margin: 0;
+	 margin-left: 10%;
 	 background-color: rgba(0, 0, 0, 0.85);
 	 padding: 0.35em 1.2em 0.25em 0.9em;
 	 justify-self: start;
-	 width: 15em !important;
-	 height: 5em !important;
+	 width: 12em !important;
+	 height: 7em !important;
 }
  .lookbook-gallery .model .model--caption .model-hed {
 	 font-size: 1.25em;
@@ -74,13 +74,13 @@
 		 flex-wrap: wrap;
 	}
 	 .lookbook-gallery .model {
-		 flex: 47.5%;
+		 /*flex: 47.5%;*/
 		 margin: 0.5%;
 	}
 }
  @media (min-width: 65em) {
 	 .lookbook-gallery .model {
-		 flex: 24.25% 0;
+		 /*flex: 24.25% 0;*/
 		 margin: 0.25%;
 	}
 	 @supports (display: grid) {
