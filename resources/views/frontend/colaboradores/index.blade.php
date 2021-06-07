@@ -22,7 +22,7 @@
     <body>
         <div class="lookbook-gallery">
 
-            <h2 class="look-hed" style="text-align: center">Desarrolladores</h2>
+            <h1 class="look-hed" style="text-align: center">Desarrolladores</h1>
             <div class="bloque1">
                 <div class="lookbook-grid" >
                 
@@ -45,7 +45,7 @@
             </div>
             <br>
 
-            <h2 class="look-hed" style="text-align: center">Profesores</h2>
+            <h1 class="look-hed" style="text-align: center">Profesores</h1>
             <div class="bloque2">
                 <div class="lookbook-grid" >
                 <figure class="model">
@@ -72,7 +72,7 @@
             </div>
             <br>
 
-            <h2 class="look-hed" style="text-align: center">Colaboradores</h2>
+            <h1 class="look-hed" style="text-align: center">Colaboradores</h1>
             <div class="bloque1">
                 <div class="lookbook-grid" role="region">
                 <figure class="model">
