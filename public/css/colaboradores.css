@@ -7,7 +7,7 @@
 .bloque2{
     text-align: center;
     color: white;
-    margin-left: 20%;
+    margin-left: 23%;
 }
 
 .lookbook-gallery .a11y-only {
@@ -30,9 +30,9 @@
 }
  .lookbook-gallery img {
 	 min-width: 10em;
-	 max-width: 100%;
+	 max-width: 17em !important;
 	 display: block;
-	 background: #ddd;
+	 /*background: #ddd;*/
 }
  .lookbook-gallery .model {
 	 margin: 0;
@@ -47,6 +47,7 @@
 	 background-color: rgba(0, 0, 0, 0.85);
 	 padding: 0.35em 1.2em 0.25em 0.9em;
 	 justify-self: start;
+	 width: 15em !important;
 }
  .lookbook-gallery .model .model--caption .model-hed {
 	 font-size: 1.25em;
