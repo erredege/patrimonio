@@ -29,7 +29,7 @@
             <div class="bloque1">
                 <div class="lookbook-grid" >
                 
-                <figure class="model">
+                <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>De Quero Granados Rosendo</h3>
@@ -37,7 +37,7 @@
                     </figcaption>
                 </figure>
                 
-                <figure class="model">
+                <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Montoya Sanchez Ivan</h3>
@@ -50,8 +50,8 @@
 
             <h1 class="look-hed" style="text-align: center">Profesores</h1>
             <div class="bloque2">
-                <div class="lookbook-grid" >
-                <figure class="model">
+                <div class="lookbook-grid">
+                <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Expósito López Felix</h3>
@@ -78,7 +78,7 @@
             <h1 class="look-hed" style="text-align: center">Colaboradores</h1>
             <div class="bloque1">
                 <div class="lookbook-grid" role="region">
-                <figure class="model">
+                <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Lopez Morales Javier</h3>
@@ -86,7 +86,7 @@
                     </figcaption>
                 </figure>
             
-                <figure class="model">
+                <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Alejandra</h3>
