@@ -65,7 +65,7 @@
                     </figcaption>
                 </figure>
 
-                <figure class="model" >
+                <figure class="model" style="margin-bottom: 5px">
                     <img src="{{url('img/user-tie.png')}}" style="margin-left: 5%"/>
                     <figcaption class="model--caption">
                         <h3>Piñero Mendoza Manuel Cristóbal</h3>
