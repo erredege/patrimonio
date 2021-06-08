@@ -21,7 +21,7 @@
     </style>
     <body>
         <div class="volver">
-            <a href="{{route('caratula.index')}}"><img src="../img/home.png" style="height: 50px; float: right;"/></a>
+            <a href="{{route('caratula.index')}}"><img src="{{url('img/home.png')}}" style="height: 50px; float: right;"/></a>
         </div>
         <div class="lookbook-gallery">
 
@@ -30,7 +30,7 @@
                 <div class="lookbook-grid" >
                 
                 <figure class="model">
-                    <img src="../img/user-tie.png" />
+                    <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>De Quero Granados Rosendo</h3>
                         <p><a href="https://github.com/erredege">GitHub</a><p>
@@ -38,7 +38,7 @@
                 </figure>
                 
                 <figure class="model">
-                    <img src="../img/user-tie.png" />
+                    <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Montoya Sanchez Ivan</h3>
                         <p><a href="https://github.com/MontoyaSanchezIvan">GitHub</a><p>
@@ -52,21 +52,21 @@
             <div class="bloque2">
                 <div class="lookbook-grid" >
                 <figure class="model">
-                    <img src="../img/user-tie.png" />
+                    <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Expósito López Felix</h3>
                     </figcaption>
                 </figure>
                 
-                <figure class="model">
-                    <img src="../img/user-tie.png" />
+                <figure class="model" style="margin-left: 5%">
+                    <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Moreno Vozmediano Alfredo</h3>
                     </figcaption>
                 </figure>
 
-                <figure class="model">
-                    <img src="../img/user-tie.png" style="margin-left: 5%" />
+                <figure class="model" >
+                    <img src="{{url('img/user-tie.png')}}" style="margin-left: 5%"/>
                     <figcaption class="model--caption">
                         <h3>Piñero Mendoza Manuel Cristóbal</h3>
                     </figcaption>
@@ -79,7 +79,7 @@
             <div class="bloque1">
                 <div class="lookbook-grid" role="region">
                 <figure class="model">
-                    <img src="../img/user-tie.png" />
+                    <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Lopez Morales Javier</h3>
                         <p><a href="https://github.com/JavierLopezMorales">GitHub</a><p>
@@ -87,7 +87,7 @@
                 </figure>
             
                 <figure class="model">
-                    <img src="../img/user-tie.png" />
+                    <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
                         <h3>Alejandra</h3>
                     </figcaption>
