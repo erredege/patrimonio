@@ -25,7 +25,7 @@
         </div>
         <div class="lookbook-gallery">
 
-            <h1 class="look-hed" style="text-align: center">Desarrolladores</h1>
+            <h1 class="look-hed" style="text-align: center; margin-left: 50px;">Desarrolladores</h1>
             <div class="bloque1">
                 <div class="lookbook-grid" >
                 
