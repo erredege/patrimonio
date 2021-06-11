@@ -42,7 +42,7 @@ body {
     opacity: 1;
 }
 
-.all:hover > div {
+.all:hover>div {
     opacity: 1;
     transition-delay: 0s;
 }
@@ -118,11 +118,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(142, 172, 255, 0.281);
-    background-image: radial-gradient(
-        circle at center top,
-        #cce,
-        rgba(237, 219, 85, 0.856)
-    );
+    background-image: radial-gradient( circle at center top, #cce, rgba(237, 219, 85, 0.856));
     border-radius: 10px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.445);
     display: flex;
@@ -148,7 +144,9 @@ body {
     font-size: 12px;
 }
 
+
 /********************************************************************************************************************/
+
 
 /********************************MENU MOVIL/TABLETS******************************************************************/
 
@@ -376,27 +374,27 @@ body {
         font-weight: bold;
     }
     /* When slowmotion is activated */
-    .is-slowmo + .device .open-main-nav .burger,
-    .is-slowmo + .device .open-main-nav .burger:before,
-    .is-slowmo + .device .open-main-nav .burger:after,
-    .is-slowmo + .device .main-nav,
-    .is-slowmo + .device .main-nav::before,
-    .is-slowmo + .device .main-nav a {
+    .is-slowmo+.device .open-main-nav .burger,
+    .is-slowmo+.device .open-main-nav .burger:before,
+    .is-slowmo+.device .open-main-nav .burger:after,
+    .is-slowmo+.device .main-nav,
+    .is-slowmo+.device .main-nav::before,
+    .is-slowmo+.device .main-nav a {
         transition-duration: 3s;
     }
-    .is-slowmo + .device .main-nav li:nth-child(1) a {
+    .is-slowmo+.device .main-nav li:nth-child(1) a {
         transition-delay: 1750ms;
     }
-    .is-slowmo + .device .main-nav li:nth-child(2) a {
+    .is-slowmo+.device .main-nav li:nth-child(2) a {
         transition-delay: 2250ms;
     }
-    .is-slowmo + .device .main-nav li:nth-child(3) a {
+    .is-slowmo+.device .main-nav li:nth-child(3) a {
         transition-delay: 2750ms;
     }
-    .is-slowmo + .device .main-nav li:nth-child(4) a {
+    .is-slowmo+.device .main-nav li:nth-child(4) a {
         transition-delay: 3250ms;
     }
-    .is-slowmo + .device .main-nav li:nth-child(5) a {
+    .is-slowmo+.device .main-nav li:nth-child(5) a {
         transition-delay: 3750ms;
     }
     /* Notice */
@@ -423,5 +421,6 @@ body {
         text-decoration: none;
     }
 }
+
 
 /*******************************************************************************************************************************************/

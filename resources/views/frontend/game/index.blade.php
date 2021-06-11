@@ -12,6 +12,15 @@
         <link rel="stylesheet" href="{{ url('icons/fontawesome-free-5.15.2-web/css/all.min.css') }}">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script><!--Iconos-->
     </head>
+    <style>
+        body{
+            overflow: hidden;
+            background-image: url("{{url('img/caratula.png')}}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
     <body>
         <!-- start Quiz button -->
         <div class="start_btn"><button>Empezar el Juego</button></div>
@@ -93,11 +102,11 @@
         <!----------------------------------------------------------------------------------->
 
         <!-------------------------------MENU MODO MOVIL----------------------------------->
-        <div class="movileMenu" style="display: none">
+        <div class="movileMenu">
             <div class="label">MENU</div>
             <div class="spacer"></div>
-            <div class="item"><span><a href="{{route('game.index')}}">Mapa</a></span></div>
-            <div class="item"><span><a href="{{route('map.index')}}">Juego</a></span></div>
+            <div class="item"><span><a href="{{route('map.index')}}">Mapa</a></span></div>
+            <div class="item"><span><a href="{{route('game.index')}}">Juego</a></span></div>
             <div class="item"><span><a href="https://iescelia.org/web/">Celia Viñas</a></span></div>
             <div class="item"><span><a href="https://www.instagram.com/iescelia/?hl=es">Instagram</a></span></div>
           </div>
