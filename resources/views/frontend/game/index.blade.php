@@ -12,6 +12,14 @@
         <link rel="stylesheet" href="{{ url('icons/fontawesome-free-5.15.2-web/css/all.min.css') }}">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script><!--Iconos-->
     </head>
+    <style>
+        html {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            padding-top: 2px;
+        }
+    </style>
     <body>
         <!-- start Quiz button -->
         <div class="start_btn"><button>Empezar el Juego</button></div>

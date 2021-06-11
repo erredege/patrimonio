@@ -1,4 +1,5 @@
 /* importing google fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
     margin: 0;
@@ -6,12 +7,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-html {
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    padding-top: 2px;
-}
+
 body {
     background-image: url("../img/caratula.png");
     background-size: cover;
@@ -19,6 +15,14 @@ body {
     background-position: center;
     overflow: hidden;
 }
+
+html {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 2px;
+}
+
 @media only screen and (max-width: 936px) {
     @import url("https://fonts.googleapis.com/css?family=Lato");
     .start_btn button {
@@ -68,7 +72,7 @@ body {
         border-radius: 5px !important;
         display: flex !important;
         align-items: center !important;
-        justify-content: space-between !important ;
+        justify-content: space-between !important;
     }
     .quiz_box header .timer .time_left_txt {
         font-weight: 400;
@@ -79,7 +83,6 @@ body {
         display: none !important;
     }
     /*************************SUSTITUTO DE MENU CIRCULAR EN MOVIL*****************/
-
     .movilMenu {
         display: unset !important;
         text-transform: uppercase;
@@ -185,7 +188,9 @@ body {
     /******************************************************************************/
 }
 
+
 /***************************MENU CIRCULAR DENTREO MAPA*****************************/
+
 .circular-menu {
     position: fixed;
     bottom: 1em;
@@ -290,6 +295,7 @@ body {
     transform: translate3d(-7em, 1em, 0);
 }
 
+
 /**
    * The other theme for this menu
    */
@@ -327,7 +333,9 @@ body {
     transform: translate3d(7em, 1em, 0);
 }
 
+
 /**********************************************************************************************************************/
+
 ::selection {
     color: #fff;
     background: #007bff;
@@ -400,6 +408,7 @@ body {
     font-weight: 600;
     color: #007bff;
 }
+
 .info_box .buttons {
     height: 60px;
     display: flex;
@@ -558,6 +567,7 @@ section .option_list .option .icon {
     transition: all 0.3s ease;
     line-height: 24px;
 }
+
 .option_list .option .icon.tick {
     color: #23903c;
     border-color: #23903c;
