@@ -20,170 +20,133 @@ body {
     overflow: hidden;
 }
 @media only screen and (max-width: 936px) {
-    @import url("https://fonts.googleapis.com/css?family=Lato");
-    .start_btn button {
-        font-size: 20px !important;
-    }
-    .info_box .info-title {
-        height: 60px;
-        width: 100%;
-        border-bottom: 1px solid lightgrey;
-        display: flex;
-        align-items: center;
-        padding: 0 30px;
-        border-radius: 5px 5px 0 0;
-        font-size: 15px !important;
-        font-weight: 600;
-    }
-    .info_box .info-list .info {
-        margin: 5px 0;
-        font-size: 15px !important;
-    }
-    .quiz_box header {
-        height: 40px !important;
-    }
-    section .que_text {
-        font-size: 15px !important;
-        font-weight: 600;
-    }
-    section .option_list .option {
-        background: aliceblue;
-        border: 1px solid #84c5fe;
-        border-radius: 5px;
-        padding: 8px 15px;
-        font-size: 15px !important;
-        margin-bottom: 15px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .quiz_box header .timer {
-        color: #004085;
-        background: #cce5ff;
-        border: 1px solid #b8daff;
-        height: 36px !important;
-        padding: 0 8px !important;
-        border-radius: 5px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important ;
-    }
-    .quiz_box header .timer .time_left_txt {
-        font-weight: 400;
-        font-size: 14px !important;
-        user-select: none;
-    }
-    #circularMenu1 {
-        display: none !important;
-    }
-    /*************************SUSTITUTO DE MENU CIRCULAR EN MOVIL*****************/
 
-    .movilMenu {
-        display: unset !important;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.8);
-        display: inline-block;
-        cursor: pointer;
-        pointer-events: none;
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
+    .movilMenu{
+        display: flex !
     }
-    .movilMenu:hover {
-        pointer-events: all;
-    }
-    .label {
-        display: inline-block;
-        cursor: pointer;
-        pointer-events: all;
-    }
-    .spacer {
-        display: inline-block;
-        width: 80px;
-        margin-left: 15px;
-        margin-right: 15px;
-        vertical-align: middle;
-        cursor: pointer;
-        position: relative;
-    }
-    .spacer:before {
-        content: "";
-        position: absolute;
-        border-bottom: 1px solid #ffffff;
-        height: 1px;
-        width: 0%;
-        transition: width 0.25s ease;
-        transition-delay: 0.7s;
-    }
-    .item {
-        position: relative;
-        display: inline-block;
-        margin-right: 30px;
-        top: 10px;
-        opacity: 0;
-        transition: opacity 0.5s ease, top 0.5s ease;
-        transition-delay: 0;
-    }
-    span {
-        transition: color 0.5s ease;
-    }
-    .item:hover span {
-        color: #ff0000;
-    }
-    .movilMenu:hover .spacer:before {
-        width: 100%;
-        transition-delay: 0s;
-    }
-    .movilMenu:hover .item {
-        opacity: 1;
-        top: 0px;
-    }
-    .item:nth-child(1) {
-        transition-delay: 0.45s;
-    }
-    .item:nth-child(2) {
-        transition-delay: 0.4s;
-    }
-    .item:nth-child(3) {
-        transition-delay: 0.35s;
-    }
-    .item:nth-child(4) {
-        transition-delay: 0.3s;
-    }
-    .item:nth-child(5) {
-        transition-delay: 0.25s;
-    }
-    .item:nth-child(6) {
-        transition-delay: 0.2s;
-    }
-    .item:nth-child(7) {
-        transition-delay: 0.15s;
-    }
-    .item:nth-child(8) {
-        transition-delay: 0.1s;
-    }
-    .item:nth-child(9) {
-        transition-delay: 0.05s;
-    }
-    .item:nth-child(10) {
-        transition-delay: 0s;
-    }
-    .movilMenu:hover .item:nth-child(1) {
-        transition-delay: 0.25s;
-    }
-    .movilMenu:hover .item:nth-child(2) {
-        transition-delay: 0.3s;
-    }
-    .movilMenu:hover .item:nth-child(3) {
-        transition-delay: 0.35s;
-    }
-    .movilMenu:hover .item:nth-child(4) {
-        transition-delay: 0.4s;
-    }
-    /******************************************************************************/
+
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+.menu {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
+.menu:hover {
+  pointer-events: all;
+}
+.label {
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: all;
+}
+.spacer {
+  display: inline-block;
+  width: 80px;
+  margin-left: 15px;
+  margin-right: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+}
+.spacer:before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #ffffff;
+  height: 1px;
+  width: 0%;
+  transition: width 0.25s ease;
+  transition-delay: 0.7s;
+}
+.item {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  top: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  transition-delay: 0;
+}
+span {
+  transition: color 0.5s ease;
+}
+.item:hover span {
+  color: #ff0000;
+}
+.menu:hover .spacer:before {
+  width: 100%;
+  transition-delay: 0s;
+}
+.menu:hover .item {
+  opacity: 1;
+  top: 0px;
+}
+.item:nth-child(1) {
+  transition-delay: 0.45s;
+}
+.item:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.item:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.item:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.item:nth-child(6) {
+  transition-delay: 0.2s;
+}
+.item:nth-child(7) {
+  transition-delay: 0.15s;
+}
+.item:nth-child(8) {
+  transition-delay: 0.1s;
+}
+.item:nth-child(9) {
+  transition-delay: 0.05s;
+}
+.item:nth-child(10) {
+  transition-delay: 0s;
+}
+.menu:hover .item:nth-child(1) {
+  transition-delay: 0.25s;
+}
+.menu:hover .item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.menu:hover .item:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.menu:hover .item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.menu:hover .item:nth-child(5) {
+  transition-delay: 0.45s;
+}
+.menu:hover .item:nth-child(6) {
+  transition-delay: 0.5s;
+}
+.menu:hover .item:nth-child(7) {
+  transition-delay: 0.55s;
+}
+.menu:hover .item:nth-child(8) {
+  transition-delay: 0.6s;
+}
+.menu:hover .item:nth-child(9) {
+  transition-delay: 0.65s;
+}
+.menu:hover .item:nth-child(10) {
+  transition-delay: 0.7s;
+}
+}
+
 
 /***************************MENU CIRCULAR DENTREO MAPA*****************************/
 .circular-menu {
