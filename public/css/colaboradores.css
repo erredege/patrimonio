@@ -1,3 +1,7 @@
+a{
+	color: white;
+}
+
 .bloque1{
 	text-align: center;
     color: white;
@@ -8,6 +12,12 @@
     text-align: center;
     color: white;
     margin-left: 20%;
+}
+
+span{
+	background-color: rgba(237, 219, 85, 0.856);
+	align-items: center;
+	padding: 0.5%;
 }
 
 .lookbook-gallery .a11y-only {
@@ -117,13 +127,13 @@
 	.bloque1{
 		text-align: center;
 		color: white;
-		margin-left: 2%;
+		margin-left: 4%;
 	}
 	
 	.bloque2{
 		text-align: center;
 		color: white;
-		margin-left: 2%;
+		margin-left: 4%;
 	}
 }
 
@@ -131,13 +141,13 @@
 	.bloque1{
 		text-align: center;
 		color: white;
-		margin-left: 2%;
+		margin-left: 8%;
 	}
 	
 	.bloque2{
 		text-align: center;
 		color: white;
-		margin-left: 2%;
+		margin-left: 8%;
 	}
 }
 
