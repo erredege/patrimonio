@@ -28,7 +28,7 @@
             <h1 class="look-hed" style="text-align: center; margin-left: 50px;">Desarrolladores</h1>
             <div class="bloque1">
                 <div class="lookbook-grid" >
-                
+
                 <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
@@ -36,7 +36,7 @@
                         <p><a href="https://github.com/erredege">GitHub</a><p>
                     </figcaption>
                 </figure>
-                
+
                 <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
@@ -44,7 +44,7 @@
                         <p><a href="https://github.com/MontoyaSanchezIvan">GitHub</a><p>
                     </figcaption>
                 </figure>
-                </div> 
+                </div>
             </div>
             <br>
 
@@ -57,7 +57,7 @@
                         <h3>Expósito López Felix</h3>
                     </figcaption>
                 </figure>
-                
+
                 <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
@@ -85,15 +85,15 @@
                         <p><a href="https://github.com/JavierLopezMorales">GitHub</a><p>
                     </figcaption>
                 </figure>
-            
+
                 <figure class="model" style="margin-left: 5%">
                     <img src="{{url('img/user-tie.png')}}" />
                     <figcaption class="model--caption">
-                        <h3>Alejandra</h3>
+                        <h3>Alejandra Cayuela López</h3>
                     </figcaption>
                 </figure>
                 </div>
             </div>
         </div>
-    </body>  
+    </body>
 </html>
