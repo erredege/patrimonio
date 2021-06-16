@@ -91,23 +91,38 @@
 
     // Extraccion de las preguntas y respuestas del array
     function showQuetions(index){
-        const que_text = document.querySelector(".que_text");
+        cont = 0;
+        do{   
+            cont++; 
+            let arr = new Array
+            for(i=0; i < questions.length; i++){
+                arr.push(questions[0]);
+            }
+            
+            orden = Math.random();
+            if(arr.includes(orden)){
+        
+                const que_text = document.querySelector(".que_text");
 
-        //Creamos un nevi span, donde colocaremos la pregunta extraida y sus respuestas
-        let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
-        let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
-        + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
-        + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
-        + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
-        que_text.innerHTML = que_tag;
-        option_list.innerHTML = option_tag;
+                //Creamos un nevi span, donde colocaremos la pregunta extraida y sus respuestas
+                let que_tag = '<span>'+ questions[index].numb + ". " + questions[orden].question +'</span>';
+                let option_tag = '<div class="option"><span>'+ questions[orden].options[0] +'</span></div>'
+                + '<div class="option"><span>'+ questions[orden].options[1] +'</span></div>'
+                + '<div class="option"><span>'+ questions[orden].options[2] +'</span></div>'
+                + '<div class="option"><span>'+ questions[orden].options[3] +'</span></div>';
+                que_text.innerHTML = que_tag;
+                option_list.innerHTML = option_tag;
 
-        const option = option_list.querySelectorAll(".option");
+                const option = option_list.querySelectorAll(".option");
 
-
-        for(i=0; i < option.length; i++){
-            option[i].setAttribute("onclick", "optionSelected(this)");
-        }
+                for(i=0; i < option.length; i++){
+                    option[i].setAttribute("onclick", "optionSelected(this)");
+                }
+                arr.slice(orden);
+            }else{
+                orden = Math.random();
+            }
+        }while(cont <= 10);
     }
     // creacion div para los iconos
     let tickIconTag = '<div></div>';
