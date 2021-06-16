@@ -244,7 +244,7 @@ let questions = [{
     {
         numb: 23,
         question: "¿Por qué en la muralla divisoria del primer recinto con el segundo recinto de la Alcazaba se instaló una campana llamada la Campana de la Torre de la Vela?",
-        answer: "",
+        answer: "A) La C y la D son correctas.",
         options: [
             "A) La C y la D son correctas.",
             "B) Para avisar del inicio de misa en la ermita de San Juan de la Alcazaba. ",
