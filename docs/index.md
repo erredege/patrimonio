@@ -11,7 +11,7 @@ Fue desarrollado por los siguientes alumnos:
 
 * <img src="https://avatars0.githubusercontent.com/u/43436494?s=460&v=4" alt="Avatar: " height="50" /> &nbsp; [Iván Montoya Sánchez](https://github.com/MontoyaSanchezIvan)
 
-* <img src="https://avatars1.githubusercontent.com/u/34535136?s=460&u=da083b81632807b5b887a38011338d1d3aec41bb&v=4" alt="Avatar: " height="50" /> &nbsp;[Rosendo De Quero Granados ](https://github.com/erredege)
+* <img src="https://avatars1.githubusercontent.com/u/34535136?s=460&u=da083b81632807b5b887a38011338d1d3aec41bb&v=4" alt="Avatar: " height="50" /> &nbsp;[Rosendo De Quero Granados](https://github.com/erredege)
 
 Además, obtuvimos ayuda y colaboración de las siguientes personas: 
 
