@@ -252,5 +252,81 @@ let questions = [{
             "D) Para avisar a la población de las horas de riego, toques de queda, llegada de tormentas, etc."
         ]
     },
-
+    {
+        numb: 24,
+        question: "¿Por qué se construyó la Cueva de la Campsa?",
+        answer: "C) Tras la destrucción de los depósitos sitos en el puerto por los bombardeos en 1937, se decidió su construcción para almacenar el combustible en bidones.",
+        options: [
+            "A) Por los continuos robos que sufrían los depósitos de combustible en su anterior ubicación.",
+            "B) Para que el combustible no se evaporase.",
+            "C) Tras la destrucción de los depósitos sitos en el puerto por los bombardeos en 1937, se decidió su construcción para almacenar el combustible en bidones.",
+            "D) Porque el microclima que se crea en la cueva es ideal para la conservación del combustible."
+        ]
+    },
+    {
+        numb: 25,
+        question: "¿Por qué se construyeron las Torres de Piedra situadas detrás de la Casa del Mar?",
+        answer: "D) Todas las respuestas anteriores son correctas.",
+        options: [
+            "A) Se trata de las chimeneas de la función de Heredia.",
+            "B) Se trata de las chimeneas de la fundición de plomo Santo Tomas.",
+            "C) Son chimeneas que palian la toxicidad de las emanaciones pumblicas de la fundición",
+            "D) Todas las respuestas anteriores son correctas."
+        ]
+    },
+    {
+        numb: 26,
+        question: "¿Por qué los lucernarios de las casas antiguas de Almería están construidas con esa forma?",
+        answer: "B) Contribuyen a mejorar la luminosidad y la temperatura de la casa.",
+        options: [
+            "A) Realzan la estética del perfil de la casa.",
+            "B) Contribuyen a mejorar la luminosidad y la temperatura de la casa.",
+            "C) Permiten la entrada de Luz en los sótanos de las casas.",
+            "D) Se pusieron de moda y los arquitectos las incluían en sus diseños."
+        ]
+    },
+    {
+        numb: 27,
+        question: "Antes de haber una ermita en el Cerro San Cristóbal existía otra edificación ¿cuál era su porqué?",
+        answer: "D) El llamado Fuerte de San Cristóbal.",
+        options: [
+            "A) No había nada.",
+            "B) Una estatua de San Cristóbal muy venerada por el pueblo de Almería.",
+            "C) Una Ermita que fue destruida por el terremoto de 1522.",
+            "D) El llamado Fuerte de San Cristóbal."
+        ]
+    },
+    {
+        numb: 28,
+        question: "¿Por qué la lápida aparecida en el dintel de la puerta del Ayuntamiento tiene el lateral izquierdo cincelado?",
+        answer: "A) Probablemente habría algún símbolo que un régimen posterior decidío eliminar.",
+        options: [
+            "A) Probablemente habría algún símbolo que un régimen posterior decidío eliminar.",
+            "B) Fue eliminado accidentalmente.",
+            "C) No está cincelado, al levantarse el recubrimiento fue destruido.",
+            "D) No le gustaba a un alcalde que hubo y mandó cincelarlo."
+        ]
+    },
+    {
+        numb: 29,
+        question: "¿Por qué el escudo del Salón de Actos del IES Celia Viñas tiene unos de los blasones cincelados?",
+        answer: "C) Las alusiones monárquicas del blasón en cuestión, hizo que fuese cincelado a la par de la sustitución de la corona monárquica por la republicana.",
+        options: [
+            "A) No hay ningún blasón cincelado, solo fue sustituida la corona inicial.",
+            "B) Estéticamente ese blasón no quedaba bien.",
+            "C) Las alusiones monárquicas del blasón en cuestión, hizo que fuese cincelado a la par de la sustitución de la corona monárquica por la republicana.",
+            "D) Heráldicamente constituía un error en la composición del escudo."
+        ]
+    },
+    {
+        numb: 30,
+        question: "¿Por qué en los Refugios de la Guerra Civil de Almería en los distintos corredores que hay se aprecian muros trasversales a izquierda y derecha regularmente distribuidos?",
+        answer: "B) Con el fin de evitar avalanchas y minimizar una posible deflagración interna que pudiese producirse.",
+        options: [
+            "A) Para que los niños durante los bombardeos pudiesen jugar al escondite.",
+            "B) Con el fin de evitar avalanchas y minimizar una posible deflagración interna que pudiese producirse.",
+            "C) Son elementos de sostén de la galería.",
+            "D) Para que los refugiados pudiesen apoyarse."
+        ]
+    },
 ];

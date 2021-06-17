@@ -40,8 +40,7 @@
                     <img src="{{ url('img/user-tie.png') }}" />
                     <figcaption class="model--caption">
                         <h3>De Quero Granados Rosendo</h3>
-                        <p><a href="https://github.com/erredege">GitHub</a>
-                        <p>
+                        <p><a href="https://github.com/erredege">GitHub</a></p>
                     </figcaption>
                 </figure>
 
@@ -49,8 +48,7 @@
                     <img src="{{ url('img/user-tie.png') }}" />
                     <figcaption class="model--caption">
                         <h3>Montoya Sanchez Ivan</h3>
-                        <p><a href="https://github.com/MontoyaSanchezIvan">GitHub</a>
-                        <p>
+                        <p><a href="https://github.com/MontoyaSanchezIvan">GitHub</a></p>
                     </figcaption>
                 </figure>
             </div>
@@ -87,14 +85,13 @@
 
         <h1 class="look-hed" style="text-align: center"><span>Colaboradores</span></h1>
         <br>
-        <div class="bloque1">
+        <div class="bloque2">
             <div class="lookbook-grid" role="region">
                 <figure class="model" style="margin-left: 5%">
                     <img src="{{ url('img/user-tie.png') }}" />
                     <figcaption class="model--caption">
                         <h3>Lopez Morales Javier</h3>
-                        <p><a href="https://github.com/JavierLopezMorales">GitHub</a>
-                        <p>
+                        <p><a href="https://github.com/JavierLopezMorales">GitHub</a></p>
                     </figcaption>
                 </figure>
 
@@ -102,6 +99,14 @@
                     <img src="{{ url('img/user-tie.png') }}" />
                     <figcaption class="model--caption">
                         <h3>Alejandra Cayuela López</h3>
+                    </figcaption>
+                </figure>
+
+                <figure class="model" style="margin-bottom: 5px">
+                    <img src="{{ url('img/user-tie.png') }}" style="margin-left: 5%" />
+                    <figcaption class="model--caption">
+                        <h3>Leiva Nicolas Domingo</h3>
+                        <p><a href="https://www.leivafotografos.com/">Leivafotografos</a></p>
                     </figcaption>
                 </figure>
             </div>
