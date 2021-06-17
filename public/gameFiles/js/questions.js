@@ -329,4 +329,70 @@ let questions = [{
             "D) Para que los refugiados pudiesen apoyarse."
         ]
     },
+    {
+        numb: 31,
+        question: "¿Por qué la calle que desemboca desde la Plaza Circular al puerto se llama Calle de la Reina Regente?",
+        answer: "D) Por el papel destacado en la cuestación realizada tras las inundaciones de 1891, por parte de María Cristina de Habsburgo y Lorena madre de Alfonso XIII.",
+        options: [
+            "A) Era norma en la época poner el nombre del monarca reinante alguna calle de la localidad.",
+            "B) Para conmemorar la primera regencia que se había producido en España.",
+            "C) Por mandato del gobiernos central de nación.",
+            "D) Por el papel destacado en la cuestación realizada tras las inundaciones de 1891, por parte de María Cristina de Habsburgo y Lorena madre de Alfonso XIII."
+        ]
+    },
+    {
+        numb: 32,
+        question: "¿Por qué en el Paseo de Almería regularmente y en determinadas zonas hay chimeneas de ventilación?",
+        answer: "B) Se trata de la ventilación de los túneles de los refugios construidos durante la guerra civil.",
+        options: [
+            "A) Para la ventilación de la red de alcantarillado, puesto que es muy antigua.",
+            "B) Se trata de la ventilación de los túneles de los refugios construidos durante la guerra civil.",
+            "C) En la actualidad no tienen ninguna utilidad y están pendientes de ser retirados.",
+            "D) Salida de extractores de gases de algunos edificios."
+        ]
+    },
+    {
+        numb: 33,
+        question: "¿Por qué las gradas de la Plaza de Toros son tan pequeñas?",
+        answer: "A) Se construyeron atendiendo a la estatura media de la gente de la época.",
+        options: [
+            "A) Se construyeron atendiendo a la estatura media de la gente de la época.",
+            "B) Para conseguir aumentar el aforo.",
+            "C) Para que la gente no pasase frio durante la corridas de toros.",
+            "D) Fue un fallo en la ejecución de la obra."
+        ]
+    },
+    {
+        numb: 34,
+        question: "¿Por qué se construyeron las tres minas que hay en la Molineta?",
+        answer: "C) Como canales de distribución del agua procedente del canal de San Indalecio, debido a la orografía del terreno.",
+        options: [
+            "A) Eso túneles se construyeron como refugios durante la guerra civil.",
+            "B) Como atajo para pasar de un lado a otro de la montaña.",
+            "C) Como canales de distribución del agua procedente del canal de San Indalecio, debido a la orografía del terreno.",
+            "D) Como prácticas de cantería de los aspirantes a canteros."
+        ]
+    },
+    {
+        numb: 35,
+        question: "¿Para qué fue construida la Residencia de las Adoratrices que hay en la calle Gran Capitán?",
+        answer: "D) Para acoger a mujeres jóvenes  y desamparadas.",
+        options: [
+            "A) Como cárcel durante el siglo XIX.",
+            "B) Como cuartel Militar.",
+            "C) Como hospital.",
+            "D) Para acoger a mujeres jóvenes  y desamparadas."
+        ]
+    },
+    {
+        numb: 36,
+        question: "¿A qué se debe que  la cúpula del Edificio de las Mariposas, esté remata por un vaso de cristal  invertido?",
+        answer: "B) Tras la culminación de la obra, Trinidad Cuartara arquitecto de la misma, invitó a todos los trabajadores de la misma, uno por uno,  a beber ese vaso lleno de vino.",
+        options: [
+            "A) No es cierto que la cúpula esté rematada por un vaso de cristal",
+            "B) Tras la culminación de la obra, Trinidad Cuartara arquitecto de la misma, invitó a todos los trabajadores de la misma, uno por uno,  a beber ese vaso lleno de vino.",
+            "C) El presupuesto de la obra no permitió instalar un pararrayo y en su lugar se puso el citado vaso.",
+            "D) Trinidad Cuartara ponía un vaso como terminación de todas las cúpulas que construía."
+        ]
+    },
 ];
