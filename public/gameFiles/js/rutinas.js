@@ -10,6 +10,8 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 
+var preguntasFinales = [];
+var contPreguntas = 0;
 // comprobacion del boton Empezar
 start_btn.onclick = () => {
     info_box.classList.add("activeInfo");
@@ -24,6 +26,7 @@ exit_btn.onclick = () => {
 continue_btn.onclick = () => {
     info_box.classList.remove("activeInfo"); //Esconder el div de Info
     quiz_box.classList.add("activeQuiz"); //Mostramos la caja de la pregunta
+    generarPreguntasMezcladas();
     showQuetions(0); //Lammada a la funcion showQuestions, para mostrar las preguntas
     queCounter(1); //Indice de la pregunta, para saber en cual estamos
     startTimer(30); //Llammamos al contador con los 30 seg
@@ -50,6 +53,7 @@ restart_quiz.onclick = () => {
     que_numb = Math.floor((Math.random() * 10) + 1);
     userScore = 0;
     widthValue = 0;
+    generarPreguntasMezcladas();
     showQuetions(que_count); //llamada showQestions function
     queCounter(que_numb); //Pasamos el indice de la pregunta con que_numb
     clearInterval(counter); //Limpiamos el contador
@@ -70,10 +74,10 @@ const bottom_ques_counter = document.querySelector("footer .total_que");
 
 // Comprobacion del boton Siguiente
 next_btn.onclick = () => {
-    if (que_count < questions.length - 1) {
+    if (preguntasFinales[contPreguntas] < questions.length) {
         que_count++; //Incrementacion del contador de preguntas
         que_numb++;
-        showQuetions(que_count); //llamada showQestions function
+        showQuetions(preguntasFinales[contPreguntas]); //llamada showQestions function
         queCounter(que_numb);
         clearInterval(counter); //Limpiamos contador
         clearInterval(counterLine); //Limpiamos linea regresiva
@@ -88,16 +92,33 @@ next_btn.onclick = () => {
     }
 }
 
+function generarPreguntasMezcladas() {
+    var ordenPreguntas = [];
+
+    for (let e = 0; e < questions.length; e++) {
+        ordenPreguntas.push(e);
+    }
+
+    randompreguntas = ordenPreguntas.sort(function() { return Math.random() - 0.5 });
+
+
+
+    for (let p = 0; p < 10; p++) {
+        preguntasFinales.push(randompreguntas[p]);
+        console.log(preguntasFinales);
+    }
+
+}
+
 // Extraccion de las preguntas y respuestas del array
 function showQuetions(index) {
     const que_text = document.querySelector(".que_text");
-
     //Creamos un nevi span, donde colocaremos la pregunta extraida y sus respuestas
-    let que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
-    let option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>' +
-        '<div class="option"><span>' + questions[index].options[1] + '</span></div>' +
-        '<div class="option"><span>' + questions[index].options[2] + '</span></div>' +
-        '<div class="option"><span>' + questions[index].options[3] + '</span></div>';
+    let que_tag = '<span>' + (contPreguntas + 1) + ". " + questions[preguntasFinales[contPreguntas]].question + '</span>';
+    let option_tag = '<div class="option"><span>' + questions[preguntasFinales[contPreguntas]].options[0] + '</span></div>' +
+        '<div class="option"><span>' + questions[preguntasFinales[contPreguntas]].options[1] + '</span></div>' +
+        '<div class="option"><span>' + questions[preguntasFinales[contPreguntas]].options[2] + '</span></div>' +
+        '<div class="option"><span>' + questions[preguntasFinales[contPreguntas]].options[3] + '</span></div>';
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
 
@@ -107,6 +128,8 @@ function showQuetions(index) {
     for (i = 0; i < option.length; i++) {
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
+
+    contPreguntas++;
 }
 // creacion div para los iconos
 let tickIconTag = '<div></div>';
@@ -116,16 +139,16 @@ let crossIconTag = '<div></div>';
 function optionSelected(answer) {
     clearInterval(counter);
     clearInterval(counterLine);
-    let userAns = answer.textContent; //Obtenemos la opsion seleccionada por el usuario
-    let correcAns = questions[que_count].answer; //Obtenemos la recpuesta correcta del aray
-    const allOptions = option_list.children.length; //Obetenmos todos las opciones
 
+    let userAns = answer.textContent; //Obtenemos la opsion seleccionada por el usuario
+    let correcAns = questions[preguntasFinales[contPreguntas - 1]].answer; //Obtenemos la recpuesta correcta del aray
+    const allOptions = option_list.children.length; //Obetenmos todos las opciones
     if (userAns == correcAns) {
         userScore += 1;
         answer.classList.add("correct");
         answer.insertAdjacentHTML("beforeend", tickIconTag);
         console.log("Respuesta Correcta ");
-        console.log("Tu respeusta correcta = " + userScore);
+        console.log("Tu respuesta correcta = " + userScore);
     } else {
         answer.classList.add("incorrect");
         answer.insertAdjacentHTML("beforeend", crossIconTag);
@@ -151,13 +174,13 @@ function showResult() {
     result_box.classList.add("activeResult");
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 8) {
-        let scoreTag = '<span>Has acertado <p>' + userScore + '</p> de <p>' + questions.length + ', enhorabuena 🎉🥳</p></span>';
+        let scoreTag = '<span>Has acertado <p>' + userScore + '</p> de <p>' + 10 + ', enhorabuena 🎉🥳</p></span>';
         scoreText.innerHTML = scoreTag; //añadimos span en la ventana final con el texto y el resultado
     } else if (userScore > 4 && userScore < 8) {
-        let scoreTag = '<span>Has acertado <p>' + userScore + '</p> de <p>' + questions.length + ', bien hecho 😎</p></span>';
+        let scoreTag = '<span>Has acertado <p>' + userScore + '</p> de <p>' + 10 + ', bien hecho 😎</p></span>';
         scoreText.innerHTML = scoreTag;
     } else {
-        let scoreTag = '<span>Lo siento, has acertado<p>' + userScore + '</p> de <p>' + questions.length + ' 😐</p></span>';
+        let scoreTag = '<span>Lo siento, has acertado<p>' + userScore + '</p> de <p>' + 10 + ' 😐</p></span>';
         scoreText.innerHTML = scoreTag;
     }
 }
@@ -176,7 +199,7 @@ function startTimer(time) {
             clearInterval(counter);
             timeText.textContent = "Tiempo Restante";
             const allOptions = option_list.children.length;
-            let correcAns = questions[que_count].answer;
+            let correcAns = questions[preguntasFinales[contPreguntas - 1]].answer;
             for (i = 0; i < allOptions; i++) {
                 if (option_list.children[i].textContent == correcAns) {
                     option_list.children[i].setAttribute("class", "option correct");
@@ -206,6 +229,6 @@ function startTimerLine(time) {
 
 function queCounter(index) {
 
-    let totalQueCounTag = '<span><p> Pregunta ' + index + '</p> de <p>' + questions.length + '</p></span>';
+    let totalQueCounTag = '<span><p> Pregunta ' + index + '</p> de <p>' + 10 + '</p></span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;
 }

@@ -1,180 +1,185 @@
-a{
-	color: white;
+a {
+    color: white;
 }
 
-.bloque1{
-	text-align: center;
+.bloque1 {
+    text-align: center;
     color: white;
     margin-left: 31%;
 }
 
-.bloque2{
+.bloque2 {
     text-align: center;
     color: white;
     margin-left: 20%;
 }
 
-span{
-	background-color: rgba(237, 219, 85, 0.856);
-	align-items: center;
-	padding: 0.5%;
+span {
+    background-color: rgba(237, 219, 85, 0.856);
+    align-items: center;
+    padding: 0.5%;
 }
 
 .lookbook-gallery .a11y-only {
-	 border: 0;
-	 clip: rect(0 0 0 0);
-	 height: 1px;
-	 margin: -1px;
-	 overflow: hidden;
-	 padding: 0;
-	 position: absolute;
-	 width: 1px;
-}
- .lookbook-gallery .a11y-only.focusable:active, .lookbook-gallery .a11y-only.focusable:focus {
-	 clip: auto;
-	 height: auto;
-	 margin: 0;
-	 overflow: visible;
-	 position: static;
-	 width: auto;
-}
- .lookbook-gallery img {
-	 min-width: 10em;
-	 max-width: 17em !important;
-	 display: block;
-	 /*background: #ddd;*/
-}
- .lookbook-gallery .model {
-	 margin: 0;
-	 position: relative;
-}
- .lookbook-gallery .model .model--caption {
-	 position: absolute;
-	 bottom: 0;
-	 left: 0;
-	 right: 0;
-	 margin-left: 10%;
-	 background-color: rgba(0, 0, 0, 0.85);
-	 padding: 0.35em 1.2em 0.25em 0.9em;
-	 justify-self: start;
-	 width: 12em !important;
-	 height: 7em !important;
-}
- .lookbook-gallery .model .model--caption .model-hed {
-	 font-size: 1.25em;
-	 margin: 0.5em 0;
-	 font-family: Lora, serif;
-}
- .lookbook-gallery .model .model--caption .model-hed a {
-	 color: #fff;
-	 text-decoration-color: rgba(255, 255, 255, 0.5);
-}
- .lookbook-gallery .model .model--caption p {
-	 font-size: 0.9375em;
-	 font-family: "Open Sans", sans-serif;
-	 font-style: normal;
-	 font-weight: 400;
-	 color: #fff;
-	 line-height: 1.5;
-	 margin: 0 0 0.5em 0;
-}
- @media (min-width: 45em) {
-	 .lookbook-gallery .lookbook-grid {
-		 display: flex;
-		 flex-wrap: wrap;
-	}
-	 .lookbook-gallery .model {
-		 /*flex: 47.5%;*/
-		 margin: 0.5%;
-	}
-}
- @media (min-width: 65em) {
-	 .lookbook-gallery .model {
-		 /*flex: 24.25% 0;*/
-		 margin: 0.25%;
-	}
-	 @supports (display: grid) {
-		 .lookbook-gallery .lookbook-grid {
-			 display: grid;
-			 grid-gap: 0.5em;
-			 grid-template-columns: repeat(4, minmax(200px, 1fr));
-		}
-		 .lookbook-gallery .model {
-			 margin: 0;
-		}
-		 .lookbook-gallery .model:nth-of-type(4n-1) {
-			 grid-row-end: span 2;
-			 grid-column-end: span 2;
-		}
-	}
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
-@media (max-width: 320px){
-	.bloque1{
-		text-align: center;
-		color: white;
-		margin-left: 2%;
-	}
-	
-	.bloque2{
-		text-align: center;
-		color: white;
-		margin-left: 2%;
-	}
-}
- 
-@media (max-width: 375px){
-	.bloque1{
-		text-align: center;
-		color: white;
-		margin-left: 4%;
-	}
-	
-	.bloque2{
-		text-align: center;
-		color: white;
-		margin-left: 4%;
-	}
+.lookbook-gallery .a11y-only.focusable:active,
+.lookbook-gallery .a11y-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }
 
-@media (max-width: 425px){
-	.bloque1{
-		text-align: center;
-		color: white;
-		margin-left: 8%;
-	}
-	
-	.bloque2{
-		text-align: center;
-		color: white;
-		margin-left: 8%;
-	}
+.lookbook-gallery img {
+    min-width: 10em;
+    max-width: 17em !important;
+    display: block;
+    /*background: #ddd;*/
 }
 
-@media (max-width: 768px){
-	.bloque1{
-		text-align: center;
-		color: white;
-		margin-left: 2%;
-	}
-	
-	.bloque2{
-		text-align: center;
-		color: white;
-		margin-left: 2%;
-	}
+.lookbook-gallery .model {
+    margin: 0;
+    position: relative;
 }
 
-@media (max-width: 1024px){
-	.bloque1{
-		text-align: center;
-		color: white;
-		margin-left: 2%;
-	}
-	
-	.bloque2{
-		text-align: center;
-		color: white;
-		margin-left: 2%;
-	}
+.lookbook-gallery .model .model--caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 10%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 0.35em 1.2em 0.25em 0.9em;
+    justify-self: start;
+    width: 12em !important;
+    height: 7em !important;
+}
+
+.lookbook-gallery .model .model--caption .model-hed {
+    font-size: 1.25em;
+    margin: 0.5em 0;
+    font-family: Lora, serif;
+}
+
+.lookbook-gallery .model .model--caption .model-hed a {
+    color: #fff;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+.lookbook-gallery .model .model--caption p {
+    font-size: 0.9375em;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.5;
+    margin: 0 0 0.5em 0;
+}
+
+@media (min-width: 45em) {
+    .lookbook-gallery .lookbook-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .lookbook-gallery .model {
+        /*flex: 47.5%;*/
+        margin: 0.5%;
+    }
+}
+
+@media (min-width: 65em) {
+    .lookbook-gallery .model {
+        /*flex: 24.25% 0;*/
+        margin: 0.25%;
+    }
+    @supports (display: grid) {
+        .lookbook-gallery .lookbook-grid {
+            display: grid;
+            grid-gap: 0.5em;
+            grid-template-columns: repeat(4, minmax(200px, 1fr));
+        }
+        .lookbook-gallery .model {
+            margin: 0;
+        }
+        .lookbook-gallery .model:nth-of-type(4n-1) {
+            grid-row-end: span 2;
+            grid-column-end: span 2;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .bloque1 {
+        text-align: center;
+        color: white;
+        margin-left: 2%;
+    }
+    .bloque2 {
+        text-align: center;
+        color: white;
+        margin-left: 2%;
+    }
+}
+
+@media (max-width: 375px) {
+    .bloque1 {
+        text-align: center;
+        color: white;
+        margin-left: 4%;
+    }
+    .bloque2 {
+        text-align: center;
+        color: white;
+        margin-left: 4%;
+    }
+}
+
+@media (max-width: 425px) {
+    .bloque1 {
+        text-align: center;
+        color: white;
+        margin-left: 8%;
+    }
+    .bloque2 {
+        text-align: center;
+        color: white;
+        margin-left: 8%;
+    }
+}
+
+@media (max-width: 768px) {
+    .bloque1 {
+        text-align: center;
+        color: white;
+        margin-left: 2%;
+    }
+    .bloque2 {
+        text-align: center;
+        color: white;
+        margin-left: 2%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bloque1 {
+        text-align: center;
+        color: white;
+        margin-left: 2%;
+    }
+    .bloque2 {
+        text-align: center;
+        color: white;
+        margin-left: 2%;
+    }
 }
