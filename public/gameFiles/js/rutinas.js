@@ -105,7 +105,7 @@ function generarPreguntasMezcladas() {
 
     for (let p = 0; p < 10; p++) {
         preguntasFinales.push(randompreguntas[p]);
-        console.log(preguntasFinales);
+
     }
 
 }

@@ -97,7 +97,7 @@
 
         <menu class="items-wrapper">
             <a href="{{ url('/') }}" class="menu-item fa fa-home"></a>
-            <a href="{{ route('game.index') }}" class="menu-item fa fa-gamepad"></a>
+            <a href="{{ route('map.index') }}" class="menu-item fas fa-map-marked-alt"></a>
             <a href="https://iescelia.org/web/" class="menu-item fas fa-school"></a>
             <a href="https://www.instagram.com/iescelia/?hl=es" class="menu-item fab fa-instagram"></a>
         </menu>
@@ -109,8 +109,8 @@
     <div class="movileMenu">
         <div class="label">MENU</div>
         <div class="spacer"></div>
+        <div class="item"><span><a href="{{ url('/') }}">Home</a></span></div>
         <div class="item"><span><a href="{{ route('map.index') }}">Mapa</a></span></div>
-        <div class="item"><span><a href="{{ route('game.index') }}">Juego</a></span></div>
         <div class="item"><span><a href="https://iescelia.org/web/">Celia Viñas</a></span></div>
         <div class="item"><span><a href="https://www.instagram.com/iescelia/?hl=es">Instagram</a></span></div>
     </div>
