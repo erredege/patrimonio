@@ -11,34 +11,31 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-    <link rel="stylesheet" href="{{ url('js/pluginSidebar/leaflet-sidebar.css') }}" />
+    <link rel="stylesheet" href="{{ url('js/pluginSidebar/leaflet-sidebar.css') }}"/>
     <script src="{{ url('js/pluginSidebar/leaflet-sidebar.js') }}"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{{ url('css/map.css') }}">
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/gh/hosuaby/Leaflet.SmoothMarkerBouncing@v2.0.0/dist/bundle.js "
-        crossorigin=" anónimo "></script>
+    <script  type = "text/javascript" src = "https://cdn.jsdelivr.net/gh/hosuaby/Leaflet.SmoothMarkerBouncing@v2.0.0/dist/bundle.js " crossorigin = " anónimo "></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+	/>
 
     <script>
         var ajax = new XMLHttpRequest();
-
         function ocultar(id) {
             var map = document.getElementById("map");
             var fm = document.getElementById("footer-map");
             var info = document.getElementById("info");
             var galeria = document.getElementById("galeria");
             var boton = document.getElementsByClassName("botonVer");
-
             if (fm.style.display === "block") {
                 fm.style.display = "none";
             } else {
@@ -46,89 +43,76 @@
                 galeria.style.border = "solid";
                 info.innerHTML = ""
             }
-            if (fm.style.display === "block") {
+            if(fm.style.display === "block"){
                 map.style.height = "65%";
-            } else {
+            }else{
                 map.style.height = "100%";
             }
-
             ajax.onreadystatechange = procesarRespuesta; // Función que procesará la respuesta del servidor
-            ajax.open("GET", "{{ url('/marker/getInfo/') }}/" + id);
+            ajax.open("GET", "{{ url('/marker/getInfo/') }}/"+id);
             ajax.send();
         }
-
         function procesarRespuesta() {
             if (ajax.readyState == 4) {
-                if (ajax.status == 200) {
-
+                if(ajax.status == 200) {
                     var data = JSON.parse(ajax.responseText);
                     console.log(data);
                     var titulo = data[0].title;
                     var info = data[0].information;
                     var ruta = data[0].route;
-                    document.getElementById("info").innerHTML = "<p class='texto'>" + titulo +
-                        "</p> <p class='texto2'>" + info + "</p>";
+                    document.getElementById("info").innerHTML = "<p class='texto'>" + titulo + "</p> <p class='texto2'>" + info + "</p>";
                     document.getElementById("carruselImg").innerHTML = "";
-                    for (var i = 0; i < data.length; i++) {
-                        if (i == 0) {
-                            document.getElementById("carruselImg").innerHTML +=
-                                "<div class='carousel-item active' id='imgCarrusel'><img src='" + data[i].route +
-                                "' class='d-block w-100' alt='" + titulo + "'></div>";
-                        } else {
-                            document.getElementById("carruselImg").innerHTML +=
-                                "<div class='carousel-item' id='imgCarrusel'><img src='" + data[i].route +
-                                "' class='d-block w-100' alt='" + titulo + "'></div>";
+                    for(var i = 0; i < data.length; i++) {
+                        if(i == 0)   {
+                            document.getElementById("carruselImg").innerHTML += "<div class='carousel-item active' id='imgCarrusel'><img src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
+                        }else{
+                            document.getElementById("carruselImg").innerHTML += "<div class='carousel-item' id='imgCarrusel'><img src='" + data[i].route + "' class='d-block w-100' alt='" + titulo + "'></div>" ;
                         }
                     }
                 }
             }
         }
-
     </script>
 </head>
 
 <body>
 
     <div class="sidebar-map" id="map" style="z-index: 10">
-        <div id="sidebar" class="sidebar collapsed">
+           <div id="sidebar" class="sidebar collapsed">
             <!-- Nav tabs -->
             <div class="sidebar-tabs">
                 <ul role="tablist">
 
-                    <li style="height:5000000px"><a href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a>
-                    </li>
+                    <li style="height:5000000px"><a  href="#home" role="tab"><i class="fas fa-map-marked-alt"></i></a></li>
                 </ul>
             </div>
 
             <!-- Tab panes -->
             <div class="sidebar-content" style="background-image: url('');">
                 <div class="sidebar-pane" id="home">
-                    <h1 class="sidebar-header">Puntos de Interés<span class="sidebar-close"><i
-                                class="fa fa-caret-right"></i></span></h1>
+                    <h1 class="sidebar-header">Puntos de Interés<span class="sidebar-close"><i class="fa fa-caret-right"></i></span></h1>
 
                     @foreach ($markerList as $marker)
-                        <p name='{{ $marker->name }}' onClick='click_{{ $marker->name }}()' id='{{ $marker->id }}'>
-                            {{ $marker->title }}</p>
+                        <p name='{{$marker->name}}' onClick='click_{{$marker->name}}()' id='{{$marker->id}}'>{{$marker->title}}</p>
                     @endforeach
                 </div>
                 <!--------------------------------Circular Menu --------------------------------------------->
 
                 <div id="circularMenu1" class="circular-menu circular-menu-left desactive">
 
-                    <a style="z-index: 50" class="floating-btn"
-                        onclick="document.getElementById('circularMenu1').classList.toggle('active');">
-                        <i class="fa fa-bars"></i>
+                    <a style="z-index: 50" class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+                    <i class="fa fa-bars"></i>
                     </a>
 
                     <menu class="items-wrapper">
-                        <a href="{{ url('/') }}" class="menu-item fa fa-home"></a>
-                        <a href="{{ route('game.index') }}" class="menu-item fa fa-gamepad"></a>
-                        <a href="https://iescelia.org/web/" class="menu-item fas fa-school"></a>
-                        <a href="https://www.instagram.com/iescelia/?hl=es" class="menu-item fab fa-instagram"></a>
+                    <a href="{{url('/')}}" class="menu-item fa fa-home"></a>
+                    <a href="{{route('game.index')}}" class="menu-item fa fa-gamepad"></a>
+                    <a href="https://iescelia.org/web/" class="menu-item fas fa-school"></a>
+                    <a href="https://www.instagram.com/iescelia/?hl=es" class="menu-item fab fa-instagram"></a>
                     </menu>
 
                 </div>
-                <!------------------------------------------------------------------------------------->
+             <!------------------------------------------------------------------------------------->
             </div>
 
         </div>
@@ -138,15 +122,13 @@
 
 
     <script>
-        ////////Variable para que aprezca mapa/////////////////
-        @php
-        function my_search($my_array, $key)
-        {
+    ////////Variable para que aprezca mapa/////////////////
+    @php
+        function my_search($my_array, $key) {
             $result = '';
-            foreach ($my_array as $pos) {
-                if ($pos->key == $key) {
+            foreach($my_array as $pos) {
+                if ($pos->key == $key)
                     $result = $pos->value;
-                }
             }
             return $result;
         }
@@ -160,106 +142,96 @@
         $valueLengthSoutheast = my_search($optionList, 'lengthSoutheast');
         $valueLatitudeNortheast = my_search($optionList, 'latitudeNortheast');
         $valueLengthNortheast = my_search($optionList, 'lengthNortheast');
-        @endphp
-        var map = L.map('map', {
-            minZoom: {{ $valueMinZoom }} //zoom minimo aceptado
-        }).setView([{{ $valueLatitude }}, {{ $valueLength }}], 15); // LOCALICACION DEL FOCUS PRIMARIO DEL MAPA
-        ///////////////////////////////////////////////////////
-        L.tileLayer('{{ $valueUrlMap }}', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map); //MODEL DEL MAPA
-        ///////////Variables de los limites //////////////////
-        var sureste = L.latLng({{ $valueLatitudeSoutheast }}, {{ $valueLengthSoutheast }});
-        var noroeste = L.latLng({{ $valueLatitudeNortheast }}, {{ $valueLengthNortheast }});
-        var bounds = L.latLngBounds(sureste, noroeste);
-        //////////////////////////////////////////////////////
-        //////Funcion que nos premite establecer los limites //
+    @endphp
+    var map = L.map('map', {
+        minZoom: {{$valueMinZoom}} //zoom minimo aceptado
+    }).setView([{{$valueLatitude}}, {{$valueLength}}], 15);// LOCALICACION DEL FOCUS PRIMARIO DEL MAPA
+    ///////////////////////////////////////////////////////
+    L.tileLayer('{{$valueUrlMap}}', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);//MODEL DEL MAPA
+    ///////////Variables de los limites //////////////////
+    var sureste = L.latLng({{$valueLatitudeSoutheast}}, {{$valueLengthSoutheast}});
+    var noroeste = L.latLng({{$valueLatitudeNortheast}}, {{$valueLengthNortheast}});
+    var bounds = L.latLngBounds(sureste, noroeste);
+    //////////////////////////////////////////////////////
+    //////Funcion que nos premite establecer los limites //
         map.setMaxBounds(bounds);
-        map.on('drag', function() {
-            map.panInsideBounds(bounds, {
-                animate: false
-            });
+        map.on('drag', function () {
+            map.panInsideBounds(bounds, { animate: false });
         });
-        ////////////////////////////////////////////////////////
-        //////////Variables para el sidebar ////////////////////
-        var sidebar = L.control.sidebar('sidebar').addTo(map);
-        sidebar.open('home');
-        ////////////////////////////////////////////////////////
-        //////////Marca de agua del Celia Viñas/////////////////
-        /*L.Control.Watermark = L.Control.extend({
-            onAdd:function(map) {
-                var img = L.DomUtil.create('img');
-                img.src =" {{ url('img/celiaEscudo.png') }}";
-                img.style.width = '80px';
-                return img;
-            }
-
-        });
-
-        L.control.watermark= function (opts) {
-            return new L.Control.Watermark(opts);
+    ////////////////////////////////////////////////////////
+    //////////Variables para el sidebar ////////////////////
+    var sidebar = L.control.sidebar('sidebar').addTo(map);
+    sidebar.open('home');
+    ////////////////////////////////////////////////////////
+    //////////Marca de agua del Celia Viñas/////////////////
+    /*L.Control.Watermark = L.Control.extend({
+        onAdd:function(map) {
+            var img = L.DomUtil.create('img');
+            img.src =" {{url('img/celiaEscudo.png')}}";
+            img.style.width = '80px';
+            return img;
         }
-        L.control.watermark({position:'bottomleft'}).addTo(map);*/
-        ////////////////////////////////////////////////////////
-        /////////////// VARIABLES DE LOS PUNTOS ///////////////////
-        @foreach ($markerList as $marker)
-            @if ($marker->type == 0)
-                var {{ $marker->name }} = L.marker([{{ $marker->latitude }}, {{ $marker->length }}], {class:"marcador",
-                id:{{ $marker->id }}}).addTo(map);
-            @elseif($marker->type == 1)
-                var {{ $marker->name }} = L.circle([{{ $marker->latitude }}, {{ $marker->length }}], {
-                id:{{ $marker->id }},
+    });
+    L.control.watermark= function (opts) {
+        return new L.Control.Watermark(opts);
+    }
+    L.control.watermark({position:'bottomleft'}).addTo(map);*/
+    ////////////////////////////////////////////////////////
+    /////////////// VARIABLES DE LOS PUNTOS ///////////////////
+    @foreach($markerList as $marker)
+        @if ($marker->type == 0)
+            var {{$marker->name}} = L.marker([{{$marker->latitude}}, {{$marker->length}}], {class:"marcador", id:{{$marker->id}}}).addTo(map);
+        @elseif($marker->type == 1)
+            var {{$marker->name}} = L.circle([{{$marker->latitude}}, {{$marker->length}}], {
+                id:{{$marker->id}},
                 class:"marcador",
-                radius:{{ $marker->radio }},
-                fillOpacity:{{ $marker->opacity }},
-                fillColor:"{{ $marker->background_color }}",
-                color:"{{ $marker->border_color }}",
-                }).addTo(map);
-            @else
-                var {{ $marker->name }} = L.polygon([
-                [{{ $marker->latitude }},{{ $marker->length }}],
-                @foreach ($pointsList as $point)
-                    @if ($marker->name == $point->marker_name)
-        
-                        [{{ $point->latitude }}, {{ $point->length }}],
+                radius:{{$marker->radio}},
+                fillOpacity:{{$marker->opacity}},
+                fillColor:"{{$marker->background_color}}",
+                color:"{{$marker->border_color}}",
+            }).addTo(map);
+        @else
+            var {{$marker->name}} = L.polygon([
+                [{{$marker->latitude}},{{$marker->length}}],
+                @foreach($pointsList as $point)
+                    @if($marker->name == $point->marker_name)
+                        [{{$point->latitude}}, {{$point->length}}],
                     @endif
                 @endforeach
-                ], {
-                id:{{ $marker->id }},
+            ], {
+                id:{{$marker->id}},
                 class:"marcador",
-                fillOpacity:{{ $marker->opacity }},
-                fillColor:"{{ $marker->background_color }}",
-                color:"{{ $marker->border_color }}",
-                }).addTo(map);
+                fillOpacity:{{$marker->opacity}},
+                fillColor:"{{$marker->background_color}}",
+                color:"{{$marker->border_color}}",
+            }).addTo(map);
+        @endif
+    @endforeach
+    //////////////////////////////////////////////////////////////////////////////////
+    ////////////POPUPS IMGS//////////////////////////////////
+    var encontrado= false;
+    @foreach($markerList as $marker)
+        @foreach($imageList as $image)
+            @if(($marker->name)==($image->title) && ($image->order==1))
+                encontrado=true;
+                {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p>  <img src={{$image->route}}> <br><br><br><a id='{{$marker->id}}'  onclick='ocultar({{$marker->id}})' class='myButton'>Información</a>");
             @endif
         @endforeach
-        //////////////////////////////////////////////////////////////////////////////////
-        ////////////POPUPS IMGS//////////////////////////////////
-        var encontrado = false;
-        @foreach ($markerList as $marker)
-            @foreach ($imageList as $image)
-                @if ($marker->name == $image->title && $image->order == 1)
-                    encontrado=true;
-                    {{ $marker->name }}.bindPopup("<p class='texto'>{{ $marker->title }}</p> <img src={{ $image->route }}>
-                    <br><br><br><a id='{{ $marker->id }}' onclick='ocultar({{ $marker->id }})'
-                        class='myButton'>Información</a>");
-                @endif
-        
-            @endforeach
-            if(!encontrado){
-            {{ $marker->name }}.bindPopup("<p class='texto'>{{ $marker->title }}</p> <br><a id='{{ $marker->id }}'
-                onclick='ocultar({{ $marker->id }})' class='myButton'>Información</a>");
-            }
-        @endforeach
-        ////////////////////////////////////////////////////////////////////////////////
-        // FUNCIONES FOCUS HACIA POPUP AL HACER CLICK EN CUALQUIER PUTNO DEL MARKET/////
-        @foreach ($markerList as $marker)
-            function click_{{ $marker->name }}() {
+        if(!encontrado){
+            {{$marker->name}}.bindPopup("<p class='texto'>{{$marker->title}}</p> <br><a id='{{$marker->id}}'  onclick='ocultar({{$marker->id}})' class='myButton'>Información</a>");
+        }
+    @endforeach
+    ////////////////////////////////////////////////////////////////////////////////
+    // FUNCIONES FOCUS HACIA POPUP AL HACER CLICK EN CUALQUIER PUTNO DEL MARKET/////
+    @foreach($markerList as $marker)
+        function click_{{$marker->name}}() {
             map.setView([31.86043839842163, -45.337342818000984]);
-            map.setView([{{ $marker->latitude }}, {{ $marker->length }}]);
+            map.setView([{{$marker->latitude}}, {{$marker->length}}]);
             @if ($marker->type == 0)
                 map.setZoom(18);
-                {{ $marker->name }}.bounce(7)
+                {{$marker->name}}.bounce(7)
             @endif
             @if ($marker->type == 1)
                 @if ($marker->radio > 20)
@@ -271,23 +243,21 @@
             @if ($marker->type == 2)
                 map.setZoom(17);
             @endif
-            //{{ $marker->name }}.openPopup();
-            }
-        
-        @endforeach
-        ////////////////////////////////////////////////////////////////////////////////
-        ///////Cerrar footer con click en el mapa////////
-        map.on('click', function(e) {
-            var map = document.getElementById("map");
-            var fm = document.getElementById("footer-map");
-            fm.style.display = "none";
-            map.style.height = "100%";
-            document.getElementById("info").innerHTML = " ";
-            document.getElementById("carruselImg").innerHTML = " ";
-        });
-
+            //{{$marker->name}}.openPopup();
+        }
+    @endforeach
+    ////////////////////////////////////////////////////////////////////////////////
+    ///////Cerrar footer con click en el mapa////////
+    map.on('click', function(e) {
+        var map = document.getElementById("map");
+        var fm = document.getElementById("footer-map");
+        fm.style.display = "none";
+        map.style.height = "100%";
+        document.getElementById("info").innerHTML = " ";
+        document.getElementById("carruselImg").innerHTML = " ";
+    });
     </script>
-    <div id="footer-map" class="prueba col-12 col-lg-4 mw-100 hw-100">
+    <div id ="footer-map" class="prueba col-12 col-lg-4 mw-100 hw-100">
         <div id="galeria" style="border: none;" class="prueba col-12 col-lg-4 mw-100 ">
             <!--aqui va la galertia-->
 
@@ -295,13 +265,11 @@
                 <div class="carousel-inner" id="carruselImg" class="prueba col-12 col-lg-4 mw-100">
 
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
