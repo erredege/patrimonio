@@ -75,7 +75,7 @@ class MarkerController extends Controller
         $marker->name = $r->name;
         $marker->information = $r->information;
         $marker->type = $r->type;
-        $marker->start_point = $r->start_point;
+        //$marker->start_point = $r->start_point;
         $marker->radio = $r->radio;
         $marker->border_color = $r->border_color;
         $marker->background_color = $r->background_color;

@@ -229,6 +229,6 @@ function startTimerLine(time) {
 
 function queCounter(index) {
 
-    let totalQueCounTag = '<span><p> Pregunta ' + index + '</p> de <p>' + 10 + '</p></span>';
-    bottom_ques_counter.innerHTML = totalQueCounTag;
+    let totalQueCounTag = '<span><p> Pregunta ' + index + '</p> de <p>' + preguntasFinales.length + '</p></span>';
+    //bottom_ques_counter.innerHTML = totalQueCounTag;
 }

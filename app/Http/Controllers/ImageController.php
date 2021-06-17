@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Image;
+use DB;
 
 class ImageController extends Controller
 {
@@ -18,7 +19,7 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $imagesList = Image::all();
+        $imagesList = DB::table('images')->select('*')->orderBy('title')->get();
         return view('backend.image.index', ['imagesList'=>$imagesList]);
     }
 
