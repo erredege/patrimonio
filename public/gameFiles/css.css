@@ -167,19 +167,20 @@ body {
         width: 97% !important;
     }
     section {
-        padding: 10px !important;
+        padding: 0 10px 0 10px !important;
     }
     .time_line {
         opacity: 0 !important;
     }
     section .que_text {
-        font-size: 17px !important;
+        font-size: 15px !important;
     }
     section .option_list {
         padding: 10px 0px !important;
     }
     section .option_list .option {
         font-size: 13px !important;
+        padding: 4px 10px !important;
     }
     /*********CSS cuadro final*****/
     .result_box {
