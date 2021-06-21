@@ -23,3 +23,5 @@ Esta aplicación fue creada como soporte del libro "De los Porqués", realizado 
 
 -En segundo lugar, un juego, en donde aparecerán preguntas relacionadas con los puntos de interés del mapa.
 El juego será estilo tipo test, en donde tendrás una pregunta y cuatro opciones, en donde unicamente solo abra una respuesta correcta, también para añadir algo de dificultad se dispondrá de solo treinta segundos para responder, una vez finalice el tiempo, se marcara la respuesta correcta y contara como pregunta errónea (si no se ha marcado ninguna) para el conteo final de puntos.Al final del juego aparecerá una nueva ventana en donde se informara de la puntuación final.
+
+Por último, disponemos de un apartado en donde disponemos de los nombres de los desarrolladores, profesores y colaboradores.
