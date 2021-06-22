@@ -1,15 +1,15 @@
 # **Indice**
 1. [Laravel](#id1)
 2. [Mapa](#id2)
-    2.1[Leaflet](#id2.1)
-    2.2[Sidebar](#id2.2)
-    2.3[Footer](#id2.3)
+    * 2.1[Leaflet](#id2.1)
+    * 2.2[Sidebar](#id2.2)
+    * 2.3[Footer](#id2.3)
 3. [Juego](#id3)
 4. [Panel de Administarción](#id4)
-    4.1[Marcadores](#id4.1)
-    4.2[Opciones](#id4.2)
-    4.3[Imagenes](#id4.3)
-    4.4[Usuarios](#id4.4)
+    * 4.1[Marcadores](#id4.1)
+    * 4.2[Opciones](#id4.2)
+    * 4.3[Imagenes](#id4.3)
+    * 4.4[Usuarios](#id4.4)
 
 # ** Laravel** <a name="id1"></a>
 Principalmente la aplicación esta desplegada en la version 8 de [laravel] (https://laravel.com/docs/8.x/installation), la cual necesita unos requerimientos mínimos como:

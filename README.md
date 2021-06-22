@@ -28,9 +28,9 @@ El juego será estilo tipo test, en donde tendrás una pregunta y cuatro opcione
 
 # **Indice**
 1. [Guia de Usuarios](#id1) 
-    1.1 [Mapa](#id2)
-    1.2 [Juego](#id3)
-    1.3 [Colaboradores](#id4)
+    * 1.1 [Mapa](#id2)
+    * 1.2 [Juego](#id3)
+    * 1.3 [Colaboradores](#id4)
 
 # **Guia de usuarios**<a name="id1"></a>
 Como se ha dicho antes esta aplicacion cuenta con dos partes, la del mapa y la del juego.
